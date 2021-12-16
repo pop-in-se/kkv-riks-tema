@@ -1,0 +1,1043 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    padding-top: 0px!important;
+}
+
+body {
+    background-color: #1A1919!important;
+    max-width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ------------------------ Desktop ------------------------ */
+
+
+.frontpageContainer {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    padding: 0 72px;
+}
+
+
+.frontpageContainerLinks {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.frontpageLinks {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em
+}
+
+.frontpageLinks a{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    background-color: #990F0F;
+    margin: 1em;
+    padding: 0.4em 0.8em;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.frontpageLinks ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.frontpageLinks li{
+    justify-content: center;
+    border: 2px solid #990F0F;
+    background-color: #0a0a0a40;
+    margin: 1em;
+    border-radius: 8px;
+}
+
+.frontpageLinks .menu li{
+    padding: 3em;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.omkkvriks::before {
+    word-break: break-word;
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f0eb";
+  }
+
+.aktuellt::before {
+    word-break: break-word;
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f06e";
+  }
+
+
+
+.medlemmar::before {
+    word-break: break-word;
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f118";
+  }
+
+.verkstader::before {
+    word-break: break-word;
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f1fc";
+  }
+
+.kontakt::before {
+    word-break: break-word;
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f0e0";
+  }
+
+
+
+
+.frontpageContainerTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.map {
+    width: 100%;
+}
+.lineRed { 
+    width: 90%;
+    border-top: 8px solid #990F0F;
+}
+
+.lineBeige { 
+    width: 90%;
+    border-top: 8px solid #E7DCD1;
+}
+
+.frontpageCitiesContainer li {
+    display: inline-block;
+}
+
+.cityList {
+        float: left;
+        clear: left;
+    }
+
+.frontpageCities {
+    color: #E7DCD1;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    white-space: pre-line;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+.frontpageContainerMapholder {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.frontpageContainerMap{
+    display: flex;
+    width: fit-content;
+}
+.frontpageContainerMapText{
+    width: 25%;
+    align-items: center;
+}
+
+.frontpageTitle {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 64px!important;
+    line-height: 80px;
+    margin-top: 92px;
+    color: #990F0F;
+}
+
+.frontpageSubtitle {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 42px!important;
+    line-height: 64px;
+    margin-bottom: 16px;
+    color: #990F0F;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 72px 72px 0 72px;
+}
+
+/* ------------------------ Header ------------------------ */
+
+.topHeader {
+    display: flex;
+    align-items: center;
+    padding: 0 72px 0 72px;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 104px!important;
+    left: 0%;
+    right: 0%;
+    border-bottom: 0.5px solid #990F0F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #0A0A0A!important;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.menyText {
+display: none;
+}
+
+.medlem {
+    text-align: center;
+    background-color: #990F0F;
+    width: 7em;
+    border-radius: 8px;
+}
+
+.headerPosition {
+    position: relative !important;
+}
+
+.header-logo > a > img  {
+    /* width: 100%; */
+    object-fit: cover;
+}
+
+
+div.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    color: white;
+    padding: 15px;
+    width: 100%;
+}
+
+div.header-navitems {
+    display: flex;
+    flex-direction: row;
+}
+
+hr {
+    border: 1px solid #026747;
+}
+
+#hrStart {
+    border: 1px solid #fff;
+}
+
+div.header-span {
+    display: flex;
+    flex-direction: row;
+    min-width: 85%;
+    min-height: 3%;
+    background-color: #fff;
+}
+
+
+#headernavitems {
+    font-size: 24px;
+    color: #F5F5F5;
+    font-weight: 400;
+}
+
+#sidebarMenu {
+    display: none;
+}
+
+#menu-primary-menu-1 ul {
+    padding-left: 0!important;
+}
+
+.menu {
+    padding-left: 0!important;
+    margin-top: 0;
+}
+
+.menu ul {
+    margin: 0.5em 0 0.85em 0;
+    list-style-type: none;
+    list-style: none;
+    display:inline-block;   
+}
+.menu li {
+    padding: 0;
+    display: inline-block;
+} 
+
+.menu a { 
+    color:#F5F5F5;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 46px;
+    text-decoration: none;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+
+.mobileInput {
+    display: none;
+}
+
+
+/* ------------------------ Rubriker på alla sidor ------------------------ */
+
+.heroTitleContainer {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    padding: 0 72px;
+}
+
+.heroTitleContainerCol1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 0.5em;
+}
+
+.heroTitleContainerCol2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+    margin-left: 0.5em;
+}
+
+.pageLineRed { 
+    width: 100%;
+    border-top: 8px solid #990F0F;
+}
+
+.pageLineBeige { 
+    width: 100%;
+    border-top: 8px solid #E7DCD1;
+}
+
+.heroTitle {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 42px!important;
+    line-height: 64px;
+    margin-bottom: 16px;
+    color: #E7DCD1;
+}
+
+i.icon {
+    font-size: 2.4rem;
+}
+
+/* ------------------------ Aktuellt ------------------------ */
+
+.aktuelltFull {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+    padding: 3em;
+    background: #E7DCD1;
+    border-radius: 4px;
+}
+
+.aktuelltMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 72px 32px 72px;
+}
+
+
+/* ------------------------ Kontakt ------------------------ */
+
+.kontaktMain {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 72px 32px 72px;
+    border-radius: 4px;
+}
+
+.kontaktMain p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color: #E7DCD1;
+    padding: 0.5em;
+}
+
+
+
+/* ------------------------ Om KKV ------------------------ */
+
+.aboutMain {
+    display: flex;
+    flex-direction: column;
+    background-color: #E7DCD1;
+    margin: 32px 72px 32px 72px;
+    border-radius: 4px;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 32px 72px 32px 72px;
+}
+
+.aboutText h1 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+    color: #1A1919;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.aboutText p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color: #1A1919;
+}
+
+.aboutText li {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color: #1A1919;
+}
+
+
+
+/* ----- Verkstäder samlingssida ----- */
+
+
+.verkstaderContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 48px;
+}
+
+.verkstadskortContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.verkstadskort {
+    width: 48%;
+    height: fit-content;
+    flex-direction: column;
+    background-color: #E7DCD1;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 4px;
+    padding: 2em;
+    margin: 0.5em;
+}
+
+
+.verkstaderMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4.5em 0 4.5em;
+}
+
+.verkstaderContainerCol1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.verkstaderContainerCol2 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/* ----- städer dropdown ----- */
+
+.morecities {
+    width: 200px;
+    color:#F5F5F5;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0.5em 1em;
+    border: 1px solid #F5F5F5;
+    background-color: #1A1919;
+}
+.cityDropdown {
+    display: flex;
+    margin-bottom: 3em;
+}
+.dropdown {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown select {
+    width: 200px;
+    color:#F5F5F5;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0.5em;
+    margin-right: 1em;
+    border: 1px solid #F5F5F5;
+    background-color: #1A1919;
+  }
+
+  .dropdown select label {
+      margin-right: 0.5em;
+  }
+  .dropdown input {
+    width: 50%;
+    color: #F5F5F5;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0.5em;
+    cursor: pointer;
+    border: 1px solid #F5F5F5;
+    background-color: #1A1919;
+  }
+
+  /* ----- Single verkstad ----- */
+
+.singleVerkstadMain {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 72px 72px 0 72px;
+    padding: 3em;
+    background: #E7DCD1;
+    border-radius: 4px;
+}
+
+.singleVerkstadCol1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin-right: 1em;
+    padding: 0;
+}
+
+.singleVerkstadCol2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.singleVerkstadFull {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 1em 0 2em 0;
+    border-bottom: 1px dashed #990F0F;
+}
+
+
+.singleVerkstadContactItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.25em;
+    padding: 0;
+}
+
+.singleVerkstadContactItems a {
+    text-decoration: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    color: #0A0A0A;
+}
+
+.singleVerkstadRubrik {
+    color: #990F0F;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    border-bottom: 3px solid #990F0F;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+}
+
+.singleVerkstadRubrik a{    
+    text-decoration: none;
+    color: #990F0F;
+}
+
+.singleVerkstadImg {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid #990F0F;
+}
+
+/* .singleVerkstadImg:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  } */
+
+  .singleVerkstadImg img {
+    object-fit: cover;
+  }
+
+p {
+    color: #0A0A0A;
+}
+
+/* ----- Verkstadstaggar ----- */
+
+.tagsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2em 0 1em 0;
+}
+
+.weOffer {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    color: #990F0F;
+    margin-bottom: 1em;
+}
+
+.spacer {
+    height: 32px;
+}
+
+.contactBox {
+    width: 50%;
+    border-top: 1px solid #1A1919;
+    border-bottom: 1px solid #1A1919;
+    padding: 8px;
+}
+
+.verkstadsTaggar a {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #990F0F;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-decoration: none;
+    width: fit-content;
+    height: 2.75em;
+    margin: 0.2em;
+    padding: 0.65em 0.5em 0.25em 0.5em;
+    border-radius: 3px;
+    border: 1px solid #990F0F;
+    box-sizing: border-box;
+    background-color: #E7DCD1;
+}
+
+.verkstadsTaggar a:hover {
+    background-color: #990F0F;
+    color: #E7DCD1;
+}
+
+
+/* ------------------------ Tablet ------------------------ */
+
+
+@media only screen and (max-width: 1080px) {
+
+    .frontpageContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 80vh;
+        padding: 0 32px;
+        margin-top: 48px;
+    }
+
+    .frontpageTitle {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 36px!important;
+        line-height: 46px;
+        margin-top: 96px;
+        color: #990F0F;
+    }
+
+    .frontpageSubtitle {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 32px!important;
+        line-height: 42px;
+        margin-bottom: 16px;
+        color: #990F0F;
+    }
+
+    .frontpageContainerTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+    }
+
+    .menu a { 
+        color:#F5F5F5;    
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 36px;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    div.header-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: center;
+        color: white;
+        padding: 15px;
+        width: 100%;
+    }
+
+}
+
+
+/* ------------------------ Mobil ------------------------ */
+
+
+@media only screen and (max-width: 690px)  {
+
+
+    .main {
+        margin: 0 16px 0 16px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .frontpageContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        padding: 0 32px;
+        margin-top: 0;
+    }
+
+    .frontpageTitle {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 32px!important;
+        line-height: 46px;
+        margin-top: 96px;
+        color: #990F0F;
+    }
+    
+    .frontpageSubtitle {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px!important;
+        line-height: 34px;
+        margin-bottom: 16px;
+        color: #990F0F;
+    }
+
+    .frontpageContainerMapText {
+        display: flex;
+        width: 0%;
+        align-items: center;
+    }
+
+    .map {
+        width: 80%;
+    }
+
+    .frontpageCities {
+        color: #E7DCD1;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        white-space: pre-line;
+    }
+
+/* ------------------------ Verkstäder titlar mobil ------------------------  */
+
+    .heroTitleContainer {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        padding: 0 32px;
+    }
+
+
+    .heroTitle {
+        white-space: nowrap;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 32px!important;
+        line-height: 44px;
+        margin-bottom: 16px;
+        color: #E7DCD1;
+    }
+    
+    i.icon {
+        font-size: 1.4rem;
+    }
+
+    .topHeader {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 16px 0 16px;
+        left: 0;
+        right: 0;
+        border-bottom: 0.5px solid #990F0F;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: #0A0A0A!important;
+        max-width: 100%;
+        position: fixed!important;
+        height: 72px!important;
+        overflow: hidden;
+        z-index: 99;
+    }
+
+    .lineRed { 
+        width: 80vw;
+        border-top: 4px solid #990F0F;
+        margin-bottom: 32px;
+    }
+
+    #headernavitems {
+        display: none;
+    }
+
+    div.header-form {
+        display: none;
+    }
+
+    .medlem {
+        text-align: center;
+        background-color: #990F0F;
+        width: 8em;
+        border-radius: 8px;
+    }
+
+    img.mobileLogo {
+        z-index: 101;
+        position: relative;
+        left: 16px;
+        object-fit: cover;
+   }
+
+    #menu-primary-menu-1 {
+        padding-left: 0!important;
+    }
+
+    .menu {
+        padding-left: 0!important;
+    }
+
+
+    /* Meny som slide:ar ut */
+
+    #sidebarMenu {
+        display: flex;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding-top: 100px;
+        transform: translatex(-100%);
+        transition: transform 250ms ease-in-out;
+        background: #1A1919;
+        box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 0;
+    }
+    
+    .sidebarMenuInner{
+        display:block!important;
+        margin: 16px;
+        padding: 16px;
+        width: 250px;
+    }
+    .sidebarMenuInner li{
+        list-style: none;
+        color: #F5F5F5;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0.7em;
+        cursor: pointer;
+        margin-right: 16px;
+    }
+
+    .sidebarMenuInner li a{
+        text-align: center;
+        font-size: 2.45vh;
+        color: #F5F5F5;
+        text-transform: uppercase;
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    .secondMenu li a{
+        font-size: 2vh;
+        font-weight: 300;
+    }
+
+    .mobileInput[type="checkbox"]:checked ~ #sidebarMenu {
+        transform: translateX(0);
+    }
+
+    .mobileInput[type=checkbox] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+
+    .fa-search:before{
+        display: none;
+    }
+
+    .cornerSquare {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top:0;
+        right:0;
+        z-index: 99;
+    }
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        top: 12px;
+        right: 20px;
+        height: 22px;
+        width: 22px;
+    }
+
+    /* Hamburger  */
+
+    .menyText {
+        display: block;
+        color: #F5F5F5;
+        position: relative;
+        right: 8px;
+        margin-bottom: 4px;
+    }
+
+    .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #F5F5F5;
+        border-radius: 4px;
+    }
+
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 5px;
+        border-radius: 4px;
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+        border-radius: 4px;
+    }
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 4px;
+        border-radius: 4px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    }
+}
