@@ -1,0 +1,349 @@
+/* ------------------------ Mobil ------------------------ */
+
+
+@media (max-width: 768px)  {
+
+
+    .colFull {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .col2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero {
+        margin: 1em;
+    }
+
+    .heroHeight {
+        height: 15vh;
+    }
+
+    .mrl4 {
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+
+    .flexDropdown {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .verkstadskort {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        background-color: #E7DCD1;
+        border-radius: 4px;
+        padding: 2em;
+        margin: 0.5em;
+    }
+
+    .frontpageLinks .menu li{
+        padding: 3em;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column
+    }
+
+    .main {
+        margin: 0 16px 0 16px;
+        flex-direction: column;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .frontpageContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        padding: 0 32px;
+        margin-top: 0;
+    }
+
+    .frontpageTitle {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 32px!important;
+        line-height: 46px;
+        margin-top: 108px;
+        color: #990F0F;
+    }
+    
+    .frontpageSubtitle {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px!important;
+        line-height: 34px;
+        margin-bottom: 16px;
+        color: #990F0F;
+    }
+
+    .frontpageContainerMapText {
+        display: flex;
+        width: 0%;
+        align-items: center;
+    }
+
+    .map {
+        width: 80%;
+    }
+
+    .mapContainer{
+        display: flex;
+        width: 100%;
+    }
+
+
+    .mapText{
+        width: 25%;
+        align-items: center;
+        bottom: 300px;
+        position: relative;
+    }
+
+    .frontpageCities {
+        color: #E7DCD1;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        white-space: pre-line;
+    }
+
+/* ------------------------ Verkstäder titlar mobil ------------------------  */
+
+    .heroTitleContainer {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        padding: 0 32px;
+    }
+
+
+    .heroTitle {
+        white-space: nowrap;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 32px!important;
+        line-height: 44px;
+        margin-bottom: 16px;
+        color: #E7DCD1;
+    }
+    
+    i.icon {
+        font-size: 1.4rem;
+    }
+
+    .topHeader {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 16px 0 16px;
+        left: 0;
+        right: 0;
+        border-bottom: 0.5px solid #990F0F;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: #0A0A0A!important;
+        max-width: 100%;
+        position: fixed!important;
+        height: 86px!important;
+        overflow: hidden;
+        z-index: 99;
+    }
+
+    .lineRed { 
+        width: 80vw;
+        border-top: 4px solid #990F0F;
+        margin-bottom: 32px;
+    }
+
+    #headernavitems {
+        display: none;
+    }
+
+    div.header-form {
+        display: none;
+    }
+
+    .medlem {
+        text-align: center;
+        background-color: #990F0F;
+        width: 8em;
+        border-radius: 8px;
+    }
+
+    img.mobileLogo {
+        z-index: 101;
+        position: relative;
+        left: 16px;
+        object-fit: cover;
+   }
+
+    #menu-primary-menu-1 {
+        padding-left: 0!important;
+    }
+
+    .menu {
+        padding-left: 0!important;
+    }
+
+
+    /* Meny som slide:ar ut */
+
+    #sidebarMenu {
+        display: flex;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding-top: 100px;
+        transform: translatex(-100%);
+        transition: transform 250ms ease-in-out;
+        background: #1A1919;
+        box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 0;
+    }
+    
+    .sidebarMenuInner{
+        display:block!important;
+        margin: 16px;
+        padding: 16px;
+        width: 250px;
+    }
+    .sidebarMenuInner li{
+        list-style: none;
+        color: #F5F5F5;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 0.7em;
+        cursor: pointer;
+        margin-right: 16px;
+    }
+
+    .sidebarMenuInner li a{
+        text-align: center;
+        font-size: 2.45vh;
+        color: #F5F5F5;
+        text-transform: uppercase;
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    .secondMenu li a{
+        font-size: 2vh;
+        font-weight: 300;
+    }
+
+    .mobileInput[type="checkbox"]:checked ~ #sidebarMenu {
+        transform: translateX(0);
+    }
+
+    .mobileInput[type=checkbox] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+
+    .fa-search:before{
+        display: none;
+    }
+
+    .cornerSquare {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top:0;
+        right:0;
+        z-index: 99;
+    }
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        top: 12px;
+        right: 32px;
+        height: 22px;
+        width: 22px;
+    }
+
+    /* Hamburger  */
+
+    .menyText {
+        display: block;
+        color: #F5F5F5;
+        position: relative;
+        right: 8px;
+        margin-bottom: 4px;
+    }
+
+    .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #F5F5F5;
+        border-radius: 4px;
+    }
+
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 5px;
+        border-radius: 4px;
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+        border-radius: 4px;
+    }
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 4px;
+        border-radius: 4px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    }
+}

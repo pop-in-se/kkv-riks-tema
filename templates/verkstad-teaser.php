@@ -11,26 +11,26 @@ $omVerkstaden = $verkstadInfo['text_om_verkstaden'];
 ?>
 
 
-<h1 class="singleVerkstadRubrik"> 
+<h1 class="rubrikBorderBottom"> 
 <a href="<?php echo esc_url( the_guid() ); ?>"><?php echo $namn; ?></a>
 </h1>
 
-<div class="singleVerkstadFull">
-    <div class="singleVerkstadCol1">
+<div class="colFull dashedBottom pb2 mb2 row">
+    <div class="col1 mr1 mb1">
         <p><?php echo $adress; ?></p>
     </div>
-        <div class="singleVerkstadCol2">
-            <div class="singleVerkstadContactItems">
+        <div class="col2">
+            <div class="contactItems">
             <?php if( $hemsida ): ?>
                 <i class="fas fa-globe" style="font-size: 1rem; margin-right: 1em;"></i><a href="<?php echo $hemsida; ?>" target="_blank"> <?php echo $hemsida; ?> </a>
                 <?php endif; ?>
             </div>
-            <div class="singleVerkstadContactItems">
+            <div class="contactItems">
             <?php if( $epost ): ?>
                 <i class="fas fa-at" style="font-size: 1rem; margin-right: 1em;"></i><a href="mailto:<?php echo $epost; ?>" target="_blank"> <?php echo $epost; ?> </a>
                 <?php endif; ?>
             </div>
-            <div class="singleVerkstadContactItems">
+            <div class="contactItems">
                 <?php if( $telefon ): ?>
                 <i class="fas fa-phone-alt" style="font-size: 1rem; margin-right: 1em;"></i><p><?php echo $telefon; ?></p>
                 <?php endif; ?>

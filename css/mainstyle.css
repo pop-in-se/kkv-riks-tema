@@ -14,9 +14,198 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4.5em;
+}
+
+.rubrikBorderBottom {
+    color: #990F0F;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.25em;
+    border-bottom: 3px solid #990F0F;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+}
+
+.rubrikBorderBottom a{    
+    text-decoration: none;
+    color: #990F0F;
+}
+
 
 /* ------------------------ Desktop ------------------------ */
 
+.knapp {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #990F0F;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-decoration: none;
+    width: fit-content;
+    height: 2.75em;
+    margin-top: 2em;
+    margin-right: 1em;
+    padding: 0.65em 0.5em 0.25em 0.5em;
+    border-radius: 3px;
+    border: 1px solid #990F0F;
+    box-sizing: border-box;
+    background-color: #E7DCD1;
+}
+
+.flex {
+    display: flex;
+}
+
+.colFull {
+    display: flex;
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.col2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.alignBottom {
+    justify-content: flex-end;
+}
+
+.alignRight {
+    align-items: flex-end;
+}
+
+.alignLeft {
+    align-items: flex-start;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.justifyRight {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.justifyLeft {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.alignSelfLeft {
+    align-self: flex-start;
+}
+
+.justifyCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.colorWhite {
+    color: #F5F5F5;
+}
+
+.mb1 {
+    margin-bottom: 1em;
+}
+
+.mb2 {
+    margin-bottom: 2em;
+}
+
+.mt1 {
+    margin-top: 1em;
+}
+
+.mt2 {
+    margin-top: 2em;
+}
+
+/* margin top 48 px */
+.mt3 {
+    margin-top: 3em;
+}
+
+/* margin top 72 px */
+.mt4 {
+    margin-top: 4.5em;
+}
+
+.mr1 {
+    margin-right: 1em;
+}
+
+/* margin right left 72 px*/
+.mrl4 {
+    margin-right: 4.5em;
+    margin-left: 4.5em;
+}
+
+.pb2 {
+    padding-bottom: 2em;
+}
+
+.pt2 {
+    padding-top: 2em;
+}
+
+.p3 {
+    padding: 3em;
+}
+
+.plr2 {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.br4 {
+    border-radius: 4px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+}
+
+.heroHeight {
+    height: 5vh;
+}
+
+.h30vh {
+    height: 30vh;
+}
+
+.beige {
+    background: #E7DCD1;
+}
+
+.dashedBottom {
+    border-bottom: 1px dashed #990F0F;
+}
 
 .frontpageContainer {
     display: flex;
@@ -24,7 +213,6 @@ body {
     height: 80vh;
     padding: 0 72px;
 }
-
 
 .frontpageContainerLinks {
     display: flex;
@@ -82,7 +270,6 @@ body {
   }
 
 
-
 .medlemmar::before {
     word-break: break-word;
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f118";
@@ -90,7 +277,7 @@ body {
 
 .verkstader::before {
     word-break: break-word;
-    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f1fc";
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f192";
   }
 
 .kontakt::before {
@@ -98,19 +285,15 @@ body {
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f0e0";
   }
 
-
-
-
-.frontpageContainerTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-}
+.forumblob::before {
+    word-break: break-word;
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f27a";
+  }
 
 .map {
     width: 100%;
 }
+
 .lineRed { 
     width: 90%;
     border-top: 8px solid #990F0F;
@@ -121,7 +304,7 @@ body {
     border-top: 8px solid #E7DCD1;
 }
 
-.frontpageCitiesContainer li {
+.mapTextCitiesContainer li {
     display: inline-block;
 }
 
@@ -130,7 +313,7 @@ body {
         clear: left;
     }
 
-.frontpageCities {
+.mapTextCities {
     color: #E7DCD1;
     font-size: 20px;
     line-height: 28px;
@@ -140,18 +323,11 @@ body {
     word-wrap: break-word;
 }
 
-.frontpageContainerMapholder {
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-}
-
-.frontpageContainerMap{
+.mapContainer{
     display: flex;
     width: fit-content;
 }
-.frontpageContainerMapText{
+.mapText{
     width: 25%;
     align-items: center;
 }
@@ -161,7 +337,7 @@ body {
     font-style: normal;
     font-size: 64px!important;
     line-height: 80px;
-    margin-top: 92px;
+    margin-top: 108px;
     color: #990F0F;
 }
 
@@ -174,11 +350,21 @@ body {
     color: #990F0F;
 }
 
-.main {
+.menu-sidfotsmeny-container  {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 72px 72px 0 72px;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#menu-sidfotsmeny {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-sidfotsmeny-container .menu a {
+    font-size: 1em;
+    line-height: 2em;
 }
 
 /* ------------------------ Header ------------------------ */
@@ -251,7 +437,6 @@ div.header-span {
     background-color: #fff;
 }
 
-
 #headernavitems {
     font-size: 24px;
     color: #F5F5F5;
@@ -302,28 +487,6 @@ div.header-span {
 
 /* ------------------------ Rubriker på alla sidor ------------------------ */
 
-.heroTitleContainer {
-    display: flex;
-    width: 100%;
-    height: 30vh;
-    padding: 0 72px;
-}
-
-.heroTitleContainerCol1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 50%;
-    margin-right: 0.5em;
-}
-
-.heroTitleContainerCol2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 50%;
-    margin-left: 0.5em;
-}
 
 .pageLineRed { 
     width: 100%;
@@ -350,7 +513,7 @@ i.icon {
 
 /* ------------------------ Aktuellt ------------------------ */
 
-.aktuelltFull {
+.aktuelltKort {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -361,35 +524,125 @@ i.icon {
     border-radius: 4px;
 }
 
-.aktuelltMain {
+.postLink {
+    font-size: 20px;
+    color: #990F0F;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 32px 72px 32px 72px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    height: 48px;  
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0.3em 1em;
+    border: 1px solid #F5F5F5;
+    }
+
+.postLink a{
+    text-decoration: none;
+    color: #990F0F;
+}
+
+/* ------------------------ Forum ------------------------ */
+
+
+#bbpress-forums {
+    background: 0 0;
+    clear: both;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 90vw;
+}
+
+/* #bbpress-forums a {
+    font-size: 12px;
+} */
+
+.bbpress-wrapper {
+    background: 0 0;
+    clear: both;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 90vw;
+}
+
+.entry-title {
+    text-align: center;
+}
+
+.bbp-breadcrumb-home {
+    color: #990F0F;
 }
 
 
-/* ------------------------ Kontakt ------------------------ */
-
-.kontaktMain {
-    display: flex;
-    flex-direction: column;
-    margin: 32px 72px 32px 72px;
-    border-radius: 4px;
-}
-
-.kontaktMain p {
-    font-family: Open Sans;
+/* .bbp-forum-title a {
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 42px;
-    color: #E7DCD1;
-    padding: 0.5em;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+} */
+
+.div.bbp-template-notice.info {
+    background-color: #F5F5F5;
+    border: #990F0F 1px solid;
 }
 
+div.bbp-template-notice {
+    border-radius: 4px;
+    border: #990F0F 1px solid;
+}
+/* ------------------------ Kontakt ------------------------ */
 
+.wpcf7 label {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #E7DCD1;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
+    background-color: #F5F5F5;
+    width: 100%;
+    margin: 0.6em 0 1em 0;
+}
+
+.wpcf7 input[type="submit"] {
+    color: #E7DCD1;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    background: #990F0F;
+    padding: 8px 20px 8px 8px;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    width: 20%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.wpcf7 input:hover[type="submit"] {
+    background: #E7DCD1;
+    color: #990F0F;
+}
+
+.wpcf7 input:active[type="submit"] {
+    background: #1A1919;
+}
 
 /* ------------------------ Om KKV ------------------------ */
 
@@ -405,11 +658,11 @@ i.icon {
     display: flex;
     flex-direction: column;
     width: 75%;
-    margin: 32px 72px 32px 72px;
+    margin: 0 72px 32px 72px;
 }
 
 .aboutText h1 {
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
@@ -420,7 +673,7 @@ i.icon {
 }
 
 .aboutText p {
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -429,7 +682,7 @@ i.icon {
 }
 
 .aboutText li {
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -457,50 +710,27 @@ i.icon {
 }
 
 .verkstadskort {
+    display: flex;
     width: 48%;
-    height: fit-content;
     flex-direction: column;
     background-color: #E7DCD1;
-    display: flex;
-    justify-content: flex-start;
     border-radius: 4px;
     padding: 2em;
     margin: 0.5em;
 }
 
 
-.verkstaderMain {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 4.5em 0 4.5em;
-}
-
-.verkstaderContainerCol1 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.verkstaderContainerCol2 {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    align-items: flex-start;
-    justify-content: flex-end;
-}
-
 /* ----- städer dropdown ----- */
 
 .morecities {
     width: 200px;
+    height: 48px;
     color:#F5F5F5;    
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    padding: 0.5em 1em;
+    padding: 0.3em 1em;
     border: 1px solid #F5F5F5;
     background-color: #1A1919;
 }
@@ -515,13 +745,14 @@ i.icon {
 
 .dropdown select {
     width: 200px;
+    height: 48px;
     color:#F5F5F5;    
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    padding: 0.5em;
-    margin-right: 1em;
+    padding: 0.6em;
+    margin-right: 0;
     border: 1px solid #F5F5F5;
     background-color: #1A1919;
   }
@@ -530,7 +761,7 @@ i.icon {
       margin-right: 0.5em;
   }
   .dropdown input {
-    width: 50%;
+    width: 100px;
     color: #F5F5F5;    
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -544,12 +775,10 @@ i.icon {
 
   /* ----- Single verkstad ----- */
 
-.singleVerkstadMain {
+.mainBeige {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     margin: 72px 72px 0 72px;
-    padding: 3em;
     background: #E7DCD1;
     border-radius: 4px;
 }
@@ -583,7 +812,7 @@ i.icon {
 }
 
 
-.singleVerkstadContactItems {
+.contactItems {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -592,9 +821,9 @@ i.icon {
     padding: 0;
 }
 
-.singleVerkstadContactItems a {
+.contactItems a {
     text-decoration: none;
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -602,39 +831,16 @@ i.icon {
     color: #0A0A0A;
 }
 
-.singleVerkstadRubrik {
-    color: #990F0F;    
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 48px;
-    border-bottom: 3px solid #990F0F;
-    margin-bottom: 1em;
-    padding-bottom: 0.3em;
-}
-
-.singleVerkstadRubrik a{    
-    text-decoration: none;
-    color: #990F0F;
-}
-
 .singleVerkstadImg {
     display: flex;
     position: relative;
     overflow: hidden;
     width: 100%;
-    border: 1px solid #990F0F;
 }
 
-/* .singleVerkstadImg:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  } */
-
   .singleVerkstadImg img {
-    object-fit: cover;
+    object-fit: scale-down;
+    width: -webkit-fill-available;
   }
 
 p {
@@ -660,6 +866,10 @@ p {
 
 .spacer {
     height: 32px;
+}
+
+.spacer1em {
+    height: 1em;
 }
 
 .contactBox {
@@ -693,351 +903,4 @@ p {
 .verkstadsTaggar a:hover {
     background-color: #990F0F;
     color: #E7DCD1;
-}
-
-
-/* ------------------------ Tablet ------------------------ */
-
-
-@media only screen and (max-width: 1080px) {
-
-    .frontpageContainer {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 80vh;
-        padding: 0 32px;
-        margin-top: 48px;
-    }
-
-    .frontpageTitle {
-        font-weight: 700;
-        font-style: normal;
-        font-size: 36px!important;
-        line-height: 46px;
-        margin-top: 96px;
-        color: #990F0F;
-    }
-
-    .frontpageSubtitle {
-        font-weight: 400;
-        font-style: normal;
-        font-size: 32px!important;
-        line-height: 42px;
-        margin-bottom: 16px;
-        color: #990F0F;
-    }
-
-    .frontpageContainerTitle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 40%;
-    }
-
-    .menu a { 
-        color:#F5F5F5;    
-        font-family: 'Open Sans', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 36px;
-        margin-right: 0.5em;
-        margin-left: 0.5em;
-    }
-
-    div.header-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-content: center;
-        color: white;
-        padding: 15px;
-        width: 100%;
-    }
-
-}
-
-
-/* ------------------------ Mobil ------------------------ */
-
-
-@media only screen and (max-width: 690px)  {
-
-
-    .main {
-        margin: 0 16px 0 16px;
-    }
-
-    hr {
-        display: none;
-    }
-
-    .frontpageContainer {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 70vh;
-        padding: 0 32px;
-        margin-top: 0;
-    }
-
-    .frontpageTitle {
-        font-weight: 700;
-        font-style: normal;
-        font-size: 32px!important;
-        line-height: 46px;
-        margin-top: 96px;
-        color: #990F0F;
-    }
-    
-    .frontpageSubtitle {
-        font-weight: 400;
-        font-style: normal;
-        font-size: 24px!important;
-        line-height: 34px;
-        margin-bottom: 16px;
-        color: #990F0F;
-    }
-
-    .frontpageContainerMapText {
-        display: flex;
-        width: 0%;
-        align-items: center;
-    }
-
-    .map {
-        width: 80%;
-    }
-
-    .frontpageCities {
-        color: #E7DCD1;
-        font-size: 16px;
-        line-height: 28px;
-        font-weight: 400;
-        white-space: pre-line;
-    }
-
-/* ------------------------ Verkstäder titlar mobil ------------------------  */
-
-    .heroTitleContainer {
-        display: flex;
-        width: 100%;
-        height: 30vh;
-        padding: 0 32px;
-    }
-
-
-    .heroTitle {
-        white-space: nowrap;
-        font-weight: 600;
-        font-style: normal;
-        font-size: 32px!important;
-        line-height: 44px;
-        margin-bottom: 16px;
-        color: #E7DCD1;
-    }
-    
-    i.icon {
-        font-size: 1.4rem;
-    }
-
-    .topHeader {
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0 16px 0 16px;
-        left: 0;
-        right: 0;
-        border-bottom: 0.5px solid #990F0F;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        background-color: #0A0A0A!important;
-        max-width: 100%;
-        position: fixed!important;
-        height: 72px!important;
-        overflow: hidden;
-        z-index: 99;
-    }
-
-    .lineRed { 
-        width: 80vw;
-        border-top: 4px solid #990F0F;
-        margin-bottom: 32px;
-    }
-
-    #headernavitems {
-        display: none;
-    }
-
-    div.header-form {
-        display: none;
-    }
-
-    .medlem {
-        text-align: center;
-        background-color: #990F0F;
-        width: 8em;
-        border-radius: 8px;
-    }
-
-    img.mobileLogo {
-        z-index: 101;
-        position: relative;
-        left: 16px;
-        object-fit: cover;
-   }
-
-    #menu-primary-menu-1 {
-        padding-left: 0!important;
-    }
-
-    .menu {
-        padding-left: 0!important;
-    }
-
-
-    /* Meny som slide:ar ut */
-
-    #sidebarMenu {
-        display: flex;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        padding-top: 100px;
-        transform: translatex(-100%);
-        transition: transform 250ms ease-in-out;
-        background: #1A1919;
-        box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-        z-index: 0;
-    }
-    
-    .sidebarMenuInner{
-        display:block!important;
-        margin: 16px;
-        padding: 16px;
-        width: 250px;
-    }
-    .sidebarMenuInner li{
-        list-style: none;
-        color: #F5F5F5;
-        text-transform: uppercase;
-        font-weight: 400;
-        padding: 0.7em;
-        cursor: pointer;
-        margin-right: 16px;
-    }
-
-    .sidebarMenuInner li a{
-        text-align: center;
-        font-size: 2.45vh;
-        color: #F5F5F5;
-        text-transform: uppercase;
-        font-weight: 400;
-        cursor: pointer;
-        text-decoration: none;
-        margin-right: 0.5em;
-        margin-left: 0.5em;
-    }
-
-    .secondMenu li a{
-        font-size: 2vh;
-        font-weight: 300;
-    }
-
-    .mobileInput[type="checkbox"]:checked ~ #sidebarMenu {
-        transform: translateX(0);
-    }
-
-    .mobileInput[type=checkbox] {
-        transition: all 0.3s;
-        box-sizing: border-box;
-        display: none;
-    }
-
-    .fa-search:before{
-        display: none;
-    }
-
-    .cornerSquare {
-        height: 60px;
-        width: 60px;
-        position: absolute;
-        top:0;
-        right:0;
-        z-index: 99;
-    }
-    .sidebarIconToggle {
-        transition: all 0.3s;
-        box-sizing: border-box;
-        cursor: pointer;
-        position: absolute;
-        z-index: 99;
-        top: 12px;
-        right: 20px;
-        height: 22px;
-        width: 22px;
-    }
-
-    /* Hamburger  */
-
-    .menyText {
-        display: block;
-        color: #F5F5F5;
-        position: relative;
-        right: 8px;
-        margin-bottom: 4px;
-    }
-
-    .spinner {
-        transition: all 0.3s;
-        box-sizing: border-box;
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background: #F5F5F5;
-        border-radius: 4px;
-    }
-
-    .horizontal {
-        transition: all 0.3s;
-        box-sizing: border-box;
-        position: relative;
-        float: left;
-        margin-top: 5px;
-        border-radius: 4px;
-    }
-    .diagonal.part-1 {
-        position: relative;
-        transition: all 0.3s;
-        box-sizing: border-box;
-        float: left;
-        border-radius: 4px;
-    }
-    .diagonal.part-2 {
-        transition: all 0.3s;
-        box-sizing: border-box;
-        position: relative;
-        float: left;
-        margin-top: 4px;
-        border-radius: 4px;
-    }
-    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
-        transition: all 0.3s;
-        box-sizing: border-box;
-        opacity: 0;
-    }
-    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
-        transition: all 0.3s;
-        box-sizing: border-box;
-        transform: rotate(135deg);
-        margin-top: 8px;
-    }
-    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
-        transition: all 0.3s;
-        box-sizing: border-box;
-        transform: rotate(-135deg);
-        margin-top: -9px;
-    }
 }

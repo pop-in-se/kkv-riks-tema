@@ -1,17 +1,16 @@
 <?php get_header() ?>
 
-<div class="heroTitleContainer">
-    <div class="heroTitleContainerCol1">
-      <h1 class="heroTitle"><i class="far fa-eye icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
-    <div class="pageLineRed"></div>
+<div class="mrl4 h30vh hero">
+    <div class="col1 alignBottom">
+    <h1 class="heroTitle"><i class="far fa-eye icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
+        <div class="pageLineRed"></div>
     </div>
-    <div class="heroTitleContainerCol2">
-    <div class="pageLineBeige"></div>  
+    <div class="col2 alignBottom">
+        <div class="pageLineBeige"></div>  
     </div>
-
 </div>
 
-<div class="aktuelltMain">
+<div class="main column mt2">
 
 <?php  
     $args = array(
@@ -27,11 +26,16 @@
     if ($post_query->have_posts() ) :
         while ( $post_query->have_posts() ) : $post_query->the_post(); ?>
 
-    <div class="aktuelltFull">
+    <div class="aktuelltKort">
         
-            <a href="<?php echo esc_url( the_guid() ); ?>" class="frontpageCities"><h1 class="singleVerkstadRubrik"><?php the_title() ?></h1></a>
-            <p><?php the_content() ?></p>
-            <?php the_author() ?>
+    <h1 class="rubrikBorderBottom"> 
+        <a href="<?php echo esc_url( the_guid() ); ?>" ><?php the_title() ?></a>
+    </h1>
+            <p><?php 
+            $excerpt = get_the_excerpt();
+            echo wp_trim_words($excerpt, 15) ?></p>
+            <div class="spacer1em"></div>
+            <p>Skrivet av: <?php the_author() ?> </p>
            
     </div>                      
                             
@@ -43,7 +47,5 @@
     ?>
 
 </div>
-
-<?php wp_footer()?>
 
 <?php get_footer() ?>

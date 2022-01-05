@@ -2,7 +2,15 @@
 
 
 function load_styles() {
-    wp_register_style('style', get_stylesheet_directory_uri(). '/css/mainstyle.css', array(), "", false);
+    wp_register_style( 'kkv-riks-main',  get_template_directory_uri() .'/css/mainstyle.css', array(), null, 'all' );
+    wp_register_style( 'kkv-riks-mobile',  get_template_directory_uri() .'/css/mobile.css', array(), null, 'all' );
+    wp_register_style( 'kkv-riks-tablet', get_template_directory_uri(), '/css/tablet.css', array(), null, 'all' );
+    wp_register_style( 'kkv-riks-forum', get_template_directory_uri(), '/css/forum.css', array(), null, 'all' );
+    wp_enqueue_style( 'kkv-riks-main' );
+    wp_enqueue_style( 'kkv-riks-mobile' );
+    wp_enqueue_style( 'kkv-riks-tablet' );
+    wp_enqueue_style( 'kkv-riks-forum' );
+
     wp_register_script('gallery-script', get_template_directory_uri() . '/js/magicgrid.js');
     wp_enqueue_script('gallery-script');
     wp_enqueue_script( 'my-scripts', get_stylesheet_directory_uri() . '/js/script.js', array('jquery'), 'NULL', true );
@@ -17,6 +25,35 @@ function load_styles() {
 function register_my_menu(){
     register_nav_menu( 'huvudmeny', 'Meny toppen av sidan');
     register_nav_menu( 'startsida_lankar', 'Länkar på startsidan');
+    register_nav_menu( 'sidfotsmeny', 'Länkar i sidfoten');
+}
+
+//Lägger till extra fält i forum
+add_action ( 'bbp_new_topic', 'bbp_save_extra_fields', 10, 1 );
+add_action ( 'bbp_edit_topic', 'bbp_save_extra_fields', 10, 1 );
+
+
+add_action ( 'bbp_theme_before_topic_form_content', 'bbp_extra_fields');
+function bbp_extra_fields() {
+   $value = get_post_meta( bbp_get_topic_id(), 'bbp_extra_field1', true);
+   echo '<label for="bbp_extra_field1">Pris</label><br>';
+   echo "<input type='text' name='bbp_extra_field1' value='".$value."'>";
+}
+
+function bbp_save_extra_fields($topic_id=0) {
+    if (isset($_POST) && $_POST['bbp_extra_field1']!='')
+      update_post_meta( $topic_id, 'bbp_extra_field1', $_POST['bbp_extra_field1'] );
+  }
+  
+add_action('bbp_theme_before_reply_content', 'bbp_show_extra_fields');
+function bbp_show_extra_fields() {
+$itemTitle = bbp_get_topic_title();
+  $topic_id = bbp_get_topic_id();
+  $price = get_post_meta( $topic_id, 'bbp_extra_field1', true);
+  echo "<p>".$itemTitle."</p>";
+  if ( $price )
+  echo "<p>"."Pris: ".$price."<br>"."</p>";
+  else echo "";
 }
 
     
@@ -106,31 +143,18 @@ function destinationTags() {
     return $output;
 }
 
+// Tags loop
 
-//Custom Gutenberg font size
-add_theme_support( 'editor-font-sizes', array(
-    array(
-        'name' => esc_attr__( 'Brödtext ', 'kkv-riks-tema' ),
-        'size' => 18,
-        'line-height' => 32,
-        'slug' => 'hgt-paragraph'
-    ),
-    array(
-        'name' => esc_attr__( 'Rubrik', 'kkv-riks-tema' ),
-        'size' => 36,
-        'slug' => 'hgt-medium'
-    ),
-    array(
-        'name' => esc_attr__( 'Titel', 'kkv-riks-tema' ),
-        'size' => 48,
-        'slug' => 'hgt-large'
-    ),
-    array(
-        'name' => esc_attr__( 'HeroTitle', 'kkv-riks-tema' ),
-        'size' => 64,
-        'slug' => 'hgt-x-large'
-    )
-) );
+function wpse28145_add_custom_types( $query ) {
+    if( is_tag() && $query->is_main_query() ) {
+
+        $post_types = array( 'post', 'verkstad' );
+
+        $query->set( 'post_type', $post_types );
+    }
+}
+add_filter( 'pre_get_posts', 'wpse28145_add_custom_types' );
+
 
 /**
  * Font Awesome CDN Setup Webfont
