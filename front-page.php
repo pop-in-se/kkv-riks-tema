@@ -36,17 +36,37 @@
         </ul>
     </div>                      
                             
-    <?php    
-    endwhile;
-    else :
-        _e( 'Sorry, no posts were found.', 'textdomain' );
-    endif;
-    ?>
+    <?php endwhile; else : ?>
+        <p><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+    <?php endif; ?>
 
         </div>
     </div>
 
 </div>
+
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+    <div class="colFull mrl2 mt4 frontpageText column" >
+ 
+    <?php  the_content() ?> 
+
+        <a href="<?php
+                    $about_url = get_permalink('9');
+                    echo $about_url;
+                    ?>"> 
+                <p class="mt1"> Läs mer om KKV 
+        <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 1em;"></i>
+                </p>
+        </a>
+    </div>
+
+    <?php endwhile; else : ?>
+        <p><?php esc_html_e( 'Tyvärr, Inga inlägg matchade dina kriterier.' ); ?></p>
+    <?php endif; ?>
+
+
 
 <div class="colFull">
 

@@ -10,8 +10,50 @@
     </div>
 </div>
 
-<div class="main">
-<?php the_content() ?>
+
+<div class="colFull mrl4">
+    <div class="col1"></div>
+        <div class="col2 alignRight">
+
+        <?php if ( is_user_logged_in() ) { ?>
+       
+       <?php 
+        get_template_part('/templates/logged-in-template')
+        ?>
+
+    <?php } else { ?>
+    
+        <?php 
+        get_template_part('/templates/logged-out-template')
+        ?>
+    
+    <?php } ?>
+
+        </div>
+    </div>
+    
+    
+<div class="colFull br4 beige mrl4 mt2">
+
+    
+    <?php if ( is_user_logged_in() ) { ?>
+        
+        <?php 
+        get_template_part('/templates/logged-in-content-template')
+        ?>
+
+    <?php } else { ?>
+    
+        <?php 
+        get_template_part('/templates/logged-out-content-template')
+        ?>
+    
+    <?php } ?>
+
+    
+    </div>
+
+
 </div>
 
 <?php get_footer() ?>

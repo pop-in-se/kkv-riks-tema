@@ -3,7 +3,7 @@
 
 <div class="hero mrl4 h30vh">
     <div class="col1 alignBottom">
-    <h1 class="heroTitle">Etikett: <?php single_tag_title() ?></h1>
+    <h1 class="heroTitle"> <?php single_tag_title() ?></h1>
         <div class="pageLineRed"></div>
     </div>
     <div class="col2 alignBottom">
@@ -18,7 +18,7 @@
                 $verkstader_url = get_permalink('13');
                 echo $verkstader_url;
                 ?>"> 
-        <p class="moreCities"><i class="fas fa-chevron-left" style="font-size: 1rem; margin-right: 1em;"></i>Alla verkstäder</p></a>
+        <p class="knappSvart"><i class="fas fa-chevron-left" style="font-size: 1rem; margin-right: 1em;"></i>Alla verkstäder</p></a>
     </div>
     
         

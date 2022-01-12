@@ -5,19 +5,12 @@ function load_styles() {
     wp_register_style( 'kkv-riks-main',  get_template_directory_uri() .'/css/mainstyle.css', array(), null, 'all' );
     wp_register_style( 'kkv-riks-mobile',  get_template_directory_uri() .'/css/mobile.css', array(), null, 'all' );
     wp_register_style( 'kkv-riks-tablet', get_template_directory_uri(), '/css/tablet.css', array(), null, 'all' );
-    wp_register_style( 'kkv-riks-forum', get_template_directory_uri(), '/css/forum.css', array(), null, 'all' );
+    wp_register_style( 'kkv-riks-forum', get_template_directory_uri(), '/css/forumstyle.css', array(), null, 'all' );
     wp_enqueue_style( 'kkv-riks-main' );
     wp_enqueue_style( 'kkv-riks-mobile' );
     wp_enqueue_style( 'kkv-riks-tablet' );
     wp_enqueue_style( 'kkv-riks-forum' );
 
-    wp_register_script('gallery-script', get_template_directory_uri() . '/js/magicgrid.js');
-    wp_enqueue_script('gallery-script');
-    wp_enqueue_script( 'my-scripts', get_stylesheet_directory_uri() . '/js/script.js', array('jquery'), 'NULL', true );
-    wp_localize_script('my-scripts', 'wpAjax', 
-        array('ajaxUrl' => admin_url('admin-ajax.php'))
-
-);
     wp_enqueue_style( 'style' );
 }
 
@@ -28,6 +21,18 @@ function register_my_menu(){
     register_nav_menu( 'sidfotsmeny', 'Länkar i sidfoten');
 }
 
+//Kryptera mailadresser
+add_filter( 'acf/load_value', 'eae_encode_emails' );
+
+//Forum inläggstitel längd
+
+add_filter ('bbp_get_title_max_length','kkv_change_title') ;
+
+Function kkv_change_title ($default) {
+$default=60 ;
+return $default ;
+}
+
 //Lägger till extra fält i forum
 add_action ( 'bbp_new_topic', 'bbp_save_extra_fields', 10, 1 );
 add_action ( 'bbp_edit_topic', 'bbp_save_extra_fields', 10, 1 );
@@ -36,23 +41,33 @@ add_action ( 'bbp_edit_topic', 'bbp_save_extra_fields', 10, 1 );
 add_action ( 'bbp_theme_before_topic_form_content', 'bbp_extra_fields');
 function bbp_extra_fields() {
    $value = get_post_meta( bbp_get_topic_id(), 'bbp_extra_field1', true);
-   echo '<label for="bbp_extra_field1">Pris</label><br>';
+   echo '<label>'."Extra fält för köp / Sälj".'</label>'.'<br>';
+   echo '<label for="bbp_extra_field1">Produkt:</label><br>';
    echo "<input type='text' name='bbp_extra_field1' value='".$value."'>";
+
+   $value = get_post_meta( bbp_get_topic_id(), 'bbp_extra_field2', true);
+   echo '<br><label for="bbp_extra_field1">Pris:</label><br>';
+   echo "<input type='text' name='bbp_extra_field2' value='".$value."'>";
 }
 
 function bbp_save_extra_fields($topic_id=0) {
     if (isset($_POST) && $_POST['bbp_extra_field1']!='')
-      update_post_meta( $topic_id, 'bbp_extra_field1', $_POST['bbp_extra_field1'] );
-  }
+    update_post_meta( $topic_id, 'bbp_extra_field1', $_POST['bbp_extra_field1'] );
+    if (isset($_POST) && $_POST['bbp_extra_field2']!='')
+    update_post_meta( $topic_id, 'bbp_extra_field2', $_POST['bbp_extra_field2'] );
+}
   
 add_action('bbp_theme_before_reply_content', 'bbp_show_extra_fields');
 function bbp_show_extra_fields() {
 $itemTitle = bbp_get_topic_title();
   $topic_id = bbp_get_topic_id();
-  $price = get_post_meta( $topic_id, 'bbp_extra_field1', true);
-  echo "<p>".$itemTitle."</p>";
+  $produkt = get_post_meta( $topic_id, 'bbp_extra_field1', true);
+  $price = get_post_meta( $topic_id, 'bbp_extra_field2', true);
+  if ( $produkt )
+  echo "<div class='extraField'>"."Produkt: ".$produkt."<br>"."</div>";
+  else echo "";
   if ( $price )
-  echo "<p>"."Pris: ".$price."<br>"."</p>";
+  echo "<div class='extraField'>"."Pris: ".$price."<br>"."</div>";
   else echo "";
 }
 
@@ -88,7 +103,7 @@ function post_type_verkstad() {
             'show_in_nav_menus'   => true,
             'show_in_admin_bar'   => true,
             'menu_position'       => 4,
-            'menu_icon'           => 'dashicons-admin-customizer',
+            'menu_icon'           => 'dashicons-marker',
             'can_export'          => true,
             'has_archive'         => true,
             'exclude_from_search' => false,
@@ -101,51 +116,9 @@ function post_type_verkstad() {
 }
 
 
-function acfBlocks() {
-
-    if( function_exists('acf_register_block_type') ) {
-        
-        acf_register_block_type(array(
-            'name'              => 'destinationgallery',
-            'title'             => __('Destination gallery'),
-            'description'       => __('A custom ACF block.'),
-            'render_template'   => '/blocks/destination-gallery.php',
-            'category'          => 'formatting',
-            'icon'              => 'admin-comments',
-        ));
-        
-        acf_register_block_type(array(
-            'name'              => 'destination-accordion',
-            'title'             => __('Destination accordion'),
-            'description'       => __('A custom accordion block.'),
-            'render_template'   => '/blocks/destination-accordion.php',
-            'icon'              => 'admin-comments',
-            'keywords'          => array( 'accordion', 'info' ),
-        ));
-
-        acf_register_block_type(array(
-            'name'              => 'social-media',
-            'title'             => __('Social media'),
-            'description'       => __('A custom accordion block.'),
-            'render_template'   => '/blocks/social-media-block.php',
-            'icon'              => 'admin-comments',
-            'keywords'          => array( 'social media', 'contact' ),
-        ));
-
-    }
-}
-
-
-function destinationTags() {
-    ob_start();
-    get_template_part('/templates/destination-tags');
-    $output = ob_get_clean();
-    return $output;
-}
-
 // Tags loop
 
-function wpse28145_add_custom_types( $query ) {
+function tagloop_add_custom_types( $query ) {
     if( is_tag() && $query->is_main_query() ) {
 
         $post_types = array( 'post', 'verkstad' );
@@ -153,7 +126,7 @@ function wpse28145_add_custom_types( $query ) {
         $query->set( 'post_type', $post_types );
     }
 }
-add_filter( 'pre_get_posts', 'wpse28145_add_custom_types' );
+add_filter( 'pre_get_posts', 'tagloop_add_custom_types' );
 
 
 /**

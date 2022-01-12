@@ -39,12 +39,9 @@
            
     </div>                      
                             
-    <?php    
-    endwhile;
-    else :
-        _e( 'Sorry, no posts were found.', 'textdomain' );
-    endif;
-    ?>
+    <?php endwhile; else : ?>
+        <p><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+    <?php endif; ?>
 
 </div>
 

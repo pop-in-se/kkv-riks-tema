@@ -1,6 +1,6 @@
 
 <?php
-// Load values and assign defaults.
+// ACF fields.
 $verkstadInfo = get_field('verkstads_info');
 $namn = $verkstadInfo['verkstadens_namn'];
 $adress = $verkstadInfo['adress'];
@@ -12,6 +12,12 @@ $omVerkstaden = $verkstadInfo['text_om_verkstaden'];
 $bild = get_the_post_thumbnail();
 ?>
 
+<?php
+
+if ( function_exists( 'eae_encode_emails' ) )  {
+    add_filter( 'acf/load_value', 'eae_encode_emails' );
+}
+?>
 
 <h1 class="rubrikBorderBottom"> 
 <a href="<?php echo esc_url( the_guid() ); ?>"><?php echo $namn; ?></a>

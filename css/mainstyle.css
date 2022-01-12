@@ -37,8 +37,54 @@ body {
     color: #990F0F;
 }
 
+button {
+    color: #E7DCD1;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background: #990F0F;
+    padding: 8px;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    width: fit-content;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
-/* ------------------------ Desktop ------------------------ */
+input[type="submit" i] {
+    color: #E7DCD1;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background: #990F0F;
+    padding: 8px;
+    margin: 0;
+    border: none;
+    border-radius: 0px;
+    width: fit-content;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input:active[type="submit"] {
+    background: #1A1919!important;
+}
+
+input[type="text"],
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
+    background-color: #F5F5F5;
+    margin: 0.6em 0 1em 0;
+    border: none;
+}
+
+/* ------------------------ Knappar ------------------------ */
 
 .knapp {
     display: inline-block;
@@ -62,12 +108,63 @@ body {
     background-color: #E7DCD1;
 }
 
+.knappSvart {
+    width: fit-content;
+    white-space: nowrap;
+    height: 48px;
+    color:#F5F5F5;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0.3em 1em;
+    border: 1px solid #F5F5F5;
+    background-color: #1A1919;
+}
+
+.knappSvart a {
+    text-decoration: none;
+}
+
+/* ------------------------ Extra fält forum ------------------------ */
+
+.extraField {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #990F0F;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em 0.5em 0.25em 0.5em;
+    border-radius: 3px;
+    border: 1px solid #990F0F;
+    box-sizing: border-box;
+    background-color: #e7dcd175;
+}
+
+/* ------------------------ Designsystem ------------------------ */
+
+/* p a {
+    font-size: 1.4vh;
+    line-height: 2.4vh;
+} */
+
 .flex {
     display: flex;
 }
 
 .colFull {
     display: flex;
+}
+
+.colFull a{
+    text-decoration: none;
 }
 
 .col1 {
@@ -151,10 +248,19 @@ body {
     margin-right: 1em;
 }
 
+.ml1 {
+    margin-left: 1em;
+}
+
 /* margin right left 72 px*/
 .mrl4 {
     margin-right: 4.5em;
     margin-left: 4.5em;
+}
+
+.mrl2 {
+    margin-right: 2em;
+    margin-left: 2em;
 }
 
 .pb2 {
@@ -167,6 +273,11 @@ body {
 
 .p3 {
     padding: 3em;
+}
+
+.plr1 {
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .plr2 {
@@ -196,8 +307,9 @@ body {
 }
 
 .h30vh {
-    height: 30vh;
+    height: 15vh;
 }
+
 
 .beige {
     background: #E7DCD1;
@@ -207,6 +319,32 @@ body {
     border-bottom: 1px dashed #990F0F;
 }
 
+/* ------------------------ Typografi ------------------------ */
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.75em;
+    margin-bottom: 0.25em;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-bottom: 0.25em;
+}
+
+h3 a {
+    color: #990F0F;
+}
+
+
+/* ------------------------ Frontpage ------------------------ */
+
+ 
 .frontpageContainer {
     display: flex;
     width: 100%;
@@ -335,10 +473,26 @@ body {
 .frontpageTitle {
     font-weight: 700;
     font-style: normal;
-    font-size: 64px!important;
-    line-height: 80px;
+    font-size: 48px!important;
+    line-height: 64px;
     margin-top: 108px;
     color: #990F0F;
+}
+
+.frontpageText {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px!important;
+    line-height: 40px;
+    color: #E7DCD1;
+}
+
+.frontpageText p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px!important;
+    line-height: 44px;
+    color: #E7DCD1;
 }
 
 .frontpageSubtitle {
@@ -367,6 +521,32 @@ body {
     line-height: 2em;
 }
 
+.menu-inloggad-container  {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#menu-inloggad {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+
+.menu-inloggad-container .menu a {
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.inloggad {
+    text-align: center;
+    background-color: #990F0F;
+    width: 8em;
+    border-radius: 8px;
+}
+
 /* ------------------------ Header ------------------------ */
 
 .topHeader {
@@ -389,10 +569,18 @@ body {
 display: none;
 }
 
+.medlemMeta  {
+    background-color: #FBFBFB;
+    border-radius: 8px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
 .medlem {
     text-align: center;
     background-color: #990F0F;
-    width: 7em;
+    width: fit-content;
     border-radius: 8px;
 }
 
@@ -545,8 +733,32 @@ i.icon {
     color: #990F0F;
 }
 
+/* ------------------------ Profile ------------------------ */
+
+.pp-form-wrapper.ppress-default-profile .ppress-dpf-profile-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: none;
+    background: none;
+    border: 0;
+}
+
+.pp-form-container .pp-form-wrapper.ppBuildScratch.ppsbl-pill .pp-form-submit-button-wrap input[type=submit] {
+    border-radius: 8px!important;
+    margin-top: 1em;
+}
+
 /* ------------------------ Forum ------------------------ */
 
+#bbpress-forums div.bsp-forum-content {
+    clear: both;
+    margin-left: 0px;
+    padding: 1em 0 1em 0;
+}
 
 #bbpress-forums {
     background: 0 0;
@@ -577,14 +789,14 @@ i.icon {
 }
 
 
-/* .bbp-forum-title a {
+.bbp-forum-title {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-} */
+}
 
 .div.bbp-template-notice.info {
     background-color: #F5F5F5;
@@ -717,23 +929,13 @@ textarea {
     border-radius: 4px;
     padding: 2em;
     margin: 0.5em;
+    overflow-y: hidden;
 }
 
 
 /* ----- städer dropdown ----- */
 
-.morecities {
-    width: 200px;
-    height: 48px;
-    color:#F5F5F5;    
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    padding: 0.3em 1em;
-    border: 1px solid #F5F5F5;
-    background-color: #1A1919;
-}
+
 .cityDropdown {
     display: flex;
     margin-bottom: 3em;
@@ -744,7 +946,7 @@ textarea {
 }
 
 .dropdown select {
-    width: 200px;
+    width: 190px;
     height: 48px;
     color:#F5F5F5;    
     font-family: 'Open Sans', sans-serif;
@@ -760,7 +962,21 @@ textarea {
   .dropdown select label {
       margin-right: 0.5em;
   }
+
   .dropdown input {
+    width: 100px;
+    color: #F5F5F5;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0.5em;
+    cursor: pointer;
+    border: 1px solid #F5F5F5;
+    background-color: #1A1919;
+  }
+
+  .dropdown input[type="submit" i] {
     width: 100px;
     color: #F5F5F5;    
     font-family: 'Open Sans', sans-serif;
@@ -829,6 +1045,7 @@ textarea {
     font-size: 18px;
     line-height: 32px;
     color: #0A0A0A;
+    overflow: hidden;
 }
 
 .singleVerkstadImg {

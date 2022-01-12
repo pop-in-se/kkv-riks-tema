@@ -1,8 +1,15 @@
 <?php get_header() ?>
 
-<div class="hero heroHeight">
-    <div class="col1"></div>
-    <div class="col2"></div>
+<div class="mrl4 hero h30vh">
+    <div class="col1 alignBottom">
+    <a href="<?php
+                $aktuellt_url = get_permalink('11');
+                echo $aktuellt_url;
+                ?>"> 
+        <p class="knappSvart"><i class="fas fa-chevron-left" style="font-size: 1rem; margin-right: 1em;"></i>Till aktuellt</p></div>
+    </a>
+    </div>
+    <div class="col2 alignBottom"></div>
 </div>
 
 
