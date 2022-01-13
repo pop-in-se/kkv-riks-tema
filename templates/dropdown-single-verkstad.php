@@ -4,7 +4,7 @@ $args = array(
         'post_type' => 'verkstad', 
         'orderby' => 'title',
         'order'   => 'ASC',
-        'show_option_none' => 'Byt stad',  
+        'show_option_none' => 'Byt ort',  
     );
         
     $post_query = new WP_Query($args); 

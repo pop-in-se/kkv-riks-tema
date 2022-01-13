@@ -1,7 +1,7 @@
 /* ------------------------ Tablet ------------------------ */
 
 
-@media (min-width: 1080px) {
+@media (max-width: 1080px) {
 
     .colFull {
         display: flex;
@@ -199,6 +199,10 @@
         font-weight: 300;
     }
 
+    .mobileInput {
+        display: block;
+    }
+    
     .mobileInput[type="checkbox"]:checked ~ #sidebarMenu {
         transform: translateX(0);
     }
@@ -222,6 +226,7 @@
         z-index: 99;
     }
     .sidebarIconToggle {
+        
         transition: all 0.3s;
         box-sizing: border-box;
         cursor: pointer;

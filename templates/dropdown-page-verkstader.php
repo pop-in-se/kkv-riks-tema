@@ -3,7 +3,7 @@
         'post_type' => 'verkstad', 
         'orderby' => 'title',
         'order'   => 'ASC',
-        'show_option_none' => 'Välj stad',  
+        'show_option_none' => 'Välj ort',  
     );
         
     $post_query = new WP_Query($args); 

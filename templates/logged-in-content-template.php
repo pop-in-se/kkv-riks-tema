@@ -11,7 +11,7 @@
         <p>Som medlem i KKV har du tillgång till </p>
         
 
-        <h3 class="mt1">Senaste inläggen i forumet:</h3>
+        <h3 class="mt1">Senaste inläggen:</h3>
 
         <?php if (current_user_can('manage_options')) : ?>
 			
@@ -32,7 +32,7 @@
 			
 			<div class="medlemMeta">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>    
-            <p><b>Forum: </b> <?php echo get_the_title($post->post_parent); ?><br><b>Postad av: </b> <?php the_author_posts_link(); ?> <br> 
+            <p><b>Forum: </b> <?php echo get_the_title($post->post_parent); ?><br>Postad av: <?php the_author(); ?> <br> 
 			<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j F, Y'); ?></time></p></div>	
 				
 			<?php endwhile; ?>
@@ -42,15 +42,33 @@
 			
 		<?php endif; ?>
 
+
+        <?php  
+        $blog_posts = new WP_Query( array( 'post_type' => 'post', 'post_status’' => 'publish', 'posts_per_page' => 1 ) );
+        ?>
+
+    <?php while ( $blog_posts->have_posts() ) : $blog_posts->the_post(); ?>
+
+        <div class="medlemMeta">
+        <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></h3>
+            <p><?php $excerpt = get_the_excerpt();
+            echo wp_trim_words($excerpt, 12) ?></p>
+            <div class="spacer1em"></div>
+            <p>Postad av: <?php the_author() ?> </p>
+        </div>
+
+    <?php endwhile; // end of the loop. ?>
+
         </div>
 
     </div>
 
     <div class="col2 pt2 pb2 ml1">
+
     <?php
         wp_nav_menu( array( 
-            'menu' => 'inloggad',
-            'theme_location' => 'inloggad', 
+            'menu' => 'medlemsmeny',
+            'theme_location' => 'medlemsmeny', 
             'container_class' => 'menu-inloggad-container',
             'before' => '<p class="inloggad colorWhite plr1 mb1 ml1">',
             'after' => "</p>", )

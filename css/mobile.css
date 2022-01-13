@@ -297,9 +297,8 @@
         color: #F5F5F5;
         text-transform: uppercase;
         font-weight: 400;
-        padding: 0.7em;
         cursor: pointer;
-        margin-right: 16px;
+        margin-right: 24px;
     }
 
     .sidebarMenuInner li a{
@@ -317,6 +316,10 @@
     .secondMenu li a{
         font-size: 2vh;
         font-weight: 300;
+    }
+
+    .mobileInput {
+        display: block;
     }
 
     .mobileInput[type="checkbox"]:checked ~ #sidebarMenu {
@@ -341,6 +344,7 @@
         right:0;
         z-index: 99;
     }
+
     .sidebarIconToggle {
         transition: all 0.3s;
         box-sizing: border-box;

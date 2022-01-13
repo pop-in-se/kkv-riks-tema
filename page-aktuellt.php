@@ -35,7 +35,7 @@
             $excerpt = get_the_excerpt();
             echo wp_trim_words($excerpt, 15) ?></p>
             <div class="spacer1em"></div>
-            <p>Skrivet av: <?php the_author() ?> </p>
+            <p>Postad av: <?php the_author() ?> </p>
            
     </div>                      
                             

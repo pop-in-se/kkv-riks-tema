@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="topHeader">
-    <div class="cornerSquare"></div>
+        <div class="cornerSquare"></div>
         <input type="checkbox" class="openSidebarMenu mobileInput" id="openSidebarMenu">
             <label for="openSidebarMenu" class="sidebarIconToggle">
                 <p class="menyText">Meny</p>
@@ -24,36 +24,21 @@
                 <img class="mobileLogo" src="<?php $imgId = 8; echo wp_get_attachment_image_url($imgId); ?>">
             </a>
         </div>
-            <div class="header-nav">
 
-                <div id="headernavitems" class="header-navitems">
-                    <?php
-                    $separatorTags = ' ';
-                    wp_nav_menu( array( 
-                        'menu' => 'huvudmeny', 
-                        'theme_location' => 'huvudmeny', 
-                        'container_class' => 'headerMenu',
-                        'before' => "",
-                        'after' => "", )
-                    ); 
-                    ?>
-                </div>
-            </div>
-             
-             <!-- Meny som slide:ar ut  -->
+        <?php if ( is_user_logged_in() ) { ?>
+       
+            <?php 
+             get_template_part('/templates/menu-logged-in-template')
+            ?> 
 
-            <div id="sidebarMenu">
-            <?php
-                    $separatorTags = ' ';
-                    wp_nav_menu( array( 
-                        'menu' => 'huvudmeny', 
-                        'theme_location' => 'huvudmeny', 
-                        'container_class' => 'sidebarMenuInner',
-                        'before' => "",
-                        'after' => "", )
-                    ); 
-            ?>
-                         
-      </div>    
+        <?php } else { ?>
+    
+            <?php 
+            get_template_part('/templates/menu-template')
+            ?> 
+    
+        <?php } ?>
+
+            
 
     </header>

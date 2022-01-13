@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -150,10 +149,6 @@ textarea {
 
 /* ------------------------ Designsystem ------------------------ */
 
-/* p a {
-    font-size: 1.4vh;
-    line-height: 2.4vh;
-} */
 
 .flex {
     display: flex;
@@ -342,9 +337,140 @@ h3 a {
 }
 
 
+/* ------------------------ Submenu ------------------------ */
+
+#submenu,
+#submenu ul,
+#submenu li,
+#submenu a {
+    border: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+#submenu {
+    height: 37px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+#submenu > ul {
+    list-style: inside none;
+    padding: 0;
+    margin: 0;
+}
+#submenu > ul > li {
+    list-style: inside none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    display: block;
+    position: relative;
+}
+#submenu > ul > li > a {
+    outline: none;
+    display: block;
+    position: relative;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #F5F5F5;  
+}
+
+#submenu > ul > li:first-child > a {
+    border-radius: 8px;
+}
+
+#submenu > ul > li > a:after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    right: -2px;
+    z-index: 99; 
+}
+
+#submenu ul li.has-sub:hover > a:after {
+    top: 0;
+    bottom: 0;
+}
+#submenu > ul > li.has-sub > a:before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 6px;
+    border: 5px solid transparent;
+}
+#submenu > ul > li.has-sub:hover > a:before {
+    top: 19px;
+}
+#submenu ul li.has-sub:hover > a {
+    background: #990F0F;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    top: -1px;
+    z-index: 999;
+}
+#submenu ul li.has-sub:hover > ul,
+#submenu ul li.has-sub:hover > div {
+    display: block;
+}
+#submenu ul li.has-sub > a:hover {
+    background: #990F0F;
+    border-color: #990F0F;
+    border-radius: 8px;
+}
+#submenu ul li > ul,
+#submenu ul li > div {
+    display: none;
+    width: auto;
+    position: absolute;
+    border-radius: 8px;
+    top: 38px;
+    padding: 10px 0;
+    background: #990F0F;
+    border-radius: 0 8px 8px 8px;
+    z-index: 999;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#submenu ul li > ul {
+    width: 140px;
+}
+#submenu ul li > ul li {
+    display: block;
+    list-style: inside none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+#submenu ul li > ul li a {
+    outline: none;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0.75em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    color: #F5F5F5;
+    text-decoration: none;
+    text-align: left;
+}
+#submenu ul ul a:hover {
+    color: #F5F5F5;
+}
+
+
 /* ------------------------ Frontpage ------------------------ */
 
- 
+
 .frontpageContainer {
     display: flex;
     width: 100%;
@@ -400,33 +526,33 @@ h3 a {
 .omkkvriks::before {
     word-break: break-word;
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f0eb";
-  }
+}
 
 .aktuellt::before {
     word-break: break-word;
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f06e";
-  }
+}
 
 
 .medlemmar::before {
     word-break: break-word;
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f118";
-  }
+}
 
 .verkstader::before {
     word-break: break-word;
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f192";
-  }
+}
 
 .kontakt::before {
     word-break: break-word;
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f0e0";
-  }
+}
 
 .forumblob::before {
     word-break: break-word;
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f27a";
-  }
+}
 
 .map {
     width: 100%;
@@ -530,14 +656,13 @@ h3 a {
 
 #menu-inloggad {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     white-space: nowrap;
 }
 
 .menu-inloggad-container .menu a {
     font-size: 1em;
-    line-height: 2em;
 }
 
 .inloggad {
@@ -545,6 +670,7 @@ h3 a {
     background-color: #990F0F;
     width: 8em;
     border-radius: 8px;
+    white-space: nowrap;
 }
 
 /* ------------------------ Header ------------------------ */
@@ -561,7 +687,6 @@ h3 a {
     border-bottom: 0.5px solid #990F0F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #0A0A0A!important;
-    overflow: hidden;
     z-index: 99;
 }
 
@@ -645,7 +770,7 @@ div.header-span {
 }
 
 .menu ul {
-    margin: 0.5em 0 0.85em 0;
+    margin: 0 0 0.85em -16px;
     list-style-type: none;
     list-style: none;
     display:inline-block;   
@@ -663,8 +788,7 @@ div.header-span {
     font-size: 24px;
     line-height: 46px;
     text-decoration: none;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
+
 }
 
 
@@ -957,13 +1081,13 @@ textarea {
     margin-right: 0;
     border: 1px solid #F5F5F5;
     background-color: #1A1919;
-  }
+}
 
-  .dropdown select label {
-      margin-right: 0.5em;
-  }
+.dropdown select label {
+    margin-right: 0.5em;
+}
 
-  .dropdown input {
+.dropdown input {
     width: 100px;
     color: #F5F5F5;    
     font-family: 'Open Sans', sans-serif;
@@ -974,9 +1098,9 @@ textarea {
     cursor: pointer;
     border: 1px solid #F5F5F5;
     background-color: #1A1919;
-  }
+}
 
-  .dropdown input[type="submit" i] {
+.dropdown input[type="submit" i] {
     width: 100px;
     color: #F5F5F5;    
     font-family: 'Open Sans', sans-serif;
@@ -987,9 +1111,9 @@ textarea {
     cursor: pointer;
     border: 1px solid #F5F5F5;
     background-color: #1A1919;
-  }
+}
 
-  /* ----- Single verkstad ----- */
+/* ----- Single verkstad ----- */
 
 .mainBeige {
     display: flex;
@@ -1042,10 +1166,16 @@ textarea {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 32px;
     color: #0A0A0A;
     overflow: hidden;
+}
+
+.contactItems p {
+    font-size: 16px;
+    line-height: 32px;
+    color: #0A0A0A;
 }
 
 .singleVerkstadImg {
@@ -1055,10 +1185,10 @@ textarea {
     width: 100%;
 }
 
-  .singleVerkstadImg img {
+.singleVerkstadImg img {
     object-fit: scale-down;
     width: -webkit-fill-available;
-  }
+}
 
 p {
     color: #0A0A0A;
@@ -1121,3 +1251,4 @@ p {
     background-color: #990F0F;
     color: #E7DCD1;
 }
+
