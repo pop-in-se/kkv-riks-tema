@@ -68,8 +68,8 @@
     .frontpageSubtitle {
         font-weight: 400;
         font-style: normal;
-        font-size: 32px!important;
-        line-height: 42px;
+        font-size: 28px!important;
+        line-height: 34px;
         margin-bottom: 16px;
         color: #990F0F;
     }
@@ -202,7 +202,7 @@
     .mobileInput {
         display: block;
     }
-    
+
     .mobileInput[type="checkbox"]:checked ~ #sidebarMenu {
         transform: translateX(0);
     }

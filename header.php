@@ -25,20 +25,10 @@
             </a>
         </div>
 
-        <?php if ( is_user_logged_in() ) { ?>
-       
-            <?php 
-             get_template_part('/templates/menu-logged-in-template')
-            ?> 
+       <!-- Meny -->
 
-        <?php } else { ?>
-    
             <?php 
             get_template_part('/templates/menu-template')
-            ?> 
-    
-        <?php } ?>
-
-            
+            ?>             
 
     </header>

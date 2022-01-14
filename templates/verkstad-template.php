@@ -9,7 +9,9 @@ $epost = $verkstadInfo['e-post'];
 $telefon = $verkstadInfo['telefon'];
 $kontaktperson = $verkstadInfo['kontaktperson'];
 $omVerkstaden = $verkstadInfo['text_om_verkstaden'];
-$bild = get_the_post_thumbnail();
+$beskrivning = $verkstadInfo['beskrivning'];
+$bild = $verkstadInfo['bild'];
+$taggar = $verkstadInfo['taggar'];
 ?>
 
 <?php
@@ -61,13 +63,13 @@ if ( function_exists( 'eae_encode_emails' ) )  {
         <div class="colFull dashedBottom pb2 mb2" >
     
         <div class="col1 mb2">
-        <p><?php the_content() ?></p>
+        <p><?php echo $beskrivning?></p>
         </div>
         <div class="col2">
             <?php if( $bild ): ?>
                 <div class="singleVerkstadImg"> 
                         
-                        <?php echo $bild ?>
+                <img src="<?php echo $bild; ?>" />
                         
                 </div>
             <?php endif; ?>
@@ -75,27 +77,26 @@ if ( function_exists( 'eae_encode_emails' ) )  {
         
         </div>
 
-        
+
          <!-- Verkstadstaggar -->
 
 
          <p class="weOffer">Hos oss finns:</p>
             <div class="verkstadsTaggar">
-                <?php
-                    $post_tags = get_the_tags();
-                    $separatorTags = ' ';
-                    $outputTags = '';
-
-                    if ( ! empty( $post_tags ) ) {
-                        foreach ( $post_tags as $tag ) {
-                            $outputTags .= '<a href="' . esc_attr( get_tag_link( $tag->term_id ) ) . '">' . __( $tag->name ) . '</a>' . $separatorTags;
-                        }
-
-
-                    echo trim( $outputTags, $separatorTags );
-                }
-                ?>
+                <?php 
+                    if( $taggar ): ?>
+                        <ul>
+                        <?php foreach( $taggar as $tag ): ?>
+                            <li>
+                                
+                                <a href="<?php echo esc_url( get_term_link( $tag ) ); ?>"><?php echo esc_html( $tag->name ); ?></a>
+                                
+                            </li>
+                        <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
             </div>
+            
         </div>
 
         <!-- /Verkstadstaggar -->

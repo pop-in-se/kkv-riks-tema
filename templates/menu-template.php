@@ -4,7 +4,7 @@
             <?php
             $separatorTags = ' ';
             wp_nav_menu( array( 
-                'menu' => 'huvudmeny', 
+                'menu' => is_user_logged_in() ? 'inloggad' : 'huvudmeny', 
                 'theme_location' => 'huvudmeny', 
                 'container_id' => 'submenu',
                 'container_class' => 'headerMenu',
@@ -22,7 +22,7 @@
                 <?php
                     $separatorTags = ' ';
                     wp_nav_menu( array( 
-                        'menu' => 'huvudmeny', 
+                        'menu' => is_user_logged_in() ? 'inloggad' : 'huvudmeny', 
                         'theme_location' => 'huvudmeny', 
                         'container_class' => 'sidebarMenuInner',
                         'walker' => new Sub_Menu_Walker(),

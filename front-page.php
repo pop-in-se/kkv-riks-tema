@@ -1,9 +1,14 @@
 <?php get_header() ?>
 
+<?php 
+$rubrik = get_field('rubrik');
+$underrubrik = get_field('underrubrik');
+?>
+
 <div class="main mt4">
     <div class="col1">
-    <h1 class="frontpageTitle">Konstnärernas Kollektivverkstäder</h1>
-    <h2 class="frontpageSubtitle">Riksorganisation</h2>
+    <h1 class="frontpageTitle"><?php echo $rubrik; ?></h1>
+    <h2 class="frontpageSubtitle"><?php echo $underrubrik; ?></h2>
     <div class="lineRed"></div>
     </div>
     <div class="col2 row alignCenter">
@@ -11,35 +16,19 @@
         <img loading="lazy" width="366" height="651" src="http://localhost:8888/wp-content/uploads/2021/12/sverige-karta.png" alt="" class="wp-image-30" srcset="http://localhost:8888/wp-content/uploads/2021/12/sverige-karta.png 366w, http://localhost:8888/wp-content/uploads/2021/12/sverige-karta-169x300.png 169w, http://localhost:8888/wp-content/uploads/2021/12/sverige-karta-94x168.png 94w" sizes="(max-width: 366px) 100vw, 366px">
         </div>
         <div class="mapText"> 
+    
+            <div class="mapTextCitiesContainer cityList">
+            <?php 
+            $terms = get_terms('ort');
 
-    <?php  
-    $args = array(
-        'post_type' => 'verkstad',
-        'orderby' => 'title',
-        'order'   => 'ASC',
-    );
-        
-    $post_query = new WP_Query($args); 
-    ?>
-
-    <?php 
-
-    if ($post_query->have_posts() ) :
-        while ( $post_query->have_posts() ) : $post_query->the_post(); ?>
-
-    <div class="mapTextCitiesContainer cityList">
-        <ul>
-            <li>
-            <a href="<?php echo esc_url( the_guid() ); ?>" class="mapTextCities"><?php the_title() ?></a>
-
-            </li>
-        </ul>
-    </div>                      
+            echo '<ul>';
+            foreach ($terms as $term) {
+                echo '<li><a class="mapTextCities" href="'.get_term_link($term->slug, 'ort').'">'.$term->name.'</a></li>';
+            }
+            echo '</ul>';
+            ?>
+            </div>                      
                             
-    <?php endwhile; else : ?>
-        <p><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
-    <?php endif; ?>
-
         </div>
     </div>
 

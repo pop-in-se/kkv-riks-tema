@@ -28,9 +28,14 @@
   
         <?php if ( is_user_logged_in() ) { ?>
        
-       <?php 
-        get_template_part('/templates/logged-in-template')
-        ?>
+            <p class="colorWhite mt1"> Du är inloggad</p><br>
+        <div class="colFull row">
+            <a href="<?php
+                    $min_sida_url = get_permalink('365');
+                    echo $min_sida_url;
+                    ?>">
+                    <p class="knappSvart"> Min sida <i class="fas fas fa-chevron-right" style="font-size: 1rem; color:#E7DCD1; margin-left:16px;"></i> </p></a>
+        </div>
 
     <?php } else { ?>
     

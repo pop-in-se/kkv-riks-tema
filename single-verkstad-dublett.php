@@ -1,3 +1,10 @@
+<?php 
+/*
+Template name: Single verkstad dublett
+Template Post Type: verkstad, post, page
+*/
+?>
+
 <?php get_header() ?>
 
 <div class="hero mrl4 h30vh">
@@ -19,6 +26,12 @@
 <div class="colFull column p3 br4 beige mrl4">
     <?php 
         get_template_part('/templates/verkstad-template')
+    ?>
+</div>
+
+<div class="colFull column p3 mt4 br4 beige mrl4">
+    <?php 
+        get_template_part('/templates/verkstad-template-dublett')
     ?>
 </div>
 

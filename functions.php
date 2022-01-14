@@ -153,14 +153,16 @@ function post_type_verkstad() {
             'search_items'        => __( 'Sök verkstad'),
             'not_found'           => __( 'Hittades inte' ),
             'not_found_in_trash'  => __( 'Hittades inte i papperskorgen'),
+            'rewrite'       => array( 'slug' => '%verkstad%', 'with_front' => true),
+
         );
 
         $args = array(
             'label'               => __( 'verkstad'),
             'description'         => __( 'KKV Verksäder'),
             'labels'              => $labels,
-            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
-            'taxonomies'          => array('post_tag', 'category'), 
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'page-attributes'),
+            'taxonomies'          => array('post_tag'), 
             'hierarchical'        => true,
             'public'              => true,
             'show_ui'             => true,
@@ -174,12 +176,58 @@ function post_type_verkstad() {
             'exclude_from_search' => false,
             'publicly_queryable'  => true,
             'capability_type'     => 'post',
+			"query_var"           => true,
             'show_in_rest'        => true,
-     
         );
         register_post_type( 'verkstad', $args );
 }
 
+function ort_kategori() {
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+        'name'              => _x( 'ort', 'taxonomy general name', 'textdomain' ),
+        'menu_name'         => __( 'Orter', 'textdomain' ),
+        'singular_name'     => _x( 'Ort', 'taxonomy singular name', 'textdomain' ),
+        'search_items'      => __( 'Sök ort', 'textdomain' ),
+        'all_items'         => __( 'Alla orter', 'textdomain' ),
+        'edit_item'         => __( 'Redigera ort', 'textdomain' ),
+        'update_item'       => __( 'Uppdatera ort', 'textdomain' ),
+        'add_new_item'      => __( 'Lägg till ort', 'textdomain' ),
+        'new_item_name'     => __( 'Nytt ortnamn', 'textdomain' ),
+    );
+ 
+    $args = array(
+        'hierarchical'      => false,
+        'labels'            => $labels,
+        "public"             => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'verkstad' ),
+        'show_in_quick_edit' => true,
+        "show_in_rest"       => true,
+        "rest_base"          => "",
+    );
+ 
+    register_taxonomy( 'ort', array( 'verkstad' ), $args );
+
+    unset( $args );
+    unset( $labels );
+}
+
+add_filter('post_type_link', 'cj_update_permalink_structure', 10, 2);
+function cj_update_permalink_structure( $post_link, $post )
+{
+    if ( false !== strpos( $post_link, '%ort%' ) ) {
+        $taxonomy_terms = get_the_terms( $post->ID, 'ort' ); 
+        foreach ( $taxonomy_terms as $term ) { 
+            if ( ! $term->parent ) {
+                $post_link = str_replace( '%ort%', $term->slug, $post_link );
+            }
+        } 
+    }
+    return $post_link;
+}
 
 // Tags loop
 
@@ -252,7 +300,7 @@ add_theme_support( 'custom-logo' );
 add_action('after_setup_theme', 'register_my_menu');
 add_action( 'wp_enqueue_scripts', 'load_styles' );
 add_action( 'init', 'post_type_verkstad', 0 );
-add_action( 'init', 'post_type_Golf_course', 0 );
+add_action( 'init', 'ort_kategori', 0 );
 add_action('acf/init', 'acfBlocks');
 add_shortcode('tags', 'destinationTags');
 

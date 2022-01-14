@@ -126,6 +126,59 @@ textarea {
     text-decoration: none;
 }
 
+/* ------------------------ Dropdown ------------------------ */
+
+.dropbtn {
+    background-color: #1A1919;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    text-align: left;
+    color:#F5F5F5; 
+    width: 189px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0.8em 1.4em;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #F5F5F5;
+    border-radius: 0;
+    text-transform: none;
+  }
+  
+  /* .dropdown {
+    position: relative;
+    display: inline-block;
+  } */
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    color:#F5F5F5;
+    border: 1px solid #F5F5F5;
+    margin-top: 3em;
+    background-color: #1A1919;
+    min-width: 189px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #F5F5F5;
+    font-size: 18px;
+    padding: 12px 26px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #0A0A0A}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
 /* ------------------------ Extra fält forum ------------------------ */
 
 .extraField {
@@ -549,7 +602,7 @@ h3 a {
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f0e0";
 }
 
-.forumblob::before {
+.kurser::before {
     word-break: break-word;
     font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f27a";
 }
@@ -569,7 +622,7 @@ h3 a {
 }
 
 .mapTextCitiesContainer li {
-    display: inline-block;
+    display: flex;
 }
 
 .cityList {
@@ -599,8 +652,8 @@ h3 a {
 .frontpageTitle {
     font-weight: 700;
     font-style: normal;
-    font-size: 48px!important;
-    line-height: 64px;
+    font-size: 44px!important;
+    line-height: 56px;
     margin-top: 108px;
     color: #990F0F;
 }
@@ -625,7 +678,7 @@ h3 a {
     font-weight: 400;
     font-style: normal;
     font-size: 42px!important;
-    line-height: 64px;
+    line-height: 56px;
     margin-bottom: 16px;
     color: #990F0F;
 }
@@ -1061,9 +1114,10 @@ textarea {
 
 
 .cityDropdown {
-    display: flex;
     margin-bottom: 3em;
+    width: 200px;
 }
+
 .dropdown {
     display: flex;
     flex-direction: row;
@@ -1225,6 +1279,28 @@ p {
     border-bottom: 1px solid #1A1919;
     padding: 8px;
 }
+
+.verkstadsTaggar {
+    display: flex;
+    flex-direction: row;
+}
+
+.verkstadsTaggar li {
+    list-style: inside none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    display: block;
+    position: relative;
+}
+
+.verkstadsTaggar ul {
+    list-style: inside none;
+    padding: 0;
+    margin: 0;
+}
+
+
 
 .verkstadsTaggar a {
     display: inline-block;

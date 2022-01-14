@@ -8,7 +8,7 @@
       $first_name = $user_info->first_name;
       ?>
             <h2>Välkommen <?php echo "$first_name"; ?></h2>
-        <p>Som medlem i KKV har du tillgång till </p>
+        <p> <?php the_content() ?> </p>
         
 
         <h3 class="mt1">Senaste inläggen:</h3>

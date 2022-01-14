@@ -1,23 +1,25 @@
-<?php  
-    $args = array(
-        'post_type' => 'verkstad', 
-        'orderby' => 'title',
-        'order'   => 'ASC',
-        'show_option_none' => 'Välj ort',  
-    );
-        
-    $post_query = new WP_Query($args); 
-    ?>
 
 <div class="verkstaderContainer">
     <div class="col1">
-    <div class="cityDropdown">
-            <form class="dropdown" action="<?php echo esc_url( the_guid() ); ?>" method="get" >
-                <?php wp_dropdown_pages($args); ?>
-                <input type="submit" name="submit" value="Visa" />
-            </form>
+        
+        <div class="dropdown cityDropdown">
+        <button class="dropbtn">Välj ort <i class="fas fa-sort-down" style="font-size: 1.2rem; margin-left: 3.6em;"></i> </button>
+    
+            <div class="dropdown-content">
+
+            <?php $terms = get_terms('ort');  
+            foreach ($terms as $term) {
+        
+            echo '<a href="'.get_term_link($term->slug, 'ort').'">'.$term->name.'</a>';
+
+            } ?>
+
+            </div>
+        
         </div>
-    </div>
+</div>
+    
+    
     <div class="col2"> 
 
     </div>
