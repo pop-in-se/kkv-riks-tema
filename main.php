@@ -31,18 +31,12 @@
     <h1 class="rubrikBorderBottom"> 
         <a href="<?php echo esc_url( the_guid() ); ?>" ><?php the_title() ?></a>
     </h1>
-    <div class="justifyRight">
-    <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
-    </div>
-    <div class="spacer1em"></div>
             <p><?php 
             $excerpt = get_the_excerpt();
             echo wp_trim_words($excerpt, 15) ?></p>
-            <div class="spacer"></div>
-            
-            <div class="verkstadsTaggar justifyRight">
-        <a href="<?php echo esc_url( the_guid() ); ?>"> Läs inlägg <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
-        </div>
+            <div class="spacer1em"></div>
+            <p>Postad av: <?php the_author() ?> </p>
+           
     </div>                      
                             
     <?php endwhile; ?> 

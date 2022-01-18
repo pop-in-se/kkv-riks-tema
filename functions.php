@@ -23,6 +23,25 @@ function register_my_menu(){
 }
 
 
+//Widgets
+
+add_action( 'widgets_init', 'footer_sidebar' );
+function footer_sidebar() {
+  $args = array(
+    'name'          => 'Sidfot adress',
+    'id'            => 'footer-sidebar',
+    'description'   => 'Adress i sidfoten',
+    'class'         => '',
+    'before_widget'  => '<div id="%1$s" class="colorWhite %2$s">',
+    'after_widget'  => '</div>', 
+    'before_title'  => '<h5 class="colorWhite">',
+    'after_title'   => '</h5>' 
+  );
+
+  register_sidebar( $args );
+
+}
+
 
 //Undermeny 
 class Sub_Menu_Walker extends Walker {
@@ -161,7 +180,7 @@ function post_type_verkstad() {
             'label'               => __( 'verkstad'),
             'description'         => __( 'KKV Verksäder'),
             'labels'              => $labels,
-            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'page-attributes'),
+            'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'revisions', 'custom-fields', 'page-attributes'),
             'taxonomies'          => array('post_tag'), 
             'hierarchical'        => true,
             'public'              => true,
@@ -301,9 +320,5 @@ add_action('after_setup_theme', 'register_my_menu');
 add_action( 'wp_enqueue_scripts', 'load_styles' );
 add_action( 'init', 'post_type_verkstad', 0 );
 add_action( 'init', 'ort_kategori', 0 );
-add_action('acf/init', 'acfBlocks');
-add_shortcode('tags', 'destinationTags');
-
-
 
 ?>

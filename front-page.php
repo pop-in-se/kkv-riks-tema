@@ -52,7 +52,9 @@ $underrubrik = get_field('underrubrik');
     </div>
 
     <?php endwhile; else : ?>
-        <p><?php esc_html_e( 'Tyvärr, Inga inlägg matchade dina kriterier.' ); ?></p>
+        <div class="colFull justifyCenter colorWhite">
+                <p class="colorWhite"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+            </div>
     <?php endif; ?>
 
 

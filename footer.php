@@ -13,7 +13,9 @@
     </div>
     <div class="col2 mt4">
         <div class="pageLineBeige"></div>  
-        <p class="mb1 mt1 colorWhite">Konstnärernas <br> Kollektivverkstäder <br> Riksorganisation</p>
+        <div class="mb1 mt1 colorWhite">
+        <?php dynamic_sidebar( 'footer-sidebar' ); ?>
+        </div>
 
     </div>
 

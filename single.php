@@ -18,14 +18,27 @@
     if ( have_posts() ) while ( have_posts() ) : the_post();
             ?>
     <div class="colFull pt2 pb2 plr2">
-
         <div class="column">
-        <h1 class="rubrikBorderBottom"> 
-        <?php the_title() ?>
-        </h1>
+            
+            <h1 class="rubrikBorderBottom"> 
+                <?php the_title() ?>
+            </h1>
+            <div class="justifyRight">
+                <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
+            </div>
+            <div class="spacer"></div>
             <p><?php the_content() ?></p>
-            <div class="spacer1em"></div>
-            <p>Skrivet av: <?php the_author() ?> </p>
+            <div class="spacer"></div>
+            
+            <?php 
+                get_template_part('/templates/file-template')
+            ?>
+
+
+    <div class="spacer"></div>
+
+            <p> <?php the_author() ?> </p>
+
         </div>
 
     </div>

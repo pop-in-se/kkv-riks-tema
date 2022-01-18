@@ -21,7 +21,9 @@
             </label>
         <div class="header-logo">
             <a href="<?php echo esc_url( home_url('/') ); ?>">
-                <img class="mobileLogo" src="<?php $imgId = 8; echo wp_get_attachment_image_url($imgId); ?>">
+                <?php if ( function_exists( 'the_custom_logo' ) ) { 
+                    the_custom_logo();
+}                ?>
             </a>
         </div>
 

@@ -23,6 +23,7 @@
         'post_type' => 'verkstad',
         'orderby'   => 'title',
         'order'     => 'ASC',
+        'posts_per_page' => 99,
     );
         
     $post_query = new WP_Query($args); 
@@ -35,16 +36,17 @@
             
         <div class="verkstadskort">
             <?php 
-            get_template_part('/templates/verkstad-teaser')
+            get_template_part('/templates/verkstad-card-template')
             ?>
         </div>                      
               
-                            
+        
         <?php endwhile; else : ?>
-        <p><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
-    <?php endif; ?>
-    
-
+            <div class="colFull justifyCenter colorWhite">
+                <p class="colorWhite"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+            </div>    
+            <?php endif; ?>
+            
 
 </div>
 

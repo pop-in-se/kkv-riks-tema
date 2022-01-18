@@ -60,8 +60,11 @@
 </div>
 
 <div class="col2 column  pt2 pb2 plr2">
-
-    Resurser ansökning
+    <p>Dokument:</p>
+    <div class="spacer1em"></div>
+        <?php 
+            get_template_part('/templates/file-template')
+        ?>
     
 </div>
     

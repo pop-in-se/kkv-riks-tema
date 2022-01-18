@@ -31,9 +31,14 @@
 			
 			
 			<div class="medlemMeta">
-            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>    
-            <p><b>Forum: </b> <?php echo get_the_title($post->post_parent); ?><br>Postad av: <?php the_author(); ?> <br> 
-			<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j F, Y'); ?></time></p></div>	
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></h3>    
+            
+            <p><?php bbp_topic_excerpt(); ?></br></p>
+            <div class="spacer1em"></div>
+            <P><b>Forum: </b><?php echo get_the_title($post->post_parent); ?><br>
+            <i class="far fa-clock" style="font-size: 0.85rem; margin-right: 0.75em;"></i><time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></br>
+            <i class="fas fa-feather-alt" style="font-size: 0.85rem; margin-right: 0.25em;"></i> <?php the_author(); ?> <br> 
+			</p></a></div>
 				
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
@@ -51,10 +56,12 @@
 
         <div class="medlemMeta">
         <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></h3>
-            <p><?php $excerpt = get_the_excerpt();
+        <p><?php $excerpt = get_the_excerpt();
             echo wp_trim_words($excerpt, 12) ?></p>
             <div class="spacer1em"></div>
-            <p>Postad av: <?php the_author() ?> </p>
+            <p><b>Aktuellt</b></p>
+            <p><i class="far fa-clock" style="font-size: 0.85rem; margin-right: 0.75em;"></i><time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></br>
+            <p><i class="fas fa-feather-alt" style="font-size: 0.85rem; margin-right: 0.25em;"></i> <?php the_author() ?> </p>
         </div>
 
     <?php endwhile; // end of the loop. ?>

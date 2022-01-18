@@ -3,6 +3,7 @@
 $verkstadInfo = get_field('verkstads_info');
 $namn = $verkstadInfo['verkstadens_namn'];
 $adress = $verkstadInfo['adress'];
+$postAdress = $verkstadInfo['postadress'];
 $hemsida = $verkstadInfo['hemsida'];
 $hemsida = str_replace(array('www.', 'http://', 'https://'), '', $hemsida);
 $hemsida = rtrim($hemsida, '/');
@@ -10,17 +11,22 @@ $epost = $verkstadInfo['e-post'];
 $telefon = $verkstadInfo['telefon'];
 $kontaktperson = $verkstadInfo['kontaktperson'];
 $omVerkstaden = $verkstadInfo['text_om_verkstaden'];
+$ortsNamn = $verkstadInfo['ort'];
 ?>
 
 
 <h1 class="rubrikBorderBottom"> 
-<a href="<?php echo esc_url( the_guid() ); ?>"><?php echo $namn; ?></a>
+<a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
 </h1>
 
+<div class="colFull">
+    <p class="colorRed letter-spacing"><b><?php echo $namn; ?></b></p>
+</div>
 <div class="colFull dashedBottom pb2 mb2 row">
-    <div class="col1 mr1 mb1">
-        <p><?php echo $adress; ?></p>
-    </div>
+    <div class="col1 mr1 mb05">
+    <p><?php echo $adress; ?>
+    <br><?php echo $postAdress; ?></p>
+</div>
         <div class="col2">
             <div class="contactItems">
             <?php if( $hemsida ): ?>
@@ -34,7 +40,7 @@ $omVerkstaden = $verkstadInfo['text_om_verkstaden'];
             </div>
             <div class="contactItems">
                 <?php if( $telefon ): ?>
-                <i class="fas fa-phone-alt" style="font-size: 0.95rem; margin-right: 0.5em;"></i><p><?php echo $telefon; ?></p>
+                <i class="fas fa-phone-alt" style="font-size: 0.95rem; margin-right: 0.5em;"></i><a href="tel: <?php echo $telefon; ?>"><?php echo $telefon; ?></a>
                 <?php endif; ?>
             </div>
 
@@ -44,7 +50,7 @@ $omVerkstaden = $verkstadInfo['text_om_verkstaden'];
 
         
     
-        <div class="verkstadsTaggar">
+        <div class="verkstadsTaggar justifyRight">
         <a href="<?php echo esc_url( the_guid() ); ?>"> Mer om verkstaden <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
         </div>
     

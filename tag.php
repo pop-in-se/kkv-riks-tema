@@ -24,29 +24,26 @@
         
     
 
-<div class="verkstadskortContainer mt2">
+    <div class="verkstadskortContainer mt2">
 
-    <?php 
+        <?php 
 
-  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            
-        <div class="verkstadskort">
-            <?php 
-            get_template_part('/templates/verkstad-teaser')
-            ?>
-        </div>                      
-              
-                            
-    <?php    
-    endwhile;
-    else :
-        _e( 'Tyvärr, vi kunde inte hitta några inlägg.', 'textdomain' );
-    endif;
-    ?>
-    
+    if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                
+            <div class="verkstadskort">
+                <?php 
+                get_template_part('/templates/verkstad-card-template')
+                ?>
+            </div>                      
+                
+                                
+            <?php endwhile; else : ?>
+                <div class="colFull justifyCenter colorWhite">
+                    <p class="colorWhite"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+            </div>    
+            <?php endif; ?>
 
-
-</div>
+    </div>
 
 
 
