@@ -37,7 +37,7 @@
     <div class="spacer1em"></div>
             <p><?php 
             $excerpt = get_the_excerpt();
-            echo wp_trim_words($excerpt, 15) ?></p>
+            echo wp_trim_words($excerpt, 20) ?></p>
             <div class="spacer"></div>
             
             <div class="verkstadsTaggar justifyRight">

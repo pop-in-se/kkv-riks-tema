@@ -60,6 +60,11 @@ foreach ($_terms as $term) :
 endforeach;
 ?>
 
+<p class="justifyCenter mb1 mt2 colorWhite">Fler verkstäder:</p>
+<div class="mrl4 beige br4 postLink row">
+    <p><?php previous_post_link(); ?></p>
+    <p><?php next_post_link(); ?></p>
+</div>
 
 
 <?php get_footer() ?>

@@ -18,8 +18,20 @@
     if ( have_posts() ) while ( have_posts() ) : the_post();
             ?>
     <div class="colFull pt2 pb2 plr2">
-        <div class="column">
-            
+
+        <div class="column ">
+        <?php if ( has_post_thumbnail() ) { ?>
+            <img class="image mb1" src="<?php the_post_thumbnail_url() ?>" ></img>
+       
+      
+  <?php 
+      }else{ 
+  ?>
+      
+      <?php
+  } 
+  ?>
+        
             <h1 class="rubrikBorderBottom"> 
                 <?php the_title() ?>
             </h1>

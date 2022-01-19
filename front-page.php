@@ -13,7 +13,7 @@ $underrubrik = get_field('underrubrik');
     </div>
     <div class="col2 row alignCenter">
         <div class="mapContainer">
-        <img loading="lazy" width="366" height="651" src="http://localhost:8888/wp-content/uploads/2021/12/sverige-karta.png" alt="" class="wp-image-30" srcset="http://localhost:8888/wp-content/uploads/2021/12/sverige-karta.png 366w, http://localhost:8888/wp-content/uploads/2021/12/sverige-karta-169x300.png 169w, http://localhost:8888/wp-content/uploads/2021/12/sverige-karta-94x168.png 94w" sizes="(max-width: 366px) 100vw, 366px">
+        <?php the_post_thumbnail() ?>
         </div>
         <div class="mapText"> 
     

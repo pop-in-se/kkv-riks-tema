@@ -9,8 +9,8 @@ $hemsida = $verkstadInfo['hemsida'];
 $epost = $verkstadInfo['e-post'];
 $telefon = $verkstadInfo['telefon'];
 $kontaktpersonTelefon = $verkstadInfo['kontaktperson_telefon'];
+$kontaktpersonEpost = $verkstadInfo['kontaktperson_epost'];
 $kontaktperson = $verkstadInfo['kontaktperson'];
-$omVerkstaden = $verkstadInfo['text_om_verkstaden'];
 $beskrivning = $verkstadInfo['beskrivning'];
 $bild = $verkstadInfo['bild'];
 $taggar = $verkstadInfo['taggar'];
@@ -63,8 +63,13 @@ if ( function_exists( 'eae_encode_emails' ) )  {
                     <?php if( $kontaktpersonTelefon ): ?>
                     <a href="tel: <?php echo $kontaktpersonTelefon; ?>"><?php echo ", ", $kontaktpersonTelefon; ?></a>
                     <?php endif; ?>
-            </div>
-            
+                </div>
+
+                <div class="contactItems">
+                <?php if( $kontaktpersonEpost ): ?>
+                    <i class="fas fa-at" style="font-size: 1rem; margin-right: 0.75em;"></i><a href="mailto:<?php echo $kontaktpersonEpost; ?>" target="_blank"> <?php echo $kontaktpersonEpost; ?> </a>
+                <?php endif; ?>
+                </div>
         </div>
 </div>
 

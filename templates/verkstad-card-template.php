@@ -1,5 +1,5 @@
 <?php
-// Load values and assign defaults.
+// ACF fields.
 $verkstadInfo = get_field('verkstads_info');
 $namn = $verkstadInfo['verkstadens_namn'];
 $adress = $verkstadInfo['adress'];
@@ -11,16 +11,16 @@ $epost = $verkstadInfo['e-post'];
 $telefon = $verkstadInfo['telefon'];
 $kontaktperson = $verkstadInfo['kontaktperson'];
 $omVerkstaden = $verkstadInfo['text_om_verkstaden'];
-$ortsNamn = $verkstadInfo['ort'];
+$ortsNamn = $verkstadInfo['ortsnamn'];
 ?>
 
 
 <h1 class="rubrikBorderBottom"> 
-<a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+<a href="<?php the_permalink(); ?>"><?php echo esc_html( $ortsNamn->name ); ?></a>
 </h1>
 
 <div class="colFull">
-    <p class="colorRed letter-spacing"><b><?php echo $namn; ?></b></p>
+    <p class="colorRed letter-spacing"><b><?php echo $namn ?></b></p>
 </div>
 <div class="colFull dashedBottom pb2 mb2 row">
     <div class="col1 mr1 mb05">
@@ -51,6 +51,6 @@ $ortsNamn = $verkstadInfo['ort'];
         
     
         <div class="verkstadsTaggar justifyRight">
-        <a href="<?php echo esc_url( the_guid() ); ?>"> Mer om verkstaden <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
+        <a href="<?php the_permalink(); ?>"> Mer om verkstaden <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
         </div>
     

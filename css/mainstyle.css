@@ -403,6 +403,12 @@ h5 {
     border-bottom: 1px dashed #990F0F;
 }
 
+.image {
+    width: 100%;
+    height: auto;
+}
+
+
 /* ------------------------ Typografi ------------------------ */
 
 h2 {
