@@ -12,7 +12,7 @@
 
 <div class="main column">
     
-<?php 
+    <?php 
         get_template_part('/templates/dropdown-page-verkstader')
     ?>
 

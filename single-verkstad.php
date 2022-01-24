@@ -6,9 +6,10 @@ $ortsNamn = $verkstadInfo['ort'];
 ?>
 <div class="hero mrl4 h30vh">
     <div class="col1 alignBottom">
-    <h1 class="heroTitle"><i class="far fa-dot-circle icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
+        <h1 class="heroTitle"><i class="far fa-dot-circle icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
         <div class="pageLineRed"></div>
     </div>
+
     <div class="col2 alignBottom">
         <div class="pageLineBeige"></div>  
     </div>
@@ -50,15 +51,12 @@ foreach ($_terms as $term) :
             ?>
         
         </div>
+        
         <?php
-        endwhile;
-
-
-    endif;
-    wp_reset_postdata();
-
-endforeach;
-?>
+        endwhile; endif;
+        wp_reset_postdata();
+        endforeach;
+        ?>
 
 <p class="justifyCenter mb1 mt2 colorWhite">Fler verkstäder:</p>
 <div class="mrl4 beige br4 postLink row">

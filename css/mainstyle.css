@@ -60,12 +60,13 @@ input[type="submit" i] {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    background: #990F0F;
+    background: #1A1919;
+    border: 1px solid #F5F5F5;
     padding: 8px;
     margin: 0;
-    border: none;
     border-radius: 0px;
     width: fit-content;
+    height: 46px;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -81,7 +82,9 @@ textarea {
     background-color: #F5F5F5;
     margin: 0.6em 0 1em 0;
     border: none;
+    height: 2em;
 }
+
 
 /* ------------------------ Knappar ------------------------ */
 
@@ -126,19 +129,25 @@ textarea {
     text-decoration: none;
 }
 
+.redigera {
+    position: absolute;
+    right: 0;
+    margin-top: 4em;
+}
+
 /* ------------------------ Dropdown ------------------------ */
 
 .dropbtn {
     background-color: #1A1919;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    text-align: left;
+    /* text-align: left; */
     color:#F5F5F5; 
     width: 189px;
     height: 48px;
     font-weight: 400;
     font-size: 18px;
-    padding: 0.8em 1.4em;
+    /* padding: 0.8em 1.4em; */
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -200,15 +209,6 @@ textarea {
 
 /* ------------------------ Designsystem ------------------------ */
 
-h5 {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 28px;
-    color: #0A0A0A;
-}
-
 .link {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
@@ -241,6 +241,10 @@ h5 {
     display: flex;
     flex-direction: column;
     width: 50%;
+}
+
+.relative {
+    position: relative;
 }
 
 .alignBottom {
@@ -351,6 +355,10 @@ h5 {
     padding-bottom: 1em;
 }
 
+.pt1 {
+    padding-top: 1em;
+}
+
 .pt2 {
     padding-top: 2em;
 }
@@ -411,6 +419,14 @@ h5 {
 
 /* ------------------------ Typografi ------------------------ */
 
+p {
+    font-size: 18px;
+    line-height: 30px;
+	font-weight: 400;
+}
+
+
+
 h2 {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -429,6 +445,15 @@ h3 {
 
 h3 a {
     color: #990F0F;
+}
+
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #0A0A0A;
 }
 
 
@@ -686,18 +711,15 @@ h3 a {
     display: flex;
     width: fit-content;
 }
+
+.mapContainer img {
+    width: 100%;
+    height: auto;
+}
+
 .mapText{
     width: 25%;
     align-items: center;
-}
-
-.frontpageTitle {
-    font-weight: 700;
-    font-style: normal;
-    font-size: 44px!important;
-    line-height: 56px;
-    margin-top: 108px;
-    color: #990F0F;
 }
 
 .frontpageText {
@@ -716,11 +738,18 @@ h3 a {
     color: #E7DCD1;
 }
 
+.frontpageTitle {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6vw!important;
+    margin-top: 108px;
+    color: #990F0F;
+}
+
 .frontpageSubtitle {
     font-weight: 400;
     font-style: normal;
-    font-size: 42px!important;
-    line-height: 56px;
+    font-size: 4.5vw!important;
     margin-bottom: 16px;
     color: #990F0F;
 }
@@ -918,6 +947,8 @@ i.icon {
     font-size: 2.4rem;
 }
 
+
+
 /* ------------------------ Aktuellt ------------------------ */
 
 .aktuelltKort {
@@ -1022,6 +1053,10 @@ i.icon {
     color: #990F0F;
 }
 
+div.bbp-breadcrumb, div.bbp-topic-tags {
+    font-size: 12px;
+    margin-left: 0.5em;
+}
 
 .bbp-forum-title {
     font-family: 'Open Sans', sans-serif;
@@ -1041,6 +1076,11 @@ div.bbp-template-notice {
     border-radius: 4px;
     border: #990F0F 1px solid;
 }
+
+.profilepress-edit-profile-status success {
+    color:#990F0F;
+}
+
 /* ------------------------ Kontakt ------------------------ */
 
 .wpcf7 label {
@@ -1181,7 +1221,7 @@ textarea {
 
 
 .cityDropdown {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     width: 200px;
 }
 
@@ -1219,6 +1259,19 @@ textarea {
     cursor: pointer;
     border: 1px solid #F5F5F5;
     background-color: #1A1919;
+}
+
+input[type="search" i] {
+    height: 3.4em;
+    width: 160px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #f5f5f5;
+    background-color: #1A1919;
+    border: 1px solid #F5F5F5;
+    padding-left: 1em;
 }
 
 .dropdown input[type="submit" i] {
@@ -1291,7 +1344,7 @@ textarea {
     font-size: 18px;
     line-height: 32px;
     color: #0A0A0A;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 

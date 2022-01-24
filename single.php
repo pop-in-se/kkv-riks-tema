@@ -1,36 +1,33 @@
 <?php get_header() ?>
 
-<div class="mrl4 hero h30vh">
+<div class="mrl4 h30vh hero">
     <div class="col1 alignBottom">
-    <a href="<?php
-                $aktuellt_url = get_permalink('11');
-                echo $aktuellt_url;
-                ?>"> 
-        <p class="knappSvart"><i class="fas fa-chevron-left" style="font-size: 1rem; margin-right: 1em;"></i>Till aktuellt</p></div>
-    </a>
+    <h1 class="heroTitle"><i class="far fa-eye icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i>Aktuellt</h1>
+        <div class="pageLineRed"></div>
     </div>
-    <div class="col2 alignBottom"></div>
+    <div class="col2 alignBottom">
+        <div class="pageLineBeige"></div>  
+    </div>
+</div>
+
+<div class="mrl4 colFull">
+    <?php 
+        get_template_part('/templates/single-post-logged-in-template')
+    ?>
 </div>
 
 
-<div class="colFull column br4 beige mrl4 mt2">
-<?php
-    if ( have_posts() ) while ( have_posts() ) : the_post();
-            ?>
+<div class="colFull column br4 beige mrl4 mt1">
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     <div class="colFull pt2 pb2 plr2">
 
-        <div class="column ">
-        <?php if ( has_post_thumbnail() ) { ?>
-            <img class="image mb1" src="<?php the_post_thumbnail_url() ?>" ></img>
-       
-      
-  <?php 
-      }else{ 
-  ?>
-      
-      <?php
-  } 
-  ?>
+        <div class="column">
+            <?php if ( has_post_thumbnail() ) { ?>
+                <img class="image mb1" src="<?php the_post_thumbnail_url() ?>" ></img>  
+        
+            <?php }else{   ?>
+                <!-- Ingenting -->
+            <?php } ?>
         
             <h1 class="rubrikBorderBottom"> 
                 <?php the_title() ?>
@@ -42,19 +39,20 @@
             <p><?php the_content() ?></p>
             <div class="spacer"></div>
             
+            
+            <p>Postad av: <?php the_author() ?> </p>
+            <div class="spacer"></div>
+            
+            <div class="colFull column">
             <?php 
                 get_template_part('/templates/file-template')
             ?>
-
-
-    <div class="spacer"></div>
-
-            <p> <?php the_author() ?> </p>
-
+            </div>
+            
         </div>
-
+        
     </div>
-
+    
     <?php endwhile; // end of the loop. ?>
 </div>
 

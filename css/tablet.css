@@ -1,7 +1,17 @@
 /* ------------------------ Tablet ------------------------ */
 
 
-@media (max-width: 1080px) {
+@media (max-width: 1020px) {
+
+    html {
+        margin-top: 0px !important;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;
+    }
 
     .colFull {
         display: flex;
@@ -35,8 +45,10 @@
         flex-direction: column;
         background-color: #E7DCD1;
         border-radius: 4px;
-        padding: 2em;
-        margin: 0.5em;
+        padding: 1em;
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
     }
 
     .frontpageLinks .menu li{
@@ -59,8 +71,7 @@
     .frontpageTitle {
         font-weight: 700;
         font-style: normal;
-        font-size: 36px!important;
-        line-height: 46px;
+        font-size: 7vw!important;
         margin-top: 108px;
         color: #990F0F;
     }
@@ -68,8 +79,7 @@
     .frontpageSubtitle {
         font-weight: 400;
         font-style: normal;
-        font-size: 28px!important;
-        line-height: 34px;
+        font-size: 5vh!important;
         margin-bottom: 16px;
         color: #990F0F;
     }

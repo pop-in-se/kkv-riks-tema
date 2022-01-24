@@ -29,7 +29,7 @@
     <div class="aktuelltKort">
         
     <h1 class="rubrikBorderBottom"> 
-        <a href="<?php echo esc_url( the_guid() ); ?>" ><?php the_title() ?></a>
+        <a href="<?php the_permalink() ?>" ><?php the_title() ?></a>
     </h1>
     <div class="justifyRight">
     <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
@@ -41,7 +41,7 @@
             <div class="spacer"></div>
             
             <div class="verkstadsTaggar justifyRight">
-        <a href="<?php echo esc_url( the_guid() ); ?>"> Läs inlägg <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
+        <a href="<?php the_permalink() ?>"> Läs inlägg <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
         </div>
     </div>                      
                             
