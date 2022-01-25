@@ -44,7 +44,7 @@ foreach ($_terms as $term) :
         while ( $_posts->have_posts() ) : $_posts->the_post();
         ?>
         
-        <div class="colFull column p3 br4 beige mrl4 mb1">
+        <div class="colFull column mt2 mrl4 mb1">
         
             <?php 
                 get_template_part('/templates/verkstad-template');
@@ -59,9 +59,9 @@ foreach ($_terms as $term) :
         ?>
 
 <p class="justifyCenter mb1 mt2 colorWhite">Fler verkstäder:</p>
-<div class="mrl4 beige br4 postLink row">
-    <p><?php previous_post_link(); ?></p>
-    <p><?php next_post_link(); ?></p>
+<div class="mrl4 br4 postLink row">
+    <p class="postLink"><?php previous_post_link(); ?></p>
+    <p class="postLink"><?php next_post_link(); ?></p>
 </div>
 
 

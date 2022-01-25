@@ -43,7 +43,7 @@
     </div>
     
     
-<div class="colFull br4 beige mrl4 mt2">
+<div class="colFull br4 mrl4 mt2">
 
     
     <?php if ( is_user_logged_in() ) { ?>

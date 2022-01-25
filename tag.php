@@ -3,7 +3,7 @@
 
 <div class="hero mrl4 h30vh">
     <div class="col1 alignBottom">
-    <h1 class="heroTitle"> <?php single_tag_title() ?></h1>
+    <h1 class="heroTitle"><i class="fas fa-tag icon" style="font-size: 2rem; color:#E7DCD1; margin-right:8px;"></i> <?php single_tag_title() ?></h1>
         <div class="pageLineRed"></div>
     </div>
     <div class="col2 alignBottom">

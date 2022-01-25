@@ -11,7 +11,7 @@
 </div>
 
 
-<div class="colFull column br4 beige mrl4 mt2">
+<div class="colFull column br4 mrl4 mt2 colorWhite">
   
   <div class="colFull pt2 pb2 plr2">
 

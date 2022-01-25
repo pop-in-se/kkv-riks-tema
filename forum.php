@@ -27,9 +27,9 @@ get_header(); ?>
 </div>
 
  
-<div id="primary" class="colFull column br4 beige mrl4 mt2">
+<div id="primary" class="colFull column mt2">
  
-    <div id="content" class="beige br4 plr2 pt2">
+    <div id="content" class="pt2">
     
     
     <?php while ( have_posts() ) : the_post(); ?>

@@ -12,7 +12,7 @@
 
 
 
-<div class="colFull column p3 mt4 br4 beige mrl4">
+<div class="colFull column p3 mt4 br4 mrl4 colorWhite">
 
     <?php the_content() ?>
 

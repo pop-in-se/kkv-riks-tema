@@ -28,10 +28,10 @@ if ( function_exists( 'eae_encode_emails' ) )  {
 </h1>
 
 <div class="colFull dashedBottom pb2 mb2 row">
-    <div class="col1 mr1 mb1">
-    <p><?php echo $adress; ?>
+    <div class="col1 mr1">
+    <p class="colorWhite"><?php echo $adress; ?>
     <br><?php echo $postAdress; ?></p>
-    <a class="link mt1 mb1" href="https://maps.google.com/maps?q= <?php echo $adress, ", ", $postAdress; ?>" target="_blank"><i class="fas fa-map-marker-alt" style="font-size: 1rem; margin-right: 0.75em;"></i>Visa på karta</a>
+    <a class="link mt1 mb1 beigeLink" href="https://maps.google.com/maps?q= <?php echo $adress, ", ", $postAdress; ?>" target="_blank"><i class="fas fa-map-marker-alt" style="font-size: 1rem; margin-right: 0.75em;"></i>Visa på karta</a>
     </div>
 
         <div class="col2">
@@ -57,7 +57,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
             <div class="contactItems">
                 <?php if( $kontaktperson ): ?>
                     <i class="fas fa-user" style="font-size: 1rem; margin-right: 0.75em;"></i>
-                    <p><?php echo $kontaktperson;?></p>  
+                    <p class="colorWhite"><?php echo $kontaktperson;?></p>  
                     <?php endif; ?>
 
                     <?php if( $kontaktpersonTelefon ): ?>
@@ -73,29 +73,29 @@ if ( function_exists( 'eae_encode_emails' ) )  {
         </div>
 </div>
 
-        <div class="colFull dashedBottom pb2 mb2" >
+<div class="colFull dashedBottom pb2 mb2" >
+    <?php if( $bild ): ?>
+        <div class="singleVerkstadImg"> 
+            
+            <img src="<?php echo $bild; ?>" />
+            
+        </div>
+        <?php endif; ?>
+    </div>
+    <p class="weOffer">Om oss:</p>
+    <div class="bgWhite p2 mb2 br4" >
+    <p><?php the_content() ?></p>
     
-        <div class="col1 mb2">
-        <p><?php the_content() ?></p>
-        </div>
-        <div class="col2">
-            <?php if( $bild ): ?>
-                <div class="singleVerkstadImg"> 
-                        
-                <img src="<?php echo $bild; ?>" />
-                        
-                </div>
-            <?php endif; ?>
-        </div>
+    </div>
         
-        </div>
+        
 
 
          <!-- Verkstadstaggar -->
 
 
          <p class="weOffer">Hos oss finns:</p>
-            <div class="verkstadsTaggar">
+            <div class="verkstadsTaggar mb2">
                 <?php 
                     if( $taggar ): ?>
                         <ul>

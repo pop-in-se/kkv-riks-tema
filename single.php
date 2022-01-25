@@ -17,9 +17,9 @@
 </div>
 
 
-<div class="colFull column br4 beige mrl4 mt1">
+<div class="colFull column br4 mrl4 mt1">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <div class="colFull pt2 pb2 plr2">
+    <div class="pt2 pb2 colorWhite">
 
         <div class="column">
             <?php if ( has_post_thumbnail() ) { ?>
@@ -57,9 +57,9 @@
 </div>
 
 <p class="justifyCenter mb1 mt2 colorWhite">Fler inlägg:</p>
-<div class="mrl4 beige br4 postLink row">
-    <p><?php previous_post_link(); ?></p>
-    <p><?php next_post_link(); ?></p>
+<div class="mrl4 br4 postLink row">
+<p class="postLink"><?php previous_post_link(); ?></p>
+<p class="postLink"><?php next_post_link(); ?></p>
 </div>
 
 

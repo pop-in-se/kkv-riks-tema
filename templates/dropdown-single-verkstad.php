@@ -37,9 +37,9 @@
         
         </div>
         
-        <div class="col2 relative alignRight"> 
+        <div class="col2edit relative alignRight mb2"> 
 
-        <div class="redigera mb1">
+        <div class="redigera mt1">
             <?php if ( is_user_logged_in() ) { ?>
             
                 <?php 

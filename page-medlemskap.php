@@ -50,22 +50,23 @@
     </div>
     
     
-<div class="colFull br4 beige mrl4 mt2">
+<div class="colFull br4 mrl4 mt2">
     
     
-<div class="col1 column  pt2 pb2 plr2">
+<div class="col1 column pt2 pb2 colorWhite">
 
 <?php the_content() ?>
 
 </div>
 
-<div class="col2 column  pt2 pb2 plr2">
-    <p>Dokument:</p>
+<div class="col2 pt2 pb2 plr2">
+    <p class="colorWhite">Dokument:</p>
     <div class="spacer1em"></div>
+    <div class="column">
         <?php 
             get_template_part('/templates/file-template')
         ?>
-    
+    </div>
 </div>
     
 

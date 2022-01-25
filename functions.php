@@ -5,11 +5,9 @@ function load_styles() {
     wp_register_style( 'kkv-riks-main',  get_template_directory_uri() .'/css/mainstyle.css', array(), null, 'all' );
     wp_register_style( 'kkv-riks-mobile',  get_template_directory_uri() .'/css/mobile.css', array(), null, 'all' );
     wp_register_style( 'kkv-riks-tablet', get_template_directory_uri(), '/css/tablet.css', array(), null, 'all' );
-    wp_register_style( 'kkv-riks-forum', get_template_directory_uri(), '/css/forumstyle.css', array(), null, 'all' );
     wp_enqueue_style( 'kkv-riks-main' );
     wp_enqueue_style( 'kkv-riks-mobile' );
     wp_enqueue_style( 'kkv-riks-tablet' );
-    wp_enqueue_style( 'kkv-riks-forum' );
 
     wp_enqueue_style( 'style' );
 }
@@ -42,6 +40,9 @@ function footer_sidebar() {
 
 }
 
+
+//Göm adminmeny 
+add_filter('show_admin_bar', 'is_blog_admin');
 
 //Undermeny 
 class Sub_Menu_Walker extends Walker {
