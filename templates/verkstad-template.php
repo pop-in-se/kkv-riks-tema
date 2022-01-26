@@ -12,9 +12,13 @@ $kontaktpersonTelefon = $verkstadInfo['kontaktperson_telefon'];
 $kontaktpersonEpost = $verkstadInfo['kontaktperson_epost'];
 $kontaktperson = $verkstadInfo['kontaktperson'];
 $beskrivning = $verkstadInfo['beskrivning'];
-$bild = $verkstadInfo['bild'];
 $taggar = $verkstadInfo['taggar'];
+$bild = $verkstadInfo['bild'];
+$bildUrl = $bild['url'];
+$alt = $bild['alt'];
 ?>
+
+
 
 <?php
 
@@ -22,6 +26,19 @@ if ( function_exists( 'eae_encode_emails' ) )  {
     add_filter( 'acf/load_value', 'eae_encode_emails' );
 }
 ?>
+ <div class="redigera mt1 mrl4 justifyRight">
+            <?php if ( is_user_logged_in() ) { ?>
+            
+                <?php 
+                get_template_part('/templates/edit-page-template')
+                ?>
+
+            <?php } else { ?>
+            
+                <!--  Ingenting -->
+                
+            <?php } ?>
+            </div>
 
 <h1 class="rubrikBorderBottom"> 
 <?php echo $namn; ?>
@@ -29,7 +46,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
 
 <div class="colFull dashedBottom pb2 mb2 row">
     <div class="col1 mr1">
-    <p class="colorWhite"><?php echo $adress; ?>
+    <p class="colorBeige"><?php echo $adress; ?>
     <br><?php echo $postAdress; ?></p>
     <a class="link mt1 mb1 beigeLink" href="https://maps.google.com/maps?q= <?php echo $adress, ", ", $postAdress; ?>" target="_blank"><i class="fas fa-map-marker-alt" style="font-size: 1rem; margin-right: 0.75em;"></i>Visa på karta</a>
     </div>
@@ -57,7 +74,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
             <div class="contactItems">
                 <?php if( $kontaktperson ): ?>
                     <i class="fas fa-user" style="font-size: 1rem; margin-right: 0.75em;"></i>
-                    <p class="colorWhite"><?php echo $kontaktperson;?></p>  
+                    <p class="colorBeige"><?php echo $kontaktperson;?></p>  
                     <?php endif; ?>
 
                     <?php if( $kontaktpersonTelefon ): ?>
@@ -73,17 +90,19 @@ if ( function_exists( 'eae_encode_emails' ) )  {
         </div>
 </div>
 
-<div class="colFull dashedBottom pb2 mb2" >
+<div class="colFull pb2 mb2" >
     <?php if( $bild ): ?>
-        <div class="singleVerkstadImg"> 
+        <div class="singleVerkstadImg colorBeige"> 
             
-            <img src="<?php echo $bild; ?>" />
-            
+        <img src="<?php echo esc_url($bildUrl); ?>" alt="<?php echo esc_attr($alt); ?>">
+            <div class="justifyRight mt05">
+            <h5><?php echo esc_attr($alt); ?></h5>
+            </div>
         </div>
         <?php endif; ?>
     </div>
     <p class="weOffer">Om oss:</p>
-    <div class="bgWhite p2 mb2 br4" >
+    <div class="mb2 br4 colorWhite" >
     <p><?php the_content() ?></p>
     
     </div>
@@ -109,7 +128,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
                         </ul>
                     <?php endif; ?>
             </div>
-            
+            <div class="dashedBottom mt1 mb1"></div>
         </div>
 
         <!-- /Verkstadstaggar -->

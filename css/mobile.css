@@ -81,9 +81,9 @@
         background-color: #141414;
         /* background-color: #E7DCD1; */
         border-radius: 4px;
-        border: 1px solid #990F0F;
+        border: 1px solid #E7DCD1;
+        margin: 0 0 1em 0;
         padding: 1em;
-        margin-bottom: 0.5em;
     }
 
     .weOffer {
@@ -107,7 +107,7 @@
         flex-direction: column;
         margin: 2em 1em 0px 1em;
         padding: 1em;
-        background: #E7DCD1;
+        /* background: #E7DCD1; */
         border-radius: 4px;
     }
     
@@ -225,8 +225,8 @@
 .aboutContainer {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin: 0 16px 32px 16px;
+    width: 100%;
+    margin: 0 0px 32px 0px;
 }
 
 .aboutText h1 {
@@ -236,8 +236,6 @@
     font-size: 30px;
     line-height: 44px;
     color: #E7DCD1;
-    margin-bottom: 2em;
-    margin-top: 2em;
 }
 
 .aboutText p {
@@ -471,6 +469,7 @@
         position: relative;
         right: 8px;
         margin-bottom: 4px;
+        white-space: nowrap;
     }
 
     .spinner {

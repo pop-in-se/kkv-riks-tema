@@ -27,7 +27,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 2.25em;
+    font-size: 2em;
     border-bottom: 3px solid #990F0F;
     margin-bottom: 0.5em;
     padding-bottom: 0.2em;
@@ -321,7 +321,15 @@ textarea {
     background-color: #F5F5F5;
 }
 
+.bgGrey {
+    background-color: #1A1919;
+}
+
 .colorRed {
+    color: #be0606;
+}
+
+.colorMaroon {
     color: #990F0F;
 }
 
@@ -343,6 +351,10 @@ textarea {
 
 .mb2 {
     margin-bottom: 2em;
+}
+
+.mt05 {
+    margin-top: 0.5em;
 }
 
 .mt1 {
@@ -398,6 +410,10 @@ textarea {
     padding-top: 2em;
 }
 
+.p1 {
+    padding: 1em;
+}
+
 .p2 {
     padding: 2em;
 }
@@ -441,12 +457,15 @@ textarea {
     height: 15vh;
 }
 
-
 .beige {
     background: #E7DCD1;
 }
 .pearl {
     background: #F6EFF0;
+}
+
+.borderRed {
+    border: 1px solid #990F0F;
 }
 
 .dashedBottom {
@@ -467,8 +486,6 @@ p {
 	font-weight: 400;
 }
 
-
-
 h2 {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -480,22 +497,21 @@ h2 {
 h3 {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.25em;
+    font-weight: 600;
+    font-size: 1.5em;
     margin-bottom: 0.25em;
 }
 
 h3 a {
-    color: #990F0F;
+    color: #be0606;
 }
 
 h5 {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 28px;
-    color: #0A0A0A;
+    font-size: 14px;
+    line-height: 26px;
 }
 
 
@@ -1238,8 +1254,6 @@ textarea {
     font-size: 40px;
     line-height: 54px;
     color: #E7DCD1;
-    margin-bottom: 2em;
-    margin-top: 2em;
 }
 
 .aboutText p {
@@ -1383,8 +1397,6 @@ input[type="search" i] {
     border-radius: 4px;
 }
 
-
-
 .contactItems {
     display: flex;
     flex-direction: row;
@@ -1410,9 +1422,15 @@ input[type="search" i] {
     overflow: hidden;
 }
 
+.singleVerkstadImg {
+    width: 100%;
+}
+
 .singleVerkstadImg img {
     width: 100%;
-    height: auto;
+    max-height: 600px;
+    opacity: 0.8;
+    object-fit: cover;
 }
 
 
@@ -1431,7 +1449,7 @@ p {
 
 .weOffer {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     color: #E7DCD1;
     margin-bottom: 1em;
@@ -1492,8 +1510,6 @@ p {
     /* border: 1px solid #E7DCD1; */
     border: 1px solid #990F0F;
     box-sizing: border-box;
-    background-color: #1A1919;
-    /* background-color: #E7DCD1; */
 }
 
 .verkstadsTaggar a:hover {

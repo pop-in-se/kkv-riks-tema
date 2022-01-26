@@ -39,19 +39,7 @@
         
         <div class="col2edit relative alignRight mb2"> 
 
-        <div class="redigera mt1">
-            <?php if ( is_user_logged_in() ) { ?>
-            
-                <?php 
-                get_template_part('/templates/edit-page-template')
-                ?>
-
-            <?php } else { ?>
-            
-                <!--  Ingenting -->
-                
-            <?php } ?>
-            </div>
+       
         </div>
 
     </div>

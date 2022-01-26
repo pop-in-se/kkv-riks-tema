@@ -20,9 +20,9 @@ $ortsNamn = $verkstadInfo['ortsnamn'];
 </h1>
 
 <div class="colFull">
-    <p class="colorRed letter-spacing"><b><?php echo $namn ?></b></p>
+    <p class="colorMaroon letter-spacing"><b><?php echo $namn ?></b></p>
 </div>
-<div class="colFull dashedBottom pb2 mb2 row">
+<div class="colFull pb2 mb2 row">
     <div class="col1 mr1 mb05">
     <p><?php echo $adress; ?>
     <br><?php echo $postAdress; ?></p>
