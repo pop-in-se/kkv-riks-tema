@@ -6,6 +6,8 @@ $namn = $verkstadInfo['verkstadens_namn'];
 $adress = $verkstadInfo['adress'];
 $postAdress = $verkstadInfo['postadress'];
 $hemsida = $verkstadInfo['hemsida'];
+$hemsida = str_replace(array('www.', 'http://', 'https://'), '', $hemsida);
+$hemsida = rtrim($hemsida, '/');
 $epost = $verkstadInfo['e-post'];
 $telefon = $verkstadInfo['telefon'];
 $kontaktpersonTelefon = $verkstadInfo['kontaktperson_telefon'];
@@ -38,7 +40,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
                 <!--  Ingenting -->
                 
             <?php } ?>
-            </div>
+</div>
 
 <h1 class="rubrikBorderBottom"> 
 <?php echo $namn; ?>
@@ -55,7 +57,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
 
             <div class="contactItems">
             <?php if( $hemsida ): ?>
-                <i class="fas fa-globe" style="font-size: 1rem; margin-right: 0.75em;"></i><a href="<?php echo $hemsida; ?>" target="_blank"> <?php echo $hemsida; ?> </a>
+                <i class="fas fa-globe" style="font-size: 1rem; margin-right: 0.75em;"></i><a href="http://<?php echo $hemsida; ?>" target="_blank"> <?php echo $hemsida; ?> </a>
                 <?php endif; ?>
             </div>
             

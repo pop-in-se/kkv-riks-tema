@@ -68,6 +68,9 @@
         margin-bottom: 1em;
     }
     
+    .redigeraText::after {
+        content: "";
+    }
 
     .flexDropdown {
         display: flex;
@@ -219,6 +222,24 @@
         white-space: pre-line;
     }
 
+    /* ------------------------ Kurser ------------------------ */
+
+.kursHeader {
+    display: flex;
+    height: 200px;
+    align-items: flex-end;
+}
+
+.kursMargin {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.kursCenter {
+    justify-content: center;
+}
+
+
 /* ------------------------ Om KKV Riks ------------------------  */
 
 
@@ -289,7 +310,7 @@
 
     .heroTitle {
         white-space: nowrap;
-        font-weight: 600;
+        font-weight: 500;
         font-style: normal;
         font-size: 32px!important;
         line-height: 44px;

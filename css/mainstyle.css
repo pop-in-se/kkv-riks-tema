@@ -30,7 +30,7 @@ body {
     font-size: 2em;
     border-bottom: 3px solid #990F0F;
     margin-bottom: 0.5em;
-    padding-bottom: 0.2em;
+    padding-bottom: 0.35em;
 }
 
 .rubrikBorderBottom a{    
@@ -138,6 +138,10 @@ textarea {
     margin-top: 4em;
 }
 
+.redigeraText::after {
+    content: "Redigera";
+}
+
 /* ------------------------ Dropdown ------------------------ */
 
 .dropbtn {
@@ -211,6 +215,10 @@ textarea {
 }
 
 /* ------------------------ Designsystem ------------------------ */
+
+.displayNone {
+    display: none;
+}
 
 .link {
     text-decoration: none;
@@ -299,6 +307,14 @@ textarea {
 
 .beigeLink i a {
     color: #E7DCD1;
+}
+
+.colorGray {
+    color: #b5a7a7;
+}
+
+.colorBlack {
+    color: #1A1919;
 }
 
 .colorWhite {
@@ -391,7 +407,12 @@ textarea {
 
 .mrl2 {
     margin-right: 2em;
+    
     margin-left: 2em;
+}
+.mrl05 {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
 }
 
 .pb2 {
@@ -558,7 +579,7 @@ h5 {
     padding: 12px 12px;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.9vw;
     color: #F5F5F5;  
 }
 
@@ -590,7 +611,6 @@ h5 {
     top: 19px;
 }
 #submenu ul li.has-sub:hover > a {
-    background: #990F0F;
     padding-bottom: 13px;
     padding-top: 13px;
     top: -1px;
@@ -600,27 +620,21 @@ h5 {
 #submenu ul li.has-sub:hover > div {
     display: block;
 }
-#submenu ul li.has-sub > a:hover {
-    background: #990F0F;
-    border-color: #990F0F;
-    border-radius: 8px;
-}
+
 #submenu ul li > ul,
 #submenu ul li > div {
     display: none;
     width: auto;
     position: absolute;
-    border-radius: 8px;
-    top: 38px;
+    top: 40px;
     padding: 10px 0;
-    background: #990F0F;
-    border-radius: 0 8px 8px 8px;
+    background: #1A1919;
     z-index: 999;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #submenu ul li > ul {
-    width: 140px;
+    width: fit-content;
 }
 #submenu ul li > ul li {
     display: block;
@@ -636,14 +650,12 @@ h5 {
     margin: 0;
     padding: 0.75em;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.7vw;
     color: #F5F5F5;
     text-decoration: none;
     text-align: left;
 }
-#submenu ul ul a:hover {
-    color: #F5F5F5;
-}
+
 
 
 /* ------------------------ Frontpage ------------------------ */
@@ -994,7 +1006,7 @@ div.header-span {
 }
 
 .heroTitle {
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
     font-size: 42px!important;
     line-height: 64px;
@@ -1007,6 +1019,75 @@ i.icon {
 }
 
 
+
+/* ------------------------ Kurser ------------------------ */
+
+.kursKort {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #141414;
+    border-radius: 4px;
+    border: 1px solid #E7DCD1;
+    margin: 0.5em;
+    overflow-y: hidden;
+}
+
+.kursMargin {
+    margin-left: 3em;
+    margin-right: 0.5em;
+}
+
+.kursCenter {
+    align-items: center;
+}
+
+.kursRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.kurserInfo {
+    width: fit-content;
+    white-space: nowrap;
+    height: fit-content;
+    color:#F5F5F5;    
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0.25em 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid #F5F5F5;
+    background-color: #1A1919;
+}
+
+.kursDatum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    color:#1A1919;    
+    padding: 0.5em 0.5em;
+    border: 4px double #1A1919;
+    background-color: #F5F5F5;
+}
+
+.kursDatum h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.kursDatum h3 {
+    margin: 0;
+}
+
+.kursHeader {
+    align-items: flex-end;
+}
 
 /* ------------------------ Aktuellt ------------------------ */
 

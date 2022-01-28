@@ -156,7 +156,51 @@ $itemTitle = bbp_get_topic_title();
   else echo "";
 }
 
-    
+
+function post_type_kurs() {
+
+    $labels = array(
+        'name'                => _x( 'Kurs', 'Post Type General Name' ),
+        'singular_name'       => _x( 'Kurs', 'Post Type Singular Name' ),
+        'menu_name'           => __( 'Kurser'),
+        'parent_item_colon'   => __( 'Parent'),
+        'all_items'           => __( 'Alla kurser' ),
+        'view_item'           => __( 'Se kurser'),
+        'add_new_item'        => __( 'Lägg till kurs' ),
+        'add_new'             => __( 'Lägg till' ),
+        'edit_item'           => __( 'Redigera kurs' ),
+        'update_item'         => __( 'Uppdatera kurs' ),
+        'search_items'        => __( 'Sök kurs'),
+        'not_found'           => __( 'Hittades inte' ),
+        'not_found_in_trash'  => __( 'Hittades inte i papperskorgen'),
+    );
+
+    $args = array(
+        'label'               => __( 'kurser'),
+        'description'         => __( 'KKV kurser'),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'revisions', 'custom-fields', 'page-attributes'),
+        'taxonomies'          => array('post_tag'), 
+        'hierarchical'        => true,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-calendar-alt',
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        "query_var"           => true,
+        'show_in_rest'        => true,
+    );
+    register_post_type( 'kurs', $args );
+}
+
+
 function post_type_verkstad() {
 
         $labels = array(
@@ -201,6 +245,7 @@ function post_type_verkstad() {
         );
         register_post_type( 'verkstad', $args );
 }
+    
 
 function ort_kategori() {
     // Add new taxonomy, make it hierarchical (like categories)
@@ -366,6 +411,7 @@ add_theme_support('widgets');
 add_theme_support( 'custom-logo' );
 add_action('after_setup_theme', 'register_my_menu');
 add_action( 'wp_enqueue_scripts', 'load_styles' );
+add_action( 'init', 'post_type_kurs', 0 );
 add_action( 'init', 'post_type_verkstad', 0 );
 add_action( 'init', 'ort_kategori', 0 );
 
