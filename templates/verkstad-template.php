@@ -42,9 +42,9 @@ if ( function_exists( 'eae_encode_emails' ) )  {
             <?php } ?>
 </div>
 
-<h1 class="rubrikBorderBottom"> 
+<h2 class="rubrikBorderBottom"> 
 <?php echo $namn; ?>
-</h1>
+</h2>
 
 <div class="colFull dashedBottom pb2 mb2 row">
     <div class="col1 mr1">

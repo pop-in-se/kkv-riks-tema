@@ -80,7 +80,7 @@
             
         </div>
         
-            <h1 class="rubrikBorderBottom mr1 ml1 mt1"> <?php the_title() ?> </h1>
+            <h2 class="rubrikBorderBottom mr1 ml1 mt1"> <?php the_title() ?> </h2>
         <div class="colFull row mr1 ml1">
         
             <div class="colorWhite mr1 ml1">

@@ -23,7 +23,7 @@
         'post_type' => 'verkstad',
         'orderby'   => 'title',
         'order'     => 'ASC',
-        'posts_per_page' => 99,
+        'posts_per_page' => 40,
     );
         
     $post_query = new WP_Query($args); 

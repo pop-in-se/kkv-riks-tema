@@ -15,9 +15,9 @@ $ortsNamn = $verkstadInfo['ortsnamn'];
 ?>
 
 
-<h1 class="rubrikBorderBottom"> 
+<h2 class="rubrikBorderBottom"> 
 <a href="<?php the_permalink(); ?>"><?php echo esc_html( $ortsNamn->name ); ?></a>
-</h1>
+</h2>
 
 <div class="colFull">
     <p class="colorMaroon letter-spacing"><b><?php echo $namn ?></b></p>

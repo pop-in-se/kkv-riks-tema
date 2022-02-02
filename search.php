@@ -26,9 +26,9 @@
 
   <div class="aktuelltKort">
 
-  <h1 class="rubrikBorderBottom"> 
+  <h2 class="rubrikBorderBottom"> 
         <a href="<?php the_permalink() ?>" ><?php the_title() ?></a>
-    </h1>
+    </h2>
 
   <p><?php $excerpt = get_the_excerpt();
             echo wp_trim_words($excerpt, 10) ?></p>

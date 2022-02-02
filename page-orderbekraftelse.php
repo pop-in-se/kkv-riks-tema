@@ -25,10 +25,10 @@
   <div class="colFull pt2 pb2 plr2 column alignCenter">
 
     <i class="fas fa-award" style="font-size: 8rem;"></i>
-    <h1 class="rubrikBorderBottom"> 
+    <h2 class="rubrikBorderBottom mt1"> 
     <?php echo $orderbekraftelse; ?>
-    </h1>
-    <p class="mt1 mb1 plr2"><i class="fas fa-shipping-fast" style="font-size: 1rem;"></i><?php echo $frakt;?></p>
+    </h2>
+    <p class="mt1 mb1 plr2"><i class="fas fa-shipping-fast" style="font-size: 1rem; margin-right:8px;"></i><?php echo $frakt;?></p>
     <p class="mt1 mb1 plr2"><?php the_content( ) ?></p>
       
   

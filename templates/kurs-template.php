@@ -111,7 +111,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
 
 
 
-<h1 class="rubrikBorderBottom mt2"> <?php the_title() ?> </h1>
+<h2 class="rubrikBorderBottom mt2"> <?php the_title() ?> </h2>
 
 <div class="colFull column"> 
 

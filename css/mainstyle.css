@@ -26,12 +26,13 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 2em;
+    line-height: 1.3em;
     border-bottom: 3px solid #990F0F;
     margin-bottom: 0.5em;
     padding-bottom: 0.35em;
 }
 
-.rubrikBorderBottom a{    
+.rubrikBorderBottom a {    
     text-decoration: none;
     color: #E7DCD1;
 }
@@ -93,6 +94,7 @@ textarea {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     line-height: 24px;
+    cursor: pointer;
     color: #E7DCD1;
     text-transform: uppercase;
     font-weight: 400;
@@ -119,9 +121,10 @@ textarea {
     font-weight: 400;
     font-size: 18px;
     text-decoration: none;
-    padding: 0.3em 1em;
+    padding: 0.4em 1em;
     border: 1px solid #F5F5F5;
     background-color: #1A1919;
+    cursor: pointer;
 }
 
 .knappSvart a {
@@ -514,6 +517,7 @@ h2 {
     font-style: normal;
     font-weight: 500;
     font-size: 1.75em;
+    line-height: 2.4em;
     margin-bottom: 0.25em;
 }
 
@@ -522,6 +526,7 @@ h3 {
     font-style: normal;
     font-weight: 600;
     font-size: 1.5em;
+    line-height: 2em;
     margin-bottom: 0.25em;
 }
 
@@ -547,6 +552,7 @@ h5 {
     border: none;
     margin: 0;
     padding: 0;
+    cursor: pointer;
     line-height: 1;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -868,9 +874,11 @@ h5 {
 .inloggad {
     text-align: center;
     background-color: #990F0F;
-    width: 8em;
+    width: 7em;
     border-radius: 8px;
     white-space: nowrap;
+    cursor: pointer;
+    margin-left: 0.5em
 }
 
 /* ------------------------ Header ------------------------ */
@@ -1280,6 +1288,7 @@ textarea {
     background-color: #F5F5F5;
     width: 100%;
     margin: 0.6em 0 1em 0;
+    height: 10%;
 }
 
 .wpcf7 input[type="submit"] {
@@ -1290,7 +1299,6 @@ textarea {
     font-size: 18px;
     line-height: 24px;
     background: #990F0F;
-    padding: 8px 20px 8px 8px;
     margin: 0;
     border: none;
     border-radius: 8px;

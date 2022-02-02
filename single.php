@@ -19,7 +19,7 @@
 
 <div class="colFull column br4 mrl4 mt1">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <div class="pt2 pb2 colorWhite">
+    <div class="pt1 pb2 colorWhite">
 
         <div class="column">
             <?php if ( has_post_thumbnail() ) { ?>
@@ -29,9 +29,9 @@
                 <!-- Ingenting -->
             <?php } ?>
         
-            <h1 class="rubrikBorderBottom"> 
+            <h2 class="rubrikBorderBottom"> 
                 <?php the_title() ?>
-            </h1>
+            </h2>
             <div>
                 <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><h5>Publicerad: </h5> <?php echo get_the_date(); ?></time>
             </div>
@@ -48,7 +48,7 @@
                 get_template_part('/templates/file-template')
             ?>
             </div>
-            
+            <div class="dashedBottom mt2 mb1"></div>
         </div>
         
     </div>
