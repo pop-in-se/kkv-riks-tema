@@ -9,7 +9,6 @@ html {
 
 body {
     background-color: #100f0f!important;
-    /* background-color: #1A1919!important; */
     max-width: 100vw;
     font-family: 'Open Sans', sans-serif;
 }
@@ -23,7 +22,6 @@ body {
 
 .rubrikBorderBottom {
     color: #E7DCD1;
-    /* color: #990F0F; */
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -36,7 +34,6 @@ body {
 .rubrikBorderBottom a{    
     text-decoration: none;
     color: #E7DCD1;
-    /* color: #990F0F; */
 }
 
 button {
@@ -110,7 +107,6 @@ textarea {
     border-radius: 4px;
     border: 1px solid #E7DCD1;
     box-sizing: border-box;
-    /* background-color: #E7DCD1; */
 }
 
 .knappSvart {
@@ -148,13 +144,11 @@ textarea {
     background-color: #1A1919;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    /* text-align: left; */
     color:#F5F5F5; 
     width: 189px;
     height: 48px;
     font-weight: 400;
     font-size: 18px;
-    /* padding: 0.8em 1.4em; */
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -228,7 +222,6 @@ textarea {
     font-size: 18px;
     line-height: 32px;
     color: #E7DCD1;
-    /* color: #0A0A0A; */
     overflow: hidden;
 }
 .flex {
@@ -507,6 +500,15 @@ p {
 	font-weight: 400;
 }
 
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0.5em 0;
+}
+
 h2 {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -603,13 +605,11 @@ h5 {
 #submenu > ul > li.has-sub > a:before {
     content: '';
     position: absolute;
-    top: 18px;
+    top: 20px;
     right: 6px;
     border: 5px solid transparent;
 }
-#submenu > ul > li.has-sub:hover > a:before {
-    top: 19px;
-}
+
 #submenu ul li.has-sub:hover > a {
     padding-bottom: 13px;
     padding-top: 13px;
@@ -626,10 +626,11 @@ h5 {
     display: none;
     width: auto;
     position: absolute;
-    top: 40px;
+    top: 42px;
     padding: 10px 0;
     background: #1A1919;
     z-index: 999;
+    border-top: 2px solid #990F0F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -741,7 +742,7 @@ h5 {
 
 .kurser::before {
     word-break: break-word;
-    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f27a";
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f073";
 }
 
 .map {
@@ -814,6 +815,11 @@ h5 {
     font-size: 6vw!important;
     margin-top: 108px;
     color: #990F0F;
+}
+
+.frontpageTitle h1 {
+    font-size: 6vw!important;
+    color: #990F0F!important;
 }
 
 .frontpageSubtitle {
@@ -909,7 +915,6 @@ display: none;
 }
 
 .header-logo > a > img  {
-    /* width: 100%; */
     object-fit: cover;
 }
 
@@ -1097,9 +1102,7 @@ i.icon {
     flex-direction: column;
     margin-top: 32px;
     padding-bottom: 1em;
-    /* background: #E7DCD1; */
     border-radius: 4px;
-    /* border-bottom: 1px dashed #E7DCD1; */
 }
 
 .aktuelltKort p {
@@ -1121,7 +1124,6 @@ i.icon {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    /* border: 1px solid #F5F5F5; */
     }
 
 .postLink p a{
@@ -1144,6 +1146,11 @@ i.icon {
     box-shadow: none;
     background: none;
     border: 0;
+}
+
+
+div#pp-user-profile-1.ppress-default-profile {
+    width: 40vw;
 }
 
 .pp-form-container .pp-form-wrapper.ppBuildScratch.ppsbl-pill .pp-form-submit-button-wrap input[type=submit] {
@@ -1447,14 +1454,12 @@ input[type="search" i] {
     display: flex;
     width: 48%;
     flex-direction: column;
-    /* background-color: #E7DCD1; */
     background-color: #141414;
     border-radius: 4px;
     border: 1px solid #E7DCD1;
     padding: 2em;
     margin: 0.5em;
     overflow-y: hidden;
-    /* box-shadow: 3px 3px #990f0f; */
 }
 
 
@@ -1499,7 +1504,6 @@ input[type="search" i] {
     font-size: 18px;
     line-height: 32px;
     color: #E7DCD1;
-    /* color: #0A0A0A; */
     overflow: hidden;
 }
 
@@ -1577,7 +1581,6 @@ p {
     font-size: 18px;
     line-height: 24px;
     color: #E7DCD1;
-    /* color: #990F0F; */
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -1588,7 +1591,6 @@ p {
     margin: 0.2em;
     padding: 0.65em 0.5em 0.25em 0.5em;
     border-radius: 3px;
-    /* border: 1px solid #E7DCD1; */
     border: 1px solid #990F0F;
     box-sizing: border-box;
 }

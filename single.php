@@ -33,7 +33,7 @@
                 <?php the_title() ?>
             </h1>
             <div>
-                <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
+                <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><h5>Publicerad: </h5> <?php echo get_the_date(); ?></time>
             </div>
             <div class="spacer"></div>
             <p><?php the_content() ?></p>

@@ -24,10 +24,7 @@
 <?php  
     $args = array(
         'post_type' => 'kurs',
-        'orderby' => 'meta_value_num',
 	    'order'	=> 'ASC',
-	    'meta_type' => 'DATE',
-	    'meta_key' => 'datum'
     );
         
     $post_query = new WP_Query($args); 

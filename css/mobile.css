@@ -159,6 +159,11 @@
         margin-top: 108px;
         color: #990F0F;
         margin-left: 0.5em;
+        margin-bottom: 0;
+    }
+
+    .frontpageTitle h1 {
+        margin-bottom: 0;
     }
     
     .frontpageSubtitle {
@@ -203,7 +208,7 @@
     }
 
     .mapContainer img {
-        width: 100%;
+        width: 75%;
         height: auto;
     }
 
@@ -296,6 +301,10 @@
         margin-bottom: 20px;
         overflow: hidden;
         width: 85vw;
+    }
+
+    div#pp-user-profile-1.ppress-default-profile {
+        width: 80vw;
     }
 
 /* ------------------------ Verkstäder titlar mobil ------------------------  */

@@ -59,7 +59,7 @@ $underrubrik = get_field('underrubrik');
 
 
 
-<div class="colFull">
+<div class="colFull mrl2">
 
         <?php
         wp_nav_menu( array( 

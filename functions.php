@@ -160,7 +160,7 @@ $itemTitle = bbp_get_topic_title();
 function post_type_kurs() {
 
     $labels = array(
-        'name'                => _x( 'Kurs', 'Post Type General Name' ),
+        'name'                => _x( 'kurs', 'Post Type General Name' ),
         'singular_name'       => _x( 'Kurs', 'Post Type Singular Name' ),
         'menu_name'           => __( 'Kurser'),
         'parent_item_colon'   => __( 'Parent'),
