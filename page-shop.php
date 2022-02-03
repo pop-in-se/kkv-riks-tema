@@ -33,6 +33,7 @@
 </div>
 
     <div class="col2 mrl2">
+    <?php the_content( ) ?>
     <h1 class="rubrikBorderBottom"> 
     <?php echo $produkt; ?>
     </h1>

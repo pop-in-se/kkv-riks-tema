@@ -183,7 +183,10 @@ textarea {
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #0A0A0A}
+  .dropdown-content a:hover {
+      background-color: #0A0A0A;
+      cursor: pointer;
+    }
   
   .dropdown:hover .dropdown-content {
     display: block;
@@ -622,6 +625,8 @@ h5 {
     top: -1px;
     z-index: 999;
 }
+
+
 #submenu ul li.has-sub:hover > ul,
 #submenu ul li.has-sub:hover > div {
     display: block;
@@ -661,6 +666,10 @@ h5 {
     color: #F5F5F5;
     text-decoration: none;
     text-align: left;
+}
+#submenu ul li > ul li a:hover {
+    background-color: #0A0A0A;
+    cursor: pointer;
 }
 
 
@@ -756,7 +765,7 @@ h5 {
 }
 
 .lineRed { 
-    width: 90%;
+    width: 80%;
     border-top: 8px solid #990F0F;
 }
 
@@ -832,8 +841,13 @@ h5 {
     font-weight: 400;
     font-style: normal;
     font-size: 4.5vw!important;
+    line-height: 1.4em;
     margin-bottom: 16px;
     color: #990F0F;
+}
+
+.frontpageSubtitle h2 {
+    line-height: 1.4em;
 }
 
 .menu-sidfotsmeny-container  {
@@ -1221,6 +1235,7 @@ div#pp-user-profile-1.ppress-default-profile {
 
 #bbpress-forums a, #bbpress-forums a:hover {
     color: #990F0F;
+    cursor: pointer;
 }
 
 .bbp-pagination-count {
@@ -1597,7 +1612,7 @@ p {
     width: fit-content;
     height: 2.75em;
     margin: 0.2em;
-    padding: 0.65em 0.5em 0.25em 0.5em;
+    padding: 0.65em 0.65em 0.25em 0.8em;
     border-radius: 3px;
     border: 1px solid #990F0F;
     box-sizing: border-box;
