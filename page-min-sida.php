@@ -4,12 +4,12 @@
     <div class="col1 alignBottom">
     <?php if ( is_user_logged_in() ) { ?>
        
-        <h1 class="heroTitle"><i class="far fa-smile icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
+        <h1 class="heroTitle"><i class="far fa-smile icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i><?php the_title() ?></h1>
 
 
     <?php } else { ?>
     
-        <h1 class="heroTitle"><i class="far fa-smile icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i>Medlemsskap</h1>
+        <h1 class="heroTitle"><i class="far fa-smile icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i>Medlemsskap</h1>
 
     
     <?php } ?>

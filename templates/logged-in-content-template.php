@@ -6,12 +6,11 @@
         $username = $user_info->user_login;
         $first_name = $user_info->first_name;
         ?>
-        <h2 class="colorBeige">Välkommen <?php echo "$first_name"; ?></h2>
-        <p class="colorBeige">Som inloggad har du tillgång till Köp / Sälj-sidan, <br>
-        du kan posta i forumet och redigera verkstadsinformation och kurser. </p>
+        <h2 class="colorDarkGrey">Välkommen <?php echo "$first_name"; ?></h2>
+        <p class="colorDarkGrey">Som inloggad har du tillgång till Köp / Sälj-sidan, du kan posta i forumet och redigera verkstadsinformation och kurser. </p>
         <p> <?php the_content() ?> </p>
         
-        <h3 class="mt2 colorBeige">Senaste inläggen:</h3>
+        <h3 class="mt2 colorDarkGrey">Senaste inläggen:</h3>
 
         <?php if (current_user_can('manage_options')) : ?>
 			
@@ -31,15 +30,15 @@
 			
 			
 			<div class="medlemMeta">
-            <div class="colFull justifyRight beigeLink">   
+            <div class="colFull justifyRight link">   
             <p> <?php edit_post_link( __( ' ', 'textdomain' ), '<i>', '</i>', null, 'fas fa-edit colorBlack' ); ?></p>
             </div> 
             <h3 class="colorMaroon"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></h3>    
             
-            <p class="colorWhite"><?php bbp_topic_excerpt(); ?></br></p>
+            <p class="colorDarkGrey"><?php bbp_topic_excerpt(); ?></br></p>
             <div class="spacer1em"></div>
             <P class="colorRed"><b>Forum: </b><?php echo get_the_title($post->post_parent); ?><br></p>
-            <P class="colorBeige">
+            <P class="colorDarkGrey">
             <i class="far fa-clock" style="font-size: 0.85rem; margin-right: 0.75em;"></i><time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></br>
             <i class="fas fa-feather-alt" style="font-size: 0.85rem; margin-right: 0.25em;"></i> <?php the_author(); ?> <br> 
 			</p></a></div>
@@ -58,16 +57,16 @@
     <?php while ( $kurs_posts->have_posts() ) : $kurs_posts->the_post(); ?>
 
         <div class="medlemMeta">
-        <div class="colFull justifyRight beigeLink">   
+        <div class="colFull justifyRight link">   
             <p> <?php edit_post_link( __( ' ', 'textdomain' ), '<i>', '</i>', null, 'fas fa-edit' ); ?></p>
         </div> 
         <h3 class="colorRed"><a href="<?php the_permalink(); ?>"><?php the_title() ?></h3>
-        <p class="colorWhite"><?php $excerpt = get_the_excerpt();
+        <p class="colorDarkGrey"><?php $excerpt = get_the_excerpt();
             echo wp_trim_words($excerpt, 12) ?></p>
             <div class="spacer1em"></div>
             <p class="colorRed"><b>Kurser</b></p>
-            <p class="colorBeige"><i class="far fa-clock" style="font-size: 0.85rem; margin-right: 0.75em;"></i><time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></br>
-            <p class="colorBeige"><i class="fas fa-feather-alt" style="font-size: 0.85rem; margin-right: 0.25em;"></i> <?php the_author() ?> </p>
+            <p class="colorDarkGrey"><i class="far fa-clock" style="font-size: 0.85rem; margin-right: 0.75em;"></i><time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></br>
+            <p class="colorDarkGrey"><i class="fas fa-feather-alt" style="font-size: 0.85rem; margin-right: 0.25em;"></i> <?php the_author() ?> </p>
         </div>
 
     <?php endwhile; ?>
@@ -80,16 +79,16 @@
     <?php while ( $blog_posts->have_posts() ) : $blog_posts->the_post(); ?>
 
         <div class="medlemMeta">
-        <div class="colFull justifyRight beigeLink">   
-            <p> <?php edit_post_link( __( ' ', 'textdomain' ), '<i>', '</i>', null, 'fas fa-edit' ); ?></p>
+        <div class="colFull justifyRight link">   
+            <p> <?php edit_post_link( __( ' ', 'textdomain' ), '<i>', '</i>', null, 'fas fa-edit link' ); ?></p>
         </div> 
         <h3 class="colorRed"><a href="<?php the_permalink(); ?>"><?php the_title() ?></h3>
-        <p class="colorWhite"><?php $excerpt = get_the_excerpt();
+        <p class="colorDarkGrey"><?php $excerpt = get_the_excerpt();
             echo wp_trim_words($excerpt, 12) ?></p>
             <div class="spacer1em"></div>
             <p class="colorRed"><b>Aktuellt</b></p>
-            <p class="colorBeige"><i class="far fa-clock" style="font-size: 0.85rem; margin-right: 0.75em;"></i><time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></br>
-            <p class="colorBeige"><i class="fas fa-feather-alt" style="font-size: 0.85rem; margin-right: 0.25em;"></i> <?php the_author() ?> </p>
+            <p class="colorDarkGrey"><i class="far fa-clock" style="font-size: 0.85rem; margin-right: 0.75em;"></i><time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time></br>
+            <p class="colorDarkGrey"><i class="fas fa-feather-alt" style="font-size: 0.85rem; margin-right: 0.25em;"></i> <?php the_author() ?> </p>
         </div>
 
     <?php endwhile; ?>
@@ -100,19 +99,19 @@
 
     <div class="col2 pt2 pb2">
 
+
     <?php
         wp_nav_menu( array( 
             'menu' => 'medlemsmeny',
             'theme_location' => 'medlemsmeny', 
             'container_class' => 'menu-inloggad-container',
-            'before' => '<p class="inloggad colorWhite plr1 mb1">',
+            'before' => '<p class="inloggad colorDarkGrey plr1 mb1">',
             'after' => "</p>", )
         ); 
         ?>
 
-<!--     <button class="knappSvart">
-        <p><a class="colorWhite" href="https://kkv-riks.se/wp-admin">Kontrollpanelen</a></p>
-    </button> -->
-
+        <div class="knapp mrl1 ml05 plr1">
+                <a href="https://kkv-riks.se/wp-admin"><i class="fas fa-wrench"></i> Gå till adminpanelen</a></p>
+        </div>
     </div>
     

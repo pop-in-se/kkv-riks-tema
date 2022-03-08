@@ -2,7 +2,7 @@
 
 <div class="mrl4 h30vh hero">
     <div class="col1 alignBottom">
-    <h1 class="heroTitle"><i class="far fa-eye icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
+    <h1 class="heroTitle"><i class="far fa-eye icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i><?php the_title() ?></h1>
         <div class="pageLineRed"></div>
     </div>
     <div class="col2 alignBottom">
@@ -39,7 +39,7 @@
             $excerpt = get_the_excerpt();
             echo wp_trim_words($excerpt, 20) ?></p>
             <div class="spacer"></div>
-           <h5 class="colorBeige"> Postad av: <?php the_author() ?> </h5>
+           <h5 class="colorDarkGrey"> Postad av: <?php the_author() ?> </h5>
             <div class="verkstadsTaggar justifyRight">
         <a href="<?php the_permalink() ?>"> Läs inlägg <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
         </div>
@@ -49,8 +49,8 @@
     <?php endwhile; ?> 
     
     <?php else : ?>
-        <div class="colFull justifyCenter colorWhite">
-            <p class="colorWhite"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+        <div class="colFull justifyCenter colorDarkGrey">
+            <p class="colorDarkGrey"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
         </div>
         <?php endif; ?>
         

@@ -2,7 +2,7 @@
 
 <div class="hero mrl4 h30vh">
     <div class="col1 alignBottom">
-    <h1 class="heroTitle"><i class="far fa-lightbulb icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
+    <h1 class="heroTitle"><i class="far fa-lightbulb icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i><?php the_title() ?></h1>
         <div class="pageLineRed"></div>
     </div>
     <div class="col2 alignBottom">
@@ -31,7 +31,8 @@
 
     <div class="aboutText">
       <?php the_content() ?>
-      <div class="spacer1em"></div>
+      <div class="spacer1em mt4"></div>
+      <h4>Relaterade sidor:</h4>
       <div class="spacer1em"></div>
       <div class="dashedBottom"></div>
 

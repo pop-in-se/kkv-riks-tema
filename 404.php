@@ -20,8 +20,13 @@
 </div>
 
 <div class="colFull column br4 mrl4 mt2">
-    <p class="colorWhite"><?php esc_html_e( 'Vi är ledsna, men sidan du letar efter kan inte hittas.', 'kkv-riks' ); ?></p>
-	<a class="knapp" href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Tillbaka till startsidan', 'kkv-riks'); ?></a>
+    <p class="colorDarkGrey"><?php esc_html_e( 'Vi är ledsna, men sidan du letar efter kan inte hittas.', 'kkv-riks' ); ?></p>
+    <div class="spacer1em"></div>
+    <p>Testa att söka, eller <a class="link" href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('gå tillbaka till startsidan', 'kkv-riks'); ?></a> </p>
+    <div class="spacer1em"></div>
+    <?php get_search_form(); ?>
+
+	
 </div>
 
 

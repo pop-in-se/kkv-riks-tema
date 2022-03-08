@@ -21,7 +21,7 @@ $valberedning = $styrelsen['valberedning'];
 $valberedningEpost = $styrelsen['valberedning_e_post'];
 ?>
 
-<div class="colFull pb2 mb2 row colorWhite">
+<div class="colFull pb2 mb2 row">
 
     <div class="col1">
 

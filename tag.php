@@ -1,9 +1,10 @@
 <?php get_header() ?>
+<?php $description = tag_description(); ?>
 
 
 <div class="hero mrl4 h30vh">
     <div class="col1 alignBottom">
-    <h1 class="heroTitle"><i class="fas fa-tag icon" style="font-size: 2rem; color:#E7DCD1; margin-right:8px;"></i> <?php single_tag_title() ?></h1>
+    <h1 class="heroTitle"><i class="fas fa-tools icon" style="font-size: 2rem; color:#b70909; margin-right:8px;"></i> <?php single_tag_title() ?></h1>
         <div class="pageLineRed"></div>
     </div>
     <div class="col2 alignBottom">
@@ -21,8 +22,14 @@
         <p class="knappSvart"><i class="fas fa-chevron-left" style="font-size: 1rem; margin-right: 1em;"></i>Alla verkstäder</p></a>
     </div>
     
-        
-    
+      <div class="colFull mt2 ml1 alignSelfLeft">
+          <p><?php echo $description ?></p>
+      </div> 
+
+      <div class="colFull mt2 ml1 alignSelfLeft">
+          <h3>Versktäder som erbjuder <?php echo single_tag_title() ?>: </h3>
+      </div>  
+
 
     <div class="verkstadskortContainer mt2">
 
@@ -38,8 +45,8 @@
                 
                                 
             <?php endwhile; else : ?>
-                <div class="colFull justifyCenter colorWhite">
-                    <p class="colorWhite"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+                <div class="colFull justifyCenter colorDarkGrey">
+                    <p class="colorDarkGrey"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
             </div>    
             <?php endif; ?>
 

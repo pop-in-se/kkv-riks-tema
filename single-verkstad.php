@@ -6,7 +6,7 @@ $ortsNamn = $verkstadInfo['ort'];
 ?>
 <div class="hero mrl4 h30vh">
     <div class="col1 alignBottom">
-        <h1 class="heroTitle"><i class="far fa-dot-circle icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
+        <h1 class="heroTitle colorRed"><i class="far fa-dot-circle icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i><?php the_title() ?></h1>
         <div class="pageLineRed"></div>
     </div>
 
@@ -58,7 +58,7 @@ foreach ($_terms as $term) :
         endforeach;
         ?>
 
-<p class="justifyCenter mb1 mt2 colorWhite">Fler verkstäder:</p>
+<p class="justifyCenter mb1 mt2">Fler verkstäder:</p>
 <div class="mrl4 br4 postLink row">
     <p class="postLink"><?php previous_post_link(); ?></p>
     <p class="postLink"><?php next_post_link(); ?></p>

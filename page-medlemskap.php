@@ -4,12 +4,12 @@
     <div class="col1 alignBottom">
     <?php if ( is_user_logged_in() ) { ?>
        
-        <h1 class="heroTitle"><i class="far fa-smile icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
+        <h1 class="heroTitle"><i class="far fa-smile icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i><?php the_title() ?></h1>
 
 
     <?php } else { ?>
     
-        <h1 class="heroTitle"><i class="far fa-smile icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i>Medlemsskap</h1>
+        <h1 class="heroTitle"><i class="far fa-smile icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i>Medlemsskap</h1>
 
     
     <?php } ?>
@@ -28,13 +28,13 @@
   
         <?php if ( is_user_logged_in() ) { ?>
        
-            <p class="colorWhite mt1"> Du är inloggad</p><br>
+            <p class="colorDarkGrey mt1"> Du är inloggad</p><br>
         <div class="colFull row">
             <a href="<?php
                     $min_sida_url = get_permalink('365');
                     echo $min_sida_url;
                     ?>">
-                    <p class="knappSvart"> Min sida <i class="fas fas fa-chevron-right" style="font-size: 1rem; color:#E7DCD1; margin-left:16px;"></i> </p></a>
+                    <p class="knappSvart"> Min sida <i class="fas fas fa-chevron-right" style="font-size: 1rem; margin-left:16px;"></i> </p></a>
         </div>
 
     <?php } else { ?>
@@ -53,14 +53,25 @@
 <div class="colFull br4 mrl4 mt2">
     
     
-<div class="col1 column pt2 pb2 colorWhite">
+<div class="col1 column pt2 pb2 colorDarkGrey">
 
 <?php the_content() ?>
 
+    <div class="spacer1em mt4"></div>
+      <h4>Relaterade sidor:</h4>
+      <div class="spacer1em"></div>
+      <div class="dashedBottom"></div>
+
+    <div class="row">
+        <?php 
+                get_template_part('/templates/link-template')
+        ?>  
+    </div>
 </div>
 
 <div class="col2 pt2 pb2 plr2">
-    <p class="colorWhite">Dokument:</p>
+    <div class="spacer1em"></div>
+    <p class="colorDarkGrey">Dokument:</p>
     <div class="spacer1em"></div>
     <div class="column">
         <?php 

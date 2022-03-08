@@ -2,7 +2,7 @@
 
 <div class="mrl4 h30vh hero">
     <div class="col1 alignBottom">
-    <h1 class="heroTitle"><i class="far fa-eye icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i>Aktuellt</h1>
+    <h1 class="heroTitle"><i class="far fa-eye icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i>Aktuellt</h1>
         <div class="pageLineRed"></div>
     </div>
     <div class="col2 alignBottom">
@@ -19,7 +19,7 @@
 
 <div class="colFull column br4 mrl4 mt1">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <div class="pt1 pb2 colorWhite">
+    <div class="pt1 pb2 colorDarkGrey">
 
         <div class="column">
             <?php if ( has_post_thumbnail() ) { ?>
@@ -56,7 +56,7 @@
     <?php endwhile; // end of the loop. ?>
 </div>
 
-<p class="justifyCenter mb1 mt2 colorWhite">Fler inlägg:</p>
+<p class="justifyCenter mb1 mt2 colorDarkGrey">Fler inlägg:</p>
 <div class="mrl4 br4 postLink row">
 <p class="postLink"><?php previous_post_link(); ?></p>
 <p class="postLink"><?php next_post_link(); ?></p>

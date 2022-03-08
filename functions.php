@@ -30,9 +30,9 @@ function footer_sidebar() {
     'id'            => 'footer-sidebar',
     'description'   => 'Adress i sidfoten',
     'class'         => '',
-    'before_widget'  => '<div id="%1$s" class="colorWhite %2$s">',
+    'before_widget'  => '<div id="%1$s" class="colorDarkGrey %2$s">',
     'after_widget'  => '</div>', 
-    'before_title'  => '<h5 class="colorWhite">',
+    'before_title'  => '<h5 class="colorDarkGrey">',
     'after_title'   => '</h5>' 
   );
 
@@ -103,6 +103,55 @@ class Sub_Menu_Walker extends Walker {
 	function end_el(&$output, $item, $depth = 0, $args = array()) {
 		$output .= "</li>\n";
 	}
+}
+
+//Ta bort gamla kurser
+
+function get_exired_posts_to_delete()
+{
+    /**
+     * If you need posts that expired more than a week ago, we would need to
+     * get the unix time stamp of the day a week ago. You can adjust the relative
+     * date and time formats as needed.
+     * @see http://php.net/manual/en/function.strtotime.php
+     * @see http://php.net/manual/en/datetime.formats.php
+     */
+    // As example, we need to get posts that has expired more than 7days ago
+    $past = strtotime( "- 1 day" );
+
+    // Set our query arguments
+    $args = [
+        'fields'         => 'ids', // Only get post ID's to improve performance
+        'post_type'      => 'kurs',
+        'post_status'    => 'expired',
+        'posts_per_page' => -1,
+        'meta_query'     => [
+            [
+                'key'     => '_expiration_date',
+                'value'   => $past,
+                'compare' => '<='
+            ]
+        ]
+    ];
+    $q = get_posts( $args );
+
+    // Check if we have posts to delete, if not, return false
+    if ( !$q )
+        return false;
+
+    // OK, we have posts to delete, lets delete them
+    foreach ( $q as $id )
+        wp_delete_post( $id );
+}
+
+// Add function to register event to wp
+add_action( 'wp', 'register_daily_post_delete_event');
+function register_daily_post_delete_event() {
+    // Make sure this event hasn't been scheduled
+    if( !wp_next_scheduled( 'expired_post_delete' ) ) {
+        // Schedule the event
+        wp_schedule_event( time(), 'daily', 'expired_post_delete' );
+    }
 }
 
 
@@ -354,57 +403,6 @@ function cf_search_distinct( $where ) {
 add_filter( 'posts_distinct', 'cf_search_distinct' );
 
 
-/**
- * Font Awesome CDN Setup Webfont
- *
- * This will load Font Awesome from the Font Awesome Free or Pro CDN.
- */
-if (! function_exists('fa_custom_setup_cdn_webfont') ) {
-    function fa_custom_setup_cdn_webfont($cdn_url = '', $integrity = null) {
-        $matches = [];
-        $match_result = preg_match('|/([^/]+?)\.css$|', $cdn_url, $matches);
-        $resource_handle_uniqueness = ($match_result === 1) ? $matches[1] : md5($cdn_url);
-        $resource_handle = "font-awesome-cdn-webfont-$resource_handle_uniqueness";
-
-        foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
-            add_action(
-                $action,
-                function () use ( $cdn_url, $resource_handle ) {
-                    wp_enqueue_style( $resource_handle, $cdn_url, [], null );
-                }
-            );
-        }
-
-        if($integrity) {
-            add_filter(
-                'style_loader_tag',
-                function( $html, $handle ) use ( $resource_handle, $integrity ) {
-                    if ( in_array( $handle, [ $resource_handle ], true ) ) {
-                        return preg_replace(
-                            '/\/>$/',
-                            'integrity="' . $integrity .
-                            '" crossorigin="anonymous" />',
-                            $html,
-                            1
-                        );
-                    } else {
-                        return $html;
-                    }
-                },
-                10,
-                2
-            );
-        }
-    }
-}
-
-fa_custom_setup_cdn_webfont(
-    'https://use.fontawesome.com/releases/v5.15.4/css/all.css',
-    'sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm'
-);
-
-
-
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 add_theme_support('widgets');
@@ -414,5 +412,6 @@ add_action( 'wp_enqueue_scripts', 'load_styles' );
 add_action( 'init', 'post_type_kurs', 0 );
 add_action( 'init', 'post_type_verkstad', 0 );
 add_action( 'init', 'ort_kategori', 0 );
+add_action( 'expired_post_delete', 'get_exired_posts_to_delete' );
 
 ?>

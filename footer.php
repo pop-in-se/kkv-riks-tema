@@ -13,7 +13,7 @@
     </div>
     <div class="col2 mt4">
         <div class="pageLineBeige"></div>  
-        <div class="mb1 mt1 colorWhite">
+        <div class="mb1 mt1">
         <?php dynamic_sidebar( 'footer-sidebar' ); ?>
         </div>
 
@@ -22,7 +22,10 @@
 </div>
 
 <div class="justifyCenter mb2">
-    <img src="<?php $imgId = 8; echo wp_get_attachment_image_url($imgId); ?>">
+    <img src="<?php $imgId = 924; echo wp_get_attachment_image_url($imgId); ?>">
+</div>
+<div class="justifyCenter mb2">
+<h5>Sidan skapad av <a href="https://pop-in.se" target="_blank">Pop-in.se</a></h5>
 </div>
 
 

@@ -58,7 +58,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
                 echo "";
                 echo '</div>';
             } else if ($slutDag && $slutManad) {
-                    echo '<h4 class="colorWhite mrl05 kursCenter colFull"> – </h4>';
+                    echo '<h4 class="colorDarkGrey mrl05 kursCenter colFull"> – </h4>';
                     echo '<div class="kursDatum colorBlack mb2 mt2 column">';
                     echo '<h3>';
                     echo $slutDag;
@@ -74,7 +74,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
     <div class="col2">
             <div class="column mr1">
 
-                <h5 class="colorGray">Ort: </h5> 
+                <h5 class="colorDarkGrey">Ort: </h5> 
                 <div class="kurserInfo colorBlack">
                 
                     <?php
@@ -99,7 +99,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
 
                 <div class="column">
                     <?php if( $kursLink ): ?>
-                    <h5 class="colorGray">Kurslänk: </h5> 
+                    <h5 class="colorDarkGrey">Kurslänk: </h5> 
                     <div class="kurserInfo">
                     <a class="link" href="<?php echo $kursLink; ?>" target="_blank">Anmälan</a>
                 </div>
@@ -121,31 +121,31 @@ if ( function_exists( 'eae_encode_emails' ) )  {
         <div class="col1 mr1">
             
             <?php if( $tider ): ?>
-                <h5 class="colorGray">Tider: </h5> 
-                <p class="colorWhite"><?php echo $tider; ?></p>
+                <h5 class="colorDarkGrey">Tider: </h5> 
+                <p class="colorDarkGrey"><?php echo $tider; ?></p>
             <?php endif; ?>
 
             <?php if( $kursledare ): ?>
-                <h5 class="colorGray">Kursledare: </h5> 
-                <p class="colorWhite"><?php echo $kursledare; ?></p>
+                <h5 class="colorDarkGrey">Kursledare: </h5> 
+                <p class="colorDarkGrey"><?php echo $kursledare; ?></p>
             <?php endif; ?>
             
             <?php if( $pris ): ?>
-                <h5 class="colorGray">Pris: </h5> 
-                <p class="colorWhite"><?php echo $pris; ?> kr</p>
+                <h5 class="colorDarkGrey">Pris: </h5> 
+                <p class="colorDarkGrey"><?php echo $pris; ?> kr</p>
             <?php endif; ?>
         </div>
 
         <div class="col2">
 
             <?php if( $deltagare ): ?>
-                <h5 class="colorGray">Antal deltagare: </h5> 
-                <p class="colorWhite"><?php echo $deltagare; ?></p>
+                <h5 class="colorDarkGrey">Antal deltagare: </h5> 
+                <p class="colorDarkGrey"><?php echo $deltagare; ?></p>
             <?php endif; ?>
 
             <?php if( $anmalningsdag ): ?>
-                <h5 class="colorGray">Sista anmälningsdag: </h5> 
-                <p class="colorWhite"><?php echo $anmalningsdag; ?></p>
+                <h5 class="colorDarkGrey">Sista anmälningsdag: </h5> 
+                <p class="colorDarkGrey"><?php echo $anmalningsdag; ?></p>
             <?php endif; ?>
                      
 
@@ -158,7 +158,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
 
 </div>
 
-<div class="colFull mrl4 colorWhite mt2 mb1 column"> 
+<div class="colFull mrl4 colorDarkGrey mt2 mb1 column"> 
 
 
     <?php the_content() ?>

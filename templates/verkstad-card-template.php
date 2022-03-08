@@ -22,12 +22,13 @@ $ortsNamn = $verkstadInfo['ortsnamn'];
 <div class="colFull">
     <p class="colorMaroon letter-spacing"><b><?php echo $namn ?></b></p>
 </div>
-<div class="colFull pb2 mb2 row">
-    <div class="col1 mr1 mb05">
+<div class="colFull mb2 column">
+    <div class="colFull mr1 mb05">
     <p><?php echo $adress; ?>
     <br><?php echo $postAdress; ?></p>
 </div>
-        <div class="col2">
+        <div class="colFull column hideMobile">
+            <div class="dashedBottom mb1 mt1"></div>
             <div class="contactItems">
             <?php if( $hemsida ): ?>
                 <i class="fas fa-globe" style="font-size: 0.95rem; margin-right: 0.5em;"></i><a href="http://<?php echo $hemsida; ?>" target="_blank"> <?php echo $hemsida; ?> </a>
@@ -51,6 +52,6 @@ $ortsNamn = $verkstadInfo['ortsnamn'];
         
     
         <div class="verkstadsTaggar justifyRight">
-        <a href="<?php the_permalink(); ?>"> Mer om verkstaden <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
+        <a class="link colorRed" href="<?php the_permalink(); ?>"> Mer info <i class="fas fa-chevron-right" style="font-size: 1rem; margin-right: 0.5em; margin-left: 0.5em;"></i> </a>
         </div>
     

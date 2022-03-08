@@ -8,7 +8,8 @@ html {
 }
 
 body {
-    background-color: #100f0f!important;
+    background-color: #C5C0BD!important;
+    /* background-color: #100f0f!important; */
     max-width: 100vw;
     font-family: 'Open Sans', sans-serif;
 }
@@ -21,20 +22,21 @@ body {
 }
 
 .rubrikBorderBottom {
-    color: #E7DCD1;
+    color: #1A1919;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 2em;
     line-height: 1.3em;
-    border-bottom: 3px solid #990F0F;
+    border-bottom: 3px solid #b70909;
+    /* border-bottom: 3px solid #990F0F; */
     margin-bottom: 0.5em;
     padding-bottom: 0.35em;
 }
 
 .rubrikBorderBottom a {    
     text-decoration: none;
-    color: #E7DCD1;
+    color: #1A1919;
 }
 
 button {
@@ -43,32 +45,32 @@ button {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 20px;
-    background: #990F0F;
+    line-height: 1;
+    background: #0a0a0a40;
     padding: 8px;
     margin: 0;
     border: none;
     border-radius: 8px;
     width: fit-content;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     cursor: pointer;
 }
 
 input[type="submit" i] {
-    color: #E7DCD1;
+    color: #1A1919;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    background: #1A1919;
-    border: 1px solid #F5F5F5;
+    background: #C5C0BD;
+    border: 1px solid #1A1919;
     padding: 8px;
     margin: 0;
     border-radius: 0px;
     width: fit-content;
-    height: 46px;
-    text-transform: uppercase;
+    height: 3em;
+    /* text-transform: uppercase; */
     cursor: pointer;
 }
 
@@ -93,37 +95,38 @@ textarea {
     display: inline-block;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 1;
     cursor: pointer;
-    color: #E7DCD1;
-    text-transform: uppercase;
+    color: #282828;
+    /* text-transform: uppercase; */
     font-weight: 400;
     letter-spacing: 0.5px;
     white-space: nowrap;
     text-decoration: none;
     width: fit-content;
     height: 2.75em;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-right: 1em;
-    padding: 0.65em 0.5em 0.25em 0.5em;
-    border-radius: 4px;
-    border: 1px solid #E7DCD1;
+    padding: 0.75em 0.5em 0.2em 0.5em;
+    border-radius: 8px;
+    border: 1px solid #282828;
     box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .knappSvart {
     width: fit-content;
     white-space: nowrap;
     height: 48px;
-    color:#F5F5F5;    
+    color:#1A1919;    
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     text-decoration: none;
     padding: 0.4em 1em;
-    border: 1px solid #F5F5F5;
-    background-color: #1A1919;
+    border: 1px solid #1A1919;
+    /* background-color: #1A1919; */
     cursor: pointer;
 }
 
@@ -144,10 +147,10 @@ textarea {
 /* ------------------------ Dropdown ------------------------ */
 
 .dropbtn {
-    background-color: #1A1919;
+    background-color: #C5C0BD;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    color:#F5F5F5; 
+    color:#1A1919;
     width: 189px;
     height: 48px;
     font-weight: 400;
@@ -155,7 +158,7 @@ textarea {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    border: 1px solid #F5F5F5;
+    border: 1px solid #1A1919;
     border-radius: 0;
     text-transform: none;
   }
@@ -164,10 +167,10 @@ textarea {
   .dropdown-content {
     display: none;
     position: absolute;
-    color:#F5F5F5;
-    border: 1px solid #F5F5F5;
+    color:#1A1919;
+    border: 1px solid #1A1919;
     margin-top: 3em;
-    background-color: #1A1919;
+    background-color: #C5C0BD;
     min-width: 189px;
     max-height: 250px;
     overflow: scroll;
@@ -176,7 +179,7 @@ textarea {
   }
   
   .dropdown-content a {
-    color: #F5F5F5;
+    color: #1A1919;
     font-size: 18px;
     padding: 12px 26px;
     text-decoration: none;
@@ -184,7 +187,7 @@ textarea {
   }
   
   .dropdown-content a:hover {
-      background-color: #0A0A0A;
+      background-color: #0a0a0a40;
       cursor: pointer;
     }
   
@@ -220,16 +223,17 @@ textarea {
     display: none;
 }
 
-.link {
+.link a p i {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 32px;
-    color: #E7DCD1;
+    color: #282828;
     overflow: hidden;
 }
+
 .flex {
     display: flex;
 }
@@ -341,7 +345,11 @@ textarea {
 }
 
 .colorRed {
-    color: #be0606;
+    color: #b70909;
+}
+
+.colorDarkGrey {
+    color: #282828;
 }
 
 .colorMaroon {
@@ -411,6 +419,10 @@ textarea {
 }
 .mrl05 {
     margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.ml05 {
     margin-left: 0.5em;
 }
 
@@ -500,10 +512,14 @@ textarea {
 
 /* ------------------------ Typografi ------------------------ */
 
+a {
+    color: #282828;
+}
 p {
     font-size: 18px;
     line-height: 30px;
 	font-weight: 400;
+    color: #1A1919;
 }
 
 
@@ -587,11 +603,14 @@ h5 {
     outline: none;
     display: block;
     position: relative;
-    padding: 12px 12px;
+    padding-right: 1em;
+    padding-top: 12px;
+    /* padding-bottom: 0.5em; */
     text-align: center;
     text-decoration: none;
-    font-size: 1.9vw;
-    color: #F5F5F5;  
+    font-size: 20px;
+    color: #1A1919;  
+    /* color: #F5F5F5; */  
 }
 
 #submenu > ul > li:first-child > a {
@@ -637,11 +656,11 @@ h5 {
     display: none;
     width: auto;
     position: absolute;
-    top: 42px;
+    top: 100%;
     padding: 10px 0;
-    background: #1A1919;
+    background: #C5C0BD;
     z-index: 999;
-    border-top: 2px solid #990F0F;
+    border-top: 1px solid #282828;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -660,15 +679,15 @@ h5 {
     display: block;
     position: relative;
     margin: 0;
-    padding: 0.75em;
+    padding: 0.5em;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.7vw;
-    color: #F5F5F5;
+    font-size: 18px;
+    color: #1A1919;
     text-decoration: none;
     text-align: left;
 }
 #submenu ul li > ul li a:hover {
-    background-color: #0A0A0A;
+    background-color: #0a0a0a40;
     cursor: pointer;
 }
 
@@ -700,11 +719,13 @@ h5 {
     text-transform: uppercase;
     display: flex;
     justify-content: center;
-    background-color: #990F0F;
+    background-color: #E7DCD1;
+    /* background-color: #990F0F; */
     margin: 1em;
     padding: 0.4em 0.8em;
     border-radius: 8px;
     white-space: nowrap;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 .frontpageLinks ul{
@@ -715,14 +736,16 @@ h5 {
 
 .frontpageLinks li{
     justify-content: center;
-    border: 2px solid #990F0F;
-    background-color: #0a0a0a40;
+    /* border: 2px solid #E7DCD1; */
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4); */
+    /* border: 2px solid #990F0F; */
+    /* background-color: #0a0a0a40; */
     margin: 1em;
     border-radius: 8px;
 }
 
 .frontpageLinks .menu li{
-    padding: 3em;
+    padding: 2em;
     width: 30%;
     display: flex;
     align-items: center;
@@ -731,33 +754,33 @@ h5 {
 
 .omkkvriks::before {
     word-break: break-word;
-    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f0eb";
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#282828; content: "\f0eb";
 }
 
 .aktuellt::before {
     word-break: break-word;
-    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f06e";
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#282828; content: "\f06e";
 }
 
 
 .medlemmar::before {
     word-break: break-word;
-    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f118";
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#282828; content: "\f118";
 }
 
 .verkstader::before {
     word-break: break-word;
-    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f192";
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#282828; content: "\f192";
 }
 
 .kontakt::before {
     word-break: break-word;
-    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f0e0";
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#282828; content: "\f0e0";
 }
 
 .kurser::before {
     word-break: break-word;
-    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#E7DCD1; content: "\f073";
+    font-family: "Font Awesome 5 Free"; font-size: 6em; margin-bottom: 0.2em; color:#282828; content: "\f073";
 }
 
 .map {
@@ -766,7 +789,7 @@ h5 {
 
 .lineRed { 
     width: 80%;
-    border-top: 8px solid #990F0F;
+    border-top: 4px solid #b70909;
 }
 
 .lineBeige { 
@@ -784,7 +807,8 @@ h5 {
     }
 
 .mapTextCities {
-    color: #E7DCD1;
+    color: #1A1919;
+    /* color: #E7DCD1; */
     font-size: 20px;
     line-height: 28px;
     font-weight: 400;
@@ -813,7 +837,7 @@ h5 {
     font-style: normal;
     font-size: 20px!important;
     line-height: 40px;
-    color: #E7DCD1;
+    color: #282828;
 }
 
 .frontpageText p {
@@ -821,29 +845,34 @@ h5 {
     font-style: normal;
     font-size: 24px!important;
     line-height: 44px;
-    color: #E7DCD1;
+    color: #1A1919;
+    /* color: #E7DCD1; */
 }
 
 .frontpageTitle {
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
     font-size: 6vw!important;
-    margin-top: 108px;
-    color: #990F0F;
+    line-height: 1.4;
+    /* margin-top: 108px; */
+    margin-bottom: 8px;
+    color: #b70909;
+    /* color: #990F0F; */
 }
 
 .frontpageTitle h1 {
     font-size: 6vw!important;
-    color: #990F0F!important;
+    color: #b70909!important;
 }
 
 .frontpageSubtitle {
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-    font-size: 4.5vw!important;
+    font-size: 4.25vw!important;
     line-height: 1.4em;
-    margin-bottom: 16px;
-    color: #990F0F;
+    margin-bottom: 8px;
+    color: #b70909;
+    /* color: #990F0F; */
 }
 
 .frontpageSubtitle h2 {
@@ -887,17 +916,22 @@ h5 {
 
 .inloggad {
     text-align: center;
-    background-color: #990F0F;
+    /* background-color: #990F0F; */
+    border: 1px solid #282828;
     width: 7em;
     border-radius: 8px;
     white-space: nowrap;
     cursor: pointer;
-    margin-left: 0.5em
+    margin-left: 0.5em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 }
+
 
 /* ------------------------ Header ------------------------ */
 
 .topHeader {
+    background-color: #0a0a0a40!important;
+    /* background-color: #0A0A0A!important; */
     display: flex;
     align-items: center;
     padding: 0 72px 0 72px;
@@ -907,8 +941,7 @@ h5 {
     left: 0%;
     right: 0%;
     border-bottom: 0.5px solid #990F0F;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: #0A0A0A!important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
     z-index: 99;
 }
 
@@ -917,12 +950,13 @@ display: none;
 }
 
 .medlemMeta  {
-    background-color: #1A1919;
+    background-color: #0a0a0a40;
     border: 1px solid #E7DCD1;
     border-radius: 8px;
     margin-top: 1em;
     margin-bottom: 1em;
-    padding: 0.75em;
+    padding: 0.75em 0.75em 0.75em 1.5em;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 40%);
 }
 
 .medlem {
@@ -940,14 +974,13 @@ display: none;
     object-fit: cover;
 }
 
-
 div.header-nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-content: center;
     color: white;
-    padding: 15px;
+    padding: 0px;
     width: 100%;
 }
 
@@ -1003,7 +1036,8 @@ div.header-span {
 } 
 
 .menu a { 
-    color:#F5F5F5;    
+    color:#1A1919;    
+    /* color:#F5F5F5;  */   
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -1024,7 +1058,7 @@ div.header-span {
 
 .pageLineRed { 
     width: 100%;
-    border-top: 8px solid #990F0F;
+    border-top: 8px solid #b70909;
 }
 
 .pageLineBeige { 
@@ -1038,7 +1072,8 @@ div.header-span {
     font-size: 42px!important;
     line-height: 64px;
     margin-bottom: 16px;
-    color: #E7DCD1;
+    color: #b70909;
+    /* color: #E7DCD1; */
 }
 
 i.icon {
@@ -1053,11 +1088,12 @@ i.icon {
     display: flex;
     width: 100%;
     flex-direction: column;
-    background-color: #141414;
+    background-color: #0a0a0a40;
     border-radius: 4px;
     border: 1px solid #E7DCD1;
     margin: 0.5em;
     overflow-y: hidden;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 40%);
 }
 
 .kursMargin {
@@ -1086,8 +1122,8 @@ i.icon {
     text-decoration: none;
     padding: 0.25em 0.5em;
     margin-bottom: 0.5em;
-    border: 1px solid #F5F5F5;
-    background-color: #1A1919;
+    border: 1px solid #1A1919;
+    background-color: #0a0a0a40;
 }
 
 .kursDatum {
@@ -1099,8 +1135,10 @@ i.icon {
     text-align: center;
     color:#1A1919;    
     padding: 0.5em 0.5em;
-    border: 4px double #1A1919;
+    margin: 0.5em;
+    border: 1px solid #1A1919;
     background-color: #F5F5F5;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
 }
 
 .kursDatum h4 {
@@ -1128,16 +1166,16 @@ i.icon {
 }
 
 .aktuelltKort p {
-    color: #E7DCD1;
+    color: #282828;
 }
 
 .aktuelltKort time {
-    color: #E7DCD1;
+    color: #282828;
 }
 
 .postLink {
     font-size: 20px;
-    color: #E7DCD1;
+    color: #282828;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1150,7 +1188,7 @@ i.icon {
 
 .postLink p a{
     text-decoration: none;
-    color: #E7DCD1;
+    color: #282828;
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
@@ -1207,7 +1245,7 @@ div#pp-user-profile-1.ppress-default-profile {
     padding: 1em 0 1em 0;
     font-size: 16px;
     line-height: 24px;
-    color: #E7DCD1;
+    color: #282828;
 }
 
 #bbpress-forums div.bbp-reply-content img {
@@ -1230,28 +1268,28 @@ div#pp-user-profile-1.ppress-default-profile {
 }
 
 .bbp-breadcrumb-home {
-    color: #990F0F;
+    color: #b70909;
 }
 
 #bbpress-forums a, #bbpress-forums a:hover {
-    color: #990F0F;
+    color: #b70909;
     cursor: pointer;
 }
 
 .bbp-pagination-count {
-    color: #E7DCD1;
+    color: #282828;
 }
 
 .bbp-breadcrumb-current {
-    color: #E7DCD1;
+    color: #282828;
 }
 
 .bbp-form {
-    color: #E7DCD1;
+    color: #282828;
 }
 
 #bbpress-forums fieldset.bbp-form label {
-    color: #E7DCD1;
+    color: #282828;
 }
 
 div.bbp-breadcrumb, div.bbp-topic-tags {
@@ -1270,16 +1308,16 @@ div.bbp-breadcrumb, div.bbp-topic-tags {
 
 .div.bbp-template-notice.info {
     background-color: #F5F5F5;
-    border: #990F0F 1px solid;
+    border: #b70909 1px solid;
 }
 
 div.bbp-template-notice {
     border-radius: 4px;
-    border: #990F0F 1px solid;
+    border: #b70909 1px solid;
 }
 
 .profilepress-edit-profile-status success {
-    color:#990F0F;
+    color:#b70909;
 }
 
 /* ------------------------ Kontakt ------------------------ */
@@ -1291,7 +1329,7 @@ div.bbp-template-notice {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    color: #E7DCD1;
+    color: #282828;
 }
 
 .wpcf7 input[type="text"],
@@ -1304,6 +1342,7 @@ textarea {
     width: 100%;
     margin: 0.6em 0 1em 0;
     height: 10%;
+    border: none;
 }
 
 .wpcf7 input[type="submit"] {
@@ -1313,19 +1352,15 @@ textarea {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    background: #990F0F;
+    /* background: #990F0F; */
     margin: 0;
     border: none;
     border-radius: 8px;
-    width: 20%;
+    width: fit-content;
     text-transform: uppercase;
     cursor: pointer;
 }
 
-.wpcf7 input:hover[type="submit"] {
-    background: #E7DCD1;
-    color: #990F0F;
-}
 
 .wpcf7 input:active[type="submit"] {
     background: #1A1919;
@@ -1364,7 +1399,7 @@ textarea {
     font-weight: 600;
     font-size: 40px;
     line-height: 54px;
-    color: #E7DCD1;
+    color: #282828;
 }
 
 .aboutText p {
@@ -1373,7 +1408,8 @@ textarea {
     font-weight: normal;
     font-size: 24px;
     line-height: 42px;
-    color: #E7DCD1;
+    color: #282828;
+    /* color: #E7DCD1; */
 }
 
 .aboutText li {
@@ -1382,7 +1418,8 @@ textarea {
     font-weight: normal;
     font-size: 24px;
     line-height: 42px;
-    color: #E7DCD1;
+    color: #282828;
+    /* color: #E7DCD1; */
 }
 
 
@@ -1437,23 +1474,23 @@ input[type="search" i] {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    color: #f5f5f5;
-    background-color: #1A1919;
-    border: 1px solid #F5F5F5;
+    color: #1A1919;
+    background-color: #C5C0BD;
+    border: 1px solid #1A1919;
     padding-left: 1em;
 }
 
 .dropdown input[type="submit" i] {
     width: 100px;
-    color: #F5F5F5;    
+    color: #1A1919;    
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     padding: 0.5em;
     cursor: pointer;
-    border: 1px solid #F5F5F5;
-    background-color: #1A1919;
+    border: 1px solid #1A1919;
+    background-color: #C5C0BD;
 }
 
 /* ----- Verkstäder samlingssida ----- */
@@ -1475,25 +1512,29 @@ input[type="search" i] {
 
 .verkstadskort {
     display: flex;
-    width: 48%;
+    width: 31%;
+    /* width: 48%; */
     flex-direction: column;
-    background-color: #141414;
+    background-color: #0a0a0a20;
+    /* background-color: #141414; */
     border-radius: 4px;
     border: 1px solid #E7DCD1;
-    padding: 2em;
+    padding: 1.5em;
+    /* padding: 2em; */
     margin: 0.5em;
     overflow-y: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 
 .verkstadskort p {
-    color: #E7DCD1;
+    color: #1A1919;
 }
 
 .verkstadskort b {
-    color: #E7DCD1;
-    font-size: 20px;
-    line-height: 2;
+    color: #1A1919;
+    font-size: 18px;
+    line-height: 1.7;
 } 
 
 /* ----- Single verkstad ----- */
@@ -1516,7 +1557,7 @@ input[type="search" i] {
 }
 
 .contactItems i {
-    color: #E7DCD1;
+    color: #282828;
 }
 
 .contactItems a {
@@ -1526,7 +1567,7 @@ input[type="search" i] {
     font-weight: normal;
     font-size: 18px;
     line-height: 32px;
-    color: #E7DCD1;
+    color: #282828;
     overflow: hidden;
 }
 
@@ -1559,7 +1600,7 @@ p {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 24px;
-    color: #E7DCD1;
+    color: #282828;
     margin-bottom: 1em;
 }
 
@@ -1603,7 +1644,8 @@ p {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     line-height: 24px;
-    color: #E7DCD1;
+    color: #282828;
+    /* color: #E7DCD1; */
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -1614,7 +1656,7 @@ p {
     margin: 0.2em;
     padding: 0.65em 0.65em 0.25em 0.8em;
     border-radius: 3px;
-    border: 1px solid #990F0F;
+    border: 1px solid #282828;
     box-sizing: border-box;
 }
 

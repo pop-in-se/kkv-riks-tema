@@ -2,10 +2,8 @@
 <div class="verkstaderContainer colFull">
     
     <div class="col1">
-    
+        
         <div class="dropdown cityDropdown">
-
-
         
             <button class="dropbtn">Välj ort <i class="fas fa-sort-down" style="font-size: 1.2rem; margin-left: 3.6em;"></i> </button>
             
@@ -19,6 +17,7 @@
             } ?>
 
             </div>
+
         </div>
 
     </div>
@@ -29,6 +28,7 @@
         
     <div class="mb1">
         
+    <div><?php get_search_form(); ?></div>
 
     </div>
 

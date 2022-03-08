@@ -8,14 +8,14 @@
 
 <div class="hero mrl4 h30vh">
     <div class="col1 alignBottom">
-    <h1 class="heroTitle"><i class="fas fa-search icon" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php the_title() ?></h1>
+    <h1 class="heroTitle"><i class="fas fa-search icon" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i><?php the_title() ?></h1>
         <div class="pageLineRed"></div>
     </div>
     <div class="col2 alignBottom">
         <div class="pageLineBeige"></div>  
     </div>
 </div>
-<p class="colorWhite ml1 mt1 mrl4">
+<p class="colorDarkGrey ml1 mt1 mrl4">
 <?php echo $wp_query->found_posts; ?> <?php _e( 'sökresultat hittades för', 'locale' ); ?>: "<?php the_search_query(); ?>"
 </p>
 
@@ -40,8 +40,8 @@
         <?php endwhile; ?>
 
         <?php else : ?>
-        <div class="colFull justifyCenter colorWhite">
-            <p class="colorWhite"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+        <div class="colFull justifyCenter colorDarkGrey">
+            <p class="colorDarkGrey"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
         </div>
         <?php endif; ?>
 

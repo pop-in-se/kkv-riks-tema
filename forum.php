@@ -18,7 +18,7 @@ get_header(); ?>
 
  <div class="mrl4 hero mt2 h30vh">
     <div class="col1 alignBottom">
-        <h1 class="heroTitle"><i class="far fa-comment-alt" style="font-size: 2.4rem; color:#E7DCD1; margin-right:16px;"></i><?php bbp_forum_title(); ?></h1>
+        <h1 class="heroTitle"><i class="far fa-comment-alt" style="font-size: 2.4rem; color:#b70909; margin-right:16px;"></i><?php bbp_forum_title(); ?></h1>
         <div class="pageLineRed"></div>
     </div>
     <div class="col2 alignBottom">

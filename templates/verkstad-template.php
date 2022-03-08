@@ -47,12 +47,12 @@ if ( function_exists( 'eae_encode_emails' ) )  {
 </h2>
 
 <div class="colFull dashedBottom pb2 mb2 row">
-    <div class="col1 mr1">
-    <p class="colorBeige"><?php echo $adress; ?>
+    <div class="col1 mr1 mb1">
+    <p><?php echo $adress; ?>
     <br><?php echo $postAdress; ?></p>
-    <a class="link mt1 mb1 beigeLink" href="https://maps.google.com/maps?q= <?php echo $adress, ", ", $postAdress; ?>" target="_blank"><i class="fas fa-map-marker-alt" style="font-size: 1rem; margin-right: 0.75em;"></i>Visa på karta</a>
+    <a class="link mt1 mb1 colorDarkGrey" href="https://maps.google.com/maps?q= <?php echo $adress, ", ", $postAdress; ?>" target="_blank"><i class="fas fa-map-marker-alt" style="font-size: 1rem; margin-right: 0.75em;"></i>Visa på karta</a>
     </div>
-
+<div class="dashedBottom mb1"></div>
         <div class="col2">
 
             <div class="contactItems">
@@ -76,7 +76,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
             <div class="contactItems">
                 <?php if( $kontaktperson ): ?>
                     <i class="fas fa-user" style="font-size: 1rem; margin-right: 0.75em;"></i>
-                    <p class="colorBeige"><?php echo $kontaktperson;?></p>  
+                    <p class="colorDarkGrey"><?php echo $kontaktperson;?></p>  
                     <?php endif; ?>
 
                     <?php if( $kontaktpersonTelefon ): ?>
@@ -94,7 +94,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
 
 <div class="colFull pb2 mb2" >
     <?php if( $bild ): ?>
-        <div class="singleVerkstadImg colorBeige"> 
+        <div class="singleVerkstadImg colorDarkGrey"> 
             
         <img src="<?php echo esc_url($bildUrl); ?>" alt="<?php echo esc_attr($alt); ?>">
             <div class="justifyRight mt05">
@@ -104,7 +104,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
         <?php endif; ?>
     </div>
     <p class="weOffer">Om oss:</p>
-    <div class="mb2 br4 colorWhite" >
+    <div class="mb2 br4" >
     <p><?php the_content() ?></p>
     
     </div>
@@ -115,7 +115,7 @@ if ( function_exists( 'eae_encode_emails' ) )  {
          <!-- Verkstadstaggar -->
 
 
-         <p class="weOffer">Hos oss finns:</p>
+         <p class="weOffer">Utrustning:</p>
             <div class="verkstadsTaggar mb2">
                 <?php 
                     if( $taggar ): ?>

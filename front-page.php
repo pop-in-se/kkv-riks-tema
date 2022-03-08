@@ -9,7 +9,7 @@ $underrubrik = get_field('underrubrik');
     <div class="col1">
     <h1 class="frontpageTitle"><?php echo $rubrik; ?></h1>
     <h2 class="frontpageSubtitle"><?php echo $underrubrik; ?></h2>
-    <div class="lineRed"></div>
+    <!-- <div class="lineRed"></div> -->
     </div>
     <div class="col2 row alignCenter">
         <div class="mapContainer">
@@ -52,8 +52,8 @@ $underrubrik = get_field('underrubrik');
     </div>
 
     <?php endwhile; else : ?>
-        <div class="colFull justifyCenter colorWhite">
-                <p class="colorWhite"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
+        <div class="colFull justifyCenter colorDarkGrey">
+                <p class="colorDarkGrey"><?php esc_html_e( 'Tyvärr, inga inlägg hittades.' ); ?></p>
             </div>
     <?php endif; ?>
 
